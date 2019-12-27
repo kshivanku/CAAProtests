@@ -11,9 +11,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/getVideoData', async (req, res) => {
     let rawcsv = fs.readFileSync('./RawData/VideoData.csv', 'utf8')
-    let prevjson = JSON.parse(fs.readFileSync('./RawData/VideoData.JSON'))
+    let prevjson = JSON.parse(fs.readFileSync('./RawData/VideoData.json'))
     let revisedJSON = await csvJSON(rawcsv, prevjson);
-    fs.writeFileSync('./RawData/VideoData.JSON', JSON.stringify(revisedJSON, null, 2))
+    fs.writeFileSync('./RawData/VideoData.json', JSON.stringify(revisedJSON, null, 2))
     res.send(revisedJSON)
 })
 
