@@ -10,6 +10,7 @@ const fetchJSON = async() => {
   const res = await fetch('/getVideoData');
   console.log(res);
   const body = await res.json();
+  console.log(body);
   if(res.status !== 200) throw Error(body.message)
   return body;
 }
