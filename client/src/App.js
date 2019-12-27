@@ -8,6 +8,7 @@ import { urlencoded } from 'body-parser';
 const fetchJSON = async() => {
   console.log("fetchJSON")
   const res = await fetch('/getVideoData');
+  console.log(res);
   const body = await res.json();
   if(res.status !== 200) throw Error(body.message)
   return body;
@@ -92,7 +93,8 @@ function App() {
             <motion.div
               style = {{
                 width: '100vw',
-                maxHeight: '80vh',
+                maxHeight: '50vh',
+                overflow: 'scroll',
                 backgroundColor: 'rgba(0, 0, 0, 0.5)',
                 color: '#fff',
                 padding: '16px',
