@@ -44,7 +44,6 @@ export function CityDetailView(props) {
                     {videoData[selectedCity].videos.map((link, index) => {
                         if(link.indexOf('twitter') !== -1) {
                             let id = link.split(/\/?\//)[4].split('?')[0];
-                            console.log(id)
                             return <TwitterVideoEmbed id={id} key={id + index}/>
                         }
                         else {
