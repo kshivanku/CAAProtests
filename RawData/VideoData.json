@@ -2,9 +2,21 @@
   "cities": {
     "Mangalore": {
       "videos": [
-        "https://twitter.com/srivatsayb/status/1208052736370954241?s=20",
-        "https://twitter.com/writesalman/status/1208069776884428800?s=20",
-        "https://twitter.com/KKAdeeb1/status/1209938288951214080?s=19"
+        {
+          "link": "https://twitter.com/srivatsayb/status/1208052736370954241?s=20",
+          "title": "Police firing in Mangalore",
+          "description": "Firing the mob at the protest"
+        },
+        {
+          "link": "https://twitter.com/writesalman/status/1208069776884428800?s=20",
+          "title": "Title not given",
+          "description": "Police activity not defined"
+        },
+        {
+          "link": "https://twitter.com/KKAdeeb1/status/1209938288951214080?s=19",
+          "title": "\"Mangalore, Karnataka \"",
+          "description": "\"Mushraf, 16 yr old student was just standing outside his college Matha Education Center waiting for bus, immediately a bunch of police came & attacked him mercilessly.\""
+        }
       ],
       "coordinates": {
         "latitude": "12.9",
@@ -13,16 +25,51 @@
     },
     "Delhi": {
       "videos": [
-        "https://twitter.com/Amitjanhit/status/1208229532022398978?s=20 ",
-        "https://twitter.com/t_d_h_nair/status/1208039740374732802?s=20",
-        "https://twitter.com/CNNnews18/status/1208046028479352832",
-        "https://twitter.com/zoyaqureshi_/status/1208030356647088130?s=20",
-        "https://twitter.com/saahilmenghani/status/1208062858669350912?s=20",
-        "https://twitter.com/DevjyotGhoshal/status/1208621623299002368",
-        "https://twitter.com/thewire_in/status/1208099148148264960?s=20",
-        "https://twitter.com/sumqqq/status/1208029006961893376?s=20",
-        "https://twitter.com/royradhika7/status/1208135563372445696?s=20",
-        "https://twitter.com/Repositoryindia/status/1210542006058942465?s=09"
+        {
+          "link": "https://twitter.com/Amitjanhit/status/1208229532022398978?s=20 ",
+          "title": "Turning a peaceful protest into a violent one",
+          "description": "Charging lathis at the protestors"
+        },
+        {
+          "link": "https://twitter.com/t_d_h_nair/status/1208039740374732802?s=20",
+          "title": "Police damaging property by themselves",
+          "description": "Damaging things by throwing brick"
+        },
+        {
+          "link": "https://twitter.com/CNNnews18/status/1208046028479352832",
+          "title": "Police use blows to the head on protestors (the usual method is blows to the legs)",
+          "description": "Jama Masjid protestors suffer head injuries after being hit on the head"
+        },
+        {
+          "link": "https://twitter.com/zoyaqureshi_/status/1208030356647088130?s=20",
+          "title": "Darya Ganj street in Delhi",
+          "description": "The protestors are water cannoned and lathi charged"
+        },
+        {
+          "link": "https://twitter.com/saahilmenghani/status/1208062858669350912?s=20",
+          "title": "The police literally quoting the PM on “we know what they look like” to randomly pick up someone who looks Muslim",
+          "description": "\"Police taking hold of a skullcapped man and later quotes Modi by saying \"\"Kapdo se pehchane jayege\"\"\""
+        },
+        {
+          "link": "https://twitter.com/DevjyotGhoshal/status/1208621623299002368",
+          "title": "Students at AMU have needed medical amputation of arms/limbs",
+          "description": " Protestors are being attacked by lathis and tear gas. The attack has left many students severely injured"
+        },
+        {
+          "link": "https://twitter.com/thewire_in/status/1208099148148264960?s=20",
+          "title": "Children being held and beaten with belts by the police",
+          "description": "Juveniles beaten up at the Daryaganj police station"
+        },
+        {
+          "link": "https://twitter.com/sumqqq/status/1208029006961893376?s=20",
+          "title": "\"This happened a few minutes back in Daryaganj, Delhi.\"",
+          "description": "\"The police is chasing protestors and beating them in the streets of Daryaganj, New delhi\""
+        },
+        {
+          "link": "https://twitter.com/royradhika7/status/1208135563372445696?s=20",
+          "title": "\"7pm, Jama Masjid - Sound on, please. Hear the sound the lathis make when they hit a minor, hear the cops shout “Maaro, maaro”. This is just horrifying.\"",
+          "description": "Police hitting a minor with lathis "
+        }
       ],
       "coordinates": {
         "latitude": "28.67",
@@ -31,8 +78,16 @@
     },
     "Bulandshahr": {
       "videos": [
-        "https://twitter.com/GauravPandhi/status/1208069417013170176?s=20",
-        "https://twitter.com/imMAK02/status/1208094891621806080?s=08"
+        {
+          "link": "https://twitter.com/GauravPandhi/status/1208069417013170176?s=20",
+          "title": "Police damaging a car in Bulandshahr",
+          "description": "Damaging a car by a lathi"
+        },
+        {
+          "link": "https://twitter.com/imMAK02/status/1208094891621806080?s=08",
+          "title": "Bulandshahar Police attacking multiple cars",
+          "description": "Police attacking cars in Bulandshahar UP"
+        }
       ],
       "coordinates": {
         "latitude": "28.4104",
@@ -41,8 +96,16 @@
     },
     "Aurangabad": {
       "videos": [
-        "https://twitter.com/alishakhan102/status/1208461878646542336?s=20",
-        "https://twitter.com/SyedYawerHussa1/status/1209296533645971456?s=08"
+        {
+          "link": "https://twitter.com/alishakhan102/status/1208461878646542336?s=20",
+          "title": "Police damaging vehicles",
+          "description": "Damaging vehicles with lathis"
+        },
+        {
+          "link": "https://twitter.com/SyedYawerHussa1/status/1209296533645971456?s=08",
+          "title": "Aurangabad Bihar",
+          "description": "Police damaging cars parked inside compound "
+        }
       ],
       "coordinates": {
         "latitude": "19.8957",
@@ -51,7 +114,11 @@
     },
     "Murshidabad": {
       "videos": [
-        "https://www.telegraphindia.com/states/west-bengal/stone-gang-in-fake-skullcap-held-by-murshidabad-police/cid/1728657"
+        {
+          "link": "https://www.telegraphindia.com/states/west-bengal/stone-gang-in-fake-skullcap-held-by-murshidabad-police/cid/1728657",
+          "title": "BJP workers dressed in skull caps fomenting violence",
+          "description": "Alleged BJP workers pelting stones at an engine"
+        }
       ],
       "coordinates": {
         "latitude": "24.17",
@@ -60,9 +127,21 @@
     },
     "Gorakhpur": {
       "videos": [
-        "https://www.telegraphindia.com/india/blood-stains-uttar-pradesh-streets/cid/1729075?utm_source=twitter&utm_medium=social&utm_campaign=tt_daily_twit",
-        "https://twitter.com/azaadindiacol/status/1208488755473993728?s=20",
-        "https://twitter.com/imMAK02/status/1208428070425649157?s=20"
+        {
+          "link": "https://www.telegraphindia.com/india/blood-stains-uttar-pradesh-streets/cid/1729075?utm_source=twitter&utm_medium=social&utm_campaign=tt_daily_twit",
+          "title": "RSS workers caught damaging shops in Gorakhpur",
+          "description": "Police attacking civilians on the basis of suspicion"
+        },
+        {
+          "link": "https://twitter.com/azaadindiacol/status/1208488755473993728?s=20",
+          "title": "Gorakhpur (Ajay Singh Bisht’s hometown)",
+          "description": "The protestors are being lathi charged"
+        },
+        {
+          "link": "https://twitter.com/imMAK02/status/1208428070425649157?s=20",
+          "title": "Police beating",
+          "description": "A minor muslim boy being beaten by the Gorakhpur police. Police ganging up on and attacking lone men passing by. "
+        }
       ],
       "coordinates": {
         "latitude": "26.7504",
@@ -71,7 +150,11 @@
     },
     "Bengaluru": {
       "videos": [
-        "https://twitter.com/mirrorforyou3/status/1207731416655486976?s=20"
+        {
+          "link": "https://twitter.com/mirrorforyou3/status/1207731416655486976?s=20",
+          "title": "\"CT Ravi, Karnataka BJP, threatening protestors with another Godhra\"",
+          "description": "Tourism minister CT Ravi claiming that situations like Godhra might arise if the majority loses its patience"
+        }
       ],
       "coordinates": {
         "latitude": "12.97",
@@ -80,15 +163,51 @@
     },
     "Lucknow": {
       "videos": [
-        "https://www.thehindu.com/news/national/a-first-person-account-by-the-hindu-correspondent-omar-rashid-of-how-he-was-picked-up-threatened-and-released-by-cops/article30361909.ece",
-        "https://www.thequint.com/news/india/sadaf-zabeen-arrested-beaten-by-police",
-        "https://twitter.com/MirrorNow/status/1208315524486254592?s=20",
-        "https://twitter.com/doamuslims/status/1208021114296946689?s=20",
-        "https://twitter.com/DesiPoliticks/status/1209173205040160774?s=08",
-        "https://twitter.com/AapAfroz/status/1209072154001596417?s=08",
-        "https://twitter.com/srivatsayb/status/1206886926289997825?s=08",
-        "https://twitter.com/cjwerleman/status/1209163918033080322?s=19",
-        "https://twitter.com/neobie14/status/1208691872866226176?s=19"
+        {
+          "link": "https://www.thehindu.com/news/national/a-first-person-account-by-the-hindu-correspondent-omar-rashid-of-how-he-was-picked-up-threatened-and-released-by-cops/article30361909.ece",
+          "title": "A “The Hindu” journalist arrested in UP or no reason because he was Kashmiri",
+          "description": "Journalist Omar Rashid and Robin Verma arrested and assaulted by the police on suspecting that they were a part of the protest and on the basis that Rashid was a Kashmiri"
+        },
+        {
+          "link": "https://www.thequint.com/news/india/sadaf-zabeen-arrested-beaten-by-police",
+          "title": "Woman school teacher arrested and beaten brutally",
+          "description": "Sadaf Jafar being arrested on questioning the police for not taking strict actions against the stone pelters"
+        },
+        {
+          "link": "https://twitter.com/MirrorNow/status/1208315524486254592?s=20",
+          "title": "One of the casualties is a 8-year old. 8. Years. Old.",
+          "description": "Police activity not defined"
+        },
+        {
+          "link": "https://twitter.com/doamuslims/status/1208021114296946689?s=20",
+          "title": "Police throwing stones at Muslims praying in Lucknow",
+          "description": "Police pelting stones on people due to which some people also throwing back stones"
+        },
+        {
+          "link": "https://twitter.com/DesiPoliticks/status/1209173205040160774?s=08",
+          "title": "Police attacking protest procession from behind",
+          "description": "Police charging towards peaceful procession of protestors from behind "
+        },
+        {
+          "link": "https://twitter.com/AapAfroz/status/1209072154001596417?s=08",
+          "title": "Husainabad Lucknow ",
+          "description": "Police attacking cars in Husainabad Lucknow "
+        },
+        {
+          "link": "https://twitter.com/srivatsayb/status/1206886926289997825?s=08",
+          "title": "Lucknow. Civilians with BJP sticker on car throwing stones on students",
+          "description": "Civilians with BJP stickers throwing stones on students ."
+        },
+        {
+          "link": "https://twitter.com/cjwerleman/status/1209163918033080322?s=19",
+          "title": "Pro BJP men attacking lone Muslim man",
+          "description": "Police activity not defined"
+        },
+        {
+          "link": "https://twitter.com/neobie14/status/1208691872866226176?s=19",
+          "title": "UP",
+          "description": "Police breaking locks of shops as woman saying in video"
+        }
       ],
       "coordinates": {
         "latitude": "26.855",
@@ -97,8 +216,16 @@
     },
     "Aligarh": {
       "videos": [
-        "https://twitter.com/MaskoorUsmani/status/1206258211679948800",
-        "https://twitter.com/Repositoryindia/status/1210547886934511616?s=09"
+        {
+          "link": "https://twitter.com/MaskoorUsmani/status/1206258211679948800",
+          "title": "NSFW Warning: Images of police brutality on students",
+          "description": "The police attack on the students have left them severly injured and prone to the risk of amputatation"
+        },
+        {
+          "link": "https://twitter.com/Repositoryindia/status/1210547886934511616?s=09",
+          "title": "Police action- In and Around AMU",
+          "description": "Police activity not defined"
+        }
       ],
       "coordinates": {
         "latitude": "27.8922",
@@ -107,7 +234,11 @@
     },
     "Nagpur": {
       "videos": [
-        "https://twitter.com/shraddhs/status/1208215489157054464"
+        {
+          "link": "https://twitter.com/shraddhs/status/1208215489157054464",
+          "title": "Title not given",
+          "description": "Peaceful"
+        }
       ],
       "coordinates": {
         "latitude": "21.17",
@@ -116,7 +247,11 @@
     },
     "Pune": {
       "videos": [
-        "https://twitter.com/CPPuneCity/status/1208057982929391616"
+        {
+          "link": "https://twitter.com/CPPuneCity/status/1208057982929391616",
+          "title": "Title not given",
+          "description": "Peaceful"
+        }
       ],
       "coordinates": {
         "latitude": "18.53",
@@ -125,8 +260,16 @@
     },
     "Mumbai": {
       "videos": [
-        "https://twitter.com/AzmiShabana/status/1207698719115808768",
-        "https://twitter.com/advsanwar/status/1208728309623873538?s=20"
+        {
+          "link": "https://twitter.com/AzmiShabana/status/1207698719115808768",
+          "title": "Title not given",
+          "description": "Peaceful"
+        },
+        {
+          "link": "https://twitter.com/advsanwar/status/1208728309623873538?s=20",
+          "title": "Title not given",
+          "description": "Peaceful"
+        }
       ],
       "coordinates": {
         "latitude": "19.017",
@@ -135,7 +278,11 @@
     },
     "Vaniyambadi": {
       "videos": [
-        "https://twitter.com/itssinghswati/status/1207995229455839233?s=20"
+        {
+          "link": "https://twitter.com/itssinghswati/status/1207995229455839233?s=20",
+          "title": "Title not given",
+          "description": "Peaceful"
+        }
       ],
       "coordinates": {
         "latitude": "12.68",
@@ -144,7 +291,11 @@
     },
     "Coimbatore": {
       "videos": [
-        "https://twitter.com/Akshayanath/status/1208084321480761345?s=20"
+        {
+          "link": "https://twitter.com/Akshayanath/status/1208084321480761345?s=20",
+          "title": "Title not given",
+          "description": "Peaceful"
+        }
       ],
       "coordinates": {
         "latitude": "11",
@@ -153,7 +304,11 @@
     },
     "Hyderabad": {
       "videos": [
-        "https://twitter.com/bemusedlawyer/status/1208439278541295618?s=20"
+        {
+          "link": "https://twitter.com/bemusedlawyer/status/1208439278541295618?s=20",
+          "title": "Title not given",
+          "description": "Peaceful"
+        }
       ],
       "coordinates": {
         "latitude": "17.4",
@@ -162,7 +317,11 @@
     },
     "Bijnor": {
       "videos": [
-        "https://twitter.com/sharmasupriya/status/1209041730235842560?s=19"
+        {
+          "link": "https://twitter.com/sharmasupriya/status/1209041730235842560?s=19",
+          "title": "Bijnor police brutality against paralysed old man",
+          "description": "\"Police dragging paralysed man, you hear gunshot in end\""
+        }
       ],
       "coordinates": {
         "latitude": "29.37",
@@ -171,7 +330,11 @@
     },
     "Jabalpur": {
       "videos": [
-        "https://twitter.com/KhanIrshad0/status/1209189532261855233?s=19"
+        {
+          "link": "https://twitter.com/KhanIrshad0/status/1209189532261855233?s=19",
+          "title": "\"Jabalpur, MP\"",
+          "description": "Police attacks cars in muslim doctor's compound. Signboard shows the doctor's name. "
+        }
       ],
       "coordinates": {
         "latitude": "23.1751",
@@ -180,9 +343,21 @@
     },
     "Kanpur": {
       "videos": [
-        "https://twitter.com/Dilsedesh/status/1208420756008255490?s=19",
-        "https://twitter.com/vinodkapri/status/1210250703664373761",
-        "https://twitter.com/vinodkapri/status/1210250703664373761?s=09"
+        {
+          "link": "https://twitter.com/Dilsedesh/status/1208420756008255490?s=19",
+          "title": "Kanpur UP",
+          "description": "Pro BJP civilians with police saying camera holder to put the camera aside and let the police fire. Many pro bjp civilians seen beating men with police "
+        },
+        {
+          "link": "https://twitter.com/vinodkapri/status/1210250703664373761",
+          "title": "Police damaging private property ",
+          "description": "Police activity not defined"
+        },
+        {
+          "link": "https://twitter.com/vinodkapri/status/1210250703664373761?s=09",
+          "title": "Vandalism by police",
+          "description": "Attacking private property of people not even involved in protests"
+        }
       ],
       "coordinates": {
         "latitude": "26.44",
@@ -191,7 +366,11 @@
     },
     "Patna": {
       "videos": [
-        "https://twitter.com/neobie14/status/1208661457585549312?s=19"
+        {
+          "link": "https://twitter.com/neobie14/status/1208661457585549312?s=19",
+          "title": "Bihar",
+          "description": "Police destroying vehicles"
+        }
       ],
       "coordinates": {
         "latitude": "25.625",
@@ -200,7 +379,11 @@
     },
     "Muzaffarnagar": {
       "videos": [
-        "https://twitter.com/yogital/status/1210514405730873345?s=19"
+        {
+          "link": "https://twitter.com/yogital/status/1210514405730873345?s=19",
+          "title": "Vandalism and looting by police",
+          "description": "Forcible entry into households and subsequent looting and threats"
+        }
       ],
       "coordinates": {
         "latitude": "29.485",

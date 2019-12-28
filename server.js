@@ -22,6 +22,8 @@ function tsvJSON(tsv, prevjson){
     return new Promise((resolve, reject) => {
         var lines=tsv.split(/\r?\n/);
         let titleLine = lines.shift();
+        let titleIndex = titleLine.split(/\t/).indexOf('Title');
+        let descriptionIndex = titleLine.split(/\t/).indexOf('Description');
         let latIndex = titleLine.split(/\t/).indexOf('Latitude (°N)');
         let longIndex = titleLine.split(/\t/).indexOf('Longitude (°E)');
         let linkIndex = titleLine.split(/\t/).indexOf('Video link');
@@ -34,14 +36,26 @@ function tsvJSON(tsv, prevjson){
             for(let i = prevTotalVideos ; i < lines.length ; i++) {
                 let currentline = lines[i].split(/\t/);
                 if(prevjson.cities && prevjson.cities[currentline[cityIndex]]) {
-                    prevjson.cities[currentline[cityIndex]].videos.push(currentline[linkIndex])
+                    prevjson.cities[currentline[cityIndex]].videos.push(
+                        {
+                            link: currentline[linkIndex],
+                            title: currentline[titleIndex],
+                            description: currentline[descriptionIndex]
+                        }
+                    )
                 }
                 else {
                     if(!prevjson.cities) {
                         prevjson.cities = {}
                     }
                     prevjson.cities[currentline[cityIndex]] = {
-                        videos: [currentline[linkIndex]],
+                        videos: [
+                            {
+                                link: currentline[linkIndex],
+                                title: currentline[titleIndex],
+                                description: currentline[descriptionIndex]
+                            }
+                        ],
                         coordinates: {
                             latitude: currentline[latIndex],
                             longitude: currentline[longIndex]

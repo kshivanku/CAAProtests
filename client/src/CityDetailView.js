@@ -41,13 +41,25 @@ export function CityDetailView(props) {
                     </button>
                 </div>
                 <div className="cityDetailView_videoList">
-                    {videoData[selectedCity].videos.map((link, index) => {
-                        if(link.indexOf('twitter.com') !== -1) {
-                            let id = link.split(/\/?\//)[4].split('?')[0];
-                            return <TwitterVideoEmbed id={id} key={id + index} onLoad={e => {if(e){e.style.display = "inline-block"}}} />
+                    {videoData[selectedCity].videos.map((videoObj, index) => {
+                        if(videoObj.link.indexOf('twitter.com') !== -1) {
+                            let id = videoObj.link.split(/\/?\//)[4].split('?')[0];
+                            return (
+                                <div className="linkCard">
+                                    <h2>{videoObj.title}</h2>
+                                    <p>{videoObj.description}</p>
+                                    <TwitterVideoEmbed id={id} key={id + index} onLoad={e => {if(e){e.style.display = "inline-block"}}} />
+                                </div>
+                            )
                         }
                         else {
-                            return <a href={link} key={index} target="_blank" style={{display: "block", marginBottom: '8px', color:'#fff'}}>{link} </a>
+                            return (
+                                <div className="linkCard">
+                                    <h2>{videoObj.title}</h2>
+                                    <p>{videoObj.description}</p>
+                                    <a href={videoObj.link} key={index} target="_blank" style={{display: "block", marginBottom: '8px', color:'#fff'}}>{videoObj.link} </a>
+                                </div>
+                            )
                         }   
                     })}
                 </div>  
