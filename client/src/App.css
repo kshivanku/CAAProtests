@@ -4,12 +4,12 @@
 
 .cityDetailView {
   position: absolute;
-  width: 90vw;
-  width: calc(var(--vw, 1vw) * 90);
-  right: 5vw;
-  right: calc(var(--vw, 1vw) * 5);
-  height: 90vh;
-  height: calc(var(--vh, 1vh) * 90);
+  width: 100vw;
+  width: calc(var(--vw, 1vw) * 100);
+  /* right: 5vw;
+  right: calc(var(--vw, 1vw) * 5); */
+  height: 60vh;
+  height: calc(var(--vh, 1vh) * 60);
   bottom: 0;
   overflow: scroll;
   background-color: rgba(0, 0, 0);
