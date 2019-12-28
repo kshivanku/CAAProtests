@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import ReactMapGL, {Marker} from 'react-map-gl'
 import {motion} from 'framer-motion'
 
@@ -12,6 +12,14 @@ export function MapLayer(props) {
         height: '100vh',
         zoom: 4
     })
+
+    useEffect(()=> {
+        window.addEventListener('resize', () => {
+            let newWidth = window.innerWidth;
+            let newHeight = window.innerHeight;
+            setViewport(prevState => {return {...prevState, width: newWidth, height: newHeight}});
+          });
+    }, [])
     
     return (
         <div>
