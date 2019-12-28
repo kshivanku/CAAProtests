@@ -42,9 +42,9 @@ export function CityDetailView(props) {
                 </div>
                 <div className="cityDetailView_videoList">
                     {videoData[selectedCity].videos.map((link, index) => {
-                        if(link.indexOf('twitter') !== -1) {
+                        if(link.indexOf('twitter.com') !== -1) {
                             let id = link.split(/\/?\//)[4].split('?')[0];
-                            return <TwitterVideoEmbed id={id} key={id + index} onLoad={e => e.style.display = "inline-block"} />
+                            return <TwitterVideoEmbed id={id} key={id + index} onLoad={e => {if(e){e.style.display = "inline-block"}}} />
                         }
                         else {
                             return <a href={link} key={index} target="_blank" style={{display: "block", marginBottom: '8px', color:'#fff'}}>{link} </a>

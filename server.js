@@ -11,36 +11,40 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/getVideoData', async (req, res) => {
-    let rawcsv = fs.readFileSync('./RawData/VideoData.csv', 'utf8')
+    let rawtsv = fs.readFileSync('./RawData/VideoData.tsv', 'utf8')
     let prevjson = JSON.parse(fs.readFileSync('./RawData/VideoData.json'))
-    let revisedJSON = await csvJSON(rawcsv, prevjson);
+    let revisedJSON = await tsvJSON(rawtsv, prevjson);
     fs.writeFileSync('./RawData/VideoData.json', JSON.stringify(revisedJSON, null, 2))
     res.send(revisedJSON)
 })
 
-function csvJSON(csv, prevjson){
+function tsvJSON(tsv, prevjson){
     return new Promise((resolve, reject) => {
-        var lines=csv.split(/\r?\n/);
-        lines.shift();
+        var lines=tsv.split(/\r?\n/);
+        let titleLine = lines.shift();
+        let latIndex = titleLine.split(/\t/).indexOf('Latitude (°N)');
+        let longIndex = titleLine.split(/\t/).indexOf('Longitude (°E)');
+        let linkIndex = titleLine.split(/\t/).indexOf('Video link');
+        let cityIndex = titleLine.split(/\t/).indexOf('Location');
         let prevTotalVideos = prevjson.totalVideos ? prevjson.totalVideos : 0 ;
         if(prevTotalVideos === lines.length) {
             resolve(prevjson)
         }
         else{
             for(let i = prevTotalVideos ; i < lines.length ; i++) {
-                let currentline = lines[i].split(",");
-                if(prevjson.cities && prevjson.cities[currentline[1]]) {
-                    prevjson.cities[currentline[1]].videos.push(currentline[0])
+                let currentline = lines[i].split(/\t/);
+                if(prevjson.cities && prevjson.cities[currentline[cityIndex]]) {
+                    prevjson.cities[currentline[cityIndex]].videos.push(currentline[linkIndex])
                 }
                 else {
                     if(!prevjson.cities) {
                         prevjson.cities = {}
                     }
-                    prevjson.cities[currentline[1]] = {
-                        videos: [currentline[0]],
+                    prevjson.cities[currentline[cityIndex]] = {
+                        videos: [currentline[linkIndex]],
                         coordinates: {
-                            latitude: currentline[2],
-                            longitude: currentline[3]
+                            latitude: currentline[latIndex],
+                            longitude: currentline[longIndex]
                         }
                     }
                 }
@@ -49,7 +53,7 @@ function csvJSON(csv, prevjson){
             resolve(prevjson)
         }
         reject({
-            error: 'something went wrong in csv to JSON conversion'
+            error: 'something went wrong in tsv to JSON conversion'
         })
     })
 }

@@ -21,7 +21,8 @@
         "https://twitter.com/DevjyotGhoshal/status/1208621623299002368",
         "https://twitter.com/thewire_in/status/1208099148148264960?s=20",
         "https://twitter.com/sumqqq/status/1208029006961893376?s=20",
-        "https://twitter.com/royradhika7/status/1208135563372445696?s=20"
+        "https://twitter.com/royradhika7/status/1208135563372445696?s=20",
+        "https://twitter.com/Repositoryindia/status/1210542006058942465?s=09"
       ],
       "coordinates": {
         "latitude": "28.67",
@@ -61,9 +62,7 @@
       "videos": [
         "https://www.telegraphindia.com/india/blood-stains-uttar-pradesh-streets/cid/1729075?utm_source=twitter&utm_medium=social&utm_campaign=tt_daily_twit",
         "https://twitter.com/azaadindiacol/status/1208488755473993728?s=20",
-        "https://twitter.com/imMAK02/status/1208428070425649157?s=20",
-        "https://twitter.com/imMAK02/status/1208428070425649157?s=20",
-        "https://twitter.com/imMAK02/status/1208428070425649157?s=08"
+        "https://twitter.com/imMAK02/status/1208428070425649157?s=20"
       ],
       "coordinates": {
         "latitude": "26.7504",
@@ -98,7 +97,8 @@
     },
     "Aligarh": {
       "videos": [
-        "https://twitter.com/MaskoorUsmani/status/1206258211679948800"
+        "https://twitter.com/MaskoorUsmani/status/1206258211679948800",
+        "https://twitter.com/Repositoryindia/status/1210547886934511616?s=09"
       ],
       "coordinates": {
         "latitude": "27.8922",
@@ -180,7 +180,9 @@
     },
     "Kanpur": {
       "videos": [
-        "https://twitter.com/Dilsedesh/status/1208420756008255490?s=19"
+        "https://twitter.com/Dilsedesh/status/1208420756008255490?s=19",
+        "https://twitter.com/vinodkapri/status/1210250703664373761",
+        "https://twitter.com/vinodkapri/status/1210250703664373761?s=09"
       ],
       "coordinates": {
         "latitude": "26.44",
@@ -195,7 +197,16 @@
         "latitude": "25.625",
         "longitude": "85.13"
       }
+    },
+    "Muzaffarnagar": {
+      "videos": [
+        "https://twitter.com/yogital/status/1210514405730873345?s=19"
+      ],
+      "coordinates": {
+        "latitude": "29.485",
+        "longitude": "77.695"
+      }
     }
   },
-  "totalVideos": 44
+  "totalVideos": 47
 }
