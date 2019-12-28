@@ -10,26 +10,22 @@ export function CityDetailView(props) {
     const variants_desktop = {
         open: {
             x: 0,
-            opcaity: 1,
-            transition: {type: 'spring', damping: 300}
+            opacity: 1
         },
         close: {
             x: 300, 
-            opacity: 0,
-            transition:{ease:'easeOut', duration: 3.5}
+            opacity: 0
         }
     }
 
     const variants_mobile = {
         open: {
             y: 0,
-            opcaity: 1,
-            transition: {type: 'spring', damping: 300}
+            opacity: 1
         },
         close: {
             y: 300, 
-            opacity: 0,
-            transition:{ease:'easeOut', duration: 3.5}
+            opacity: 0
         }
     }
 
@@ -38,7 +34,7 @@ export function CityDetailView(props) {
           {selectedCity && (
             <motion.div 
                 className="cityDetailView"
-                variants =  {isDesktop ? {variants_desktop} : {variants_mobile}}
+                variants =  {!isDesktop ? variants_desktop : variants_mobile}
                 initial = "close"
                 animate = "open"
                 exit = "close"
