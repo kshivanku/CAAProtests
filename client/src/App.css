@@ -13,11 +13,9 @@
 
 .cityDetailView {
   position: absolute;
-  width: 100vw;
   width: calc(var(--vw, 1vw) * 100);
   /* right: 5vw;
   right: calc(var(--vw, 1vw) * 5); */
-  height: 90vh;
   height: calc(var(--vh, 1vh) * 90);
   bottom: 0;
   overflow: scroll;
@@ -25,7 +23,7 @@
   color: #ffffff;
   display: grid;
   grid-template-rows: 120px 1fr;
-  grid-template-columns: auto max-content auto;
+  grid-template-columns: 1fr minmax(0, 50em) 1fr;
 }
 
 .cityDetailView_Header {
@@ -40,16 +38,17 @@
 .cityDetailView_videoList {
   padding: 0 16px 100px 16px;
   grid-column: 2;
+  justify-self: center;
+  max-width: 100%;
 }
 
 @media(min-width: 1024px) {
   .cityDetailView {
     top: 0;
     right: 0;
-    height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
     width: 400px;
-    grid-template-columns: 100vw;
+    grid-template-columns: calc(var(--vw, 1vw) * 100);
   }
   .cityDetailView_Header {
     width: inherit;
@@ -58,6 +57,7 @@
   .cityDetailView_videoList {
     width: inherit;
     grid-column: 1;
+    justify-self: start;
   }
 }
 
