@@ -18,35 +18,6 @@ app.get('/getVideoData', async (req, res) => {
     res.send(revisedJSON)
 })
 
-app.post('/getTwitterEmbedInfo', async (req, res) => {
-    console.log("inside getTwitterEmbedInfo")
-    let reqUrl = await buildUrl('https://publish.twitter.com/oembed', {url: req.body.url,theme: 'dark',widget_type: 'video'})
-    request( {url: reqUrl}, (err, resp, body) => {
-        let bodyJSON = JSON.parse(body);
-        console.log(bodyJSON)
-        res.send(bodyJSON)
-    })
-})
-
-function buildUrl(url, parameters) {
-    return new Promise((resolve, reject) => {
-        let qs = "";
-        for (const key in parameters) {
-            if (parameters.hasOwnProperty(key)) {
-                const value = parameters[key];
-                qs +=
-                    encodeURIComponent(key) + "=" + encodeURIComponent(value) + "&";
-            }
-        }
-        if (qs.length > 0) {
-            qs = qs.substring(0, qs.length - 1); //chop off last "&"
-            url = url + "?" + qs;
-        }
-        console.log(url);
-        resolve(url);
-    })
-}
-
 function csvJSON(csv, prevjson){
     return new Promise((resolve, reject) => {
         var lines=csv.split(/\r?\n/);
@@ -94,3 +65,34 @@ if (process.env.NODE_ENV === 'production') {
   }
 
 app.listen(port, ()=> console.log(`Listening on port: ${port}`));
+
+
+//TWITTER EMBED API INFO
+// app.post('/getTwitterEmbedInfo', async (req, res) => {
+//     console.log("inside getTwitterEmbedInfo")
+//     let reqUrl = await buildUrl('https://publish.twitter.com/oembed', {url: req.body.url,theme: 'dark',widget_type: 'video'})
+//     request( {url: reqUrl}, (err, resp, body) => {
+//         let bodyJSON = JSON.parse(body);
+//         console.log(bodyJSON)
+//         res.send(bodyJSON)
+//     })
+// })
+
+// function buildUrl(url, parameters) {
+//     return new Promise((resolve, reject) => {
+//         let qs = "";
+//         for (const key in parameters) {
+//             if (parameters.hasOwnProperty(key)) {
+//                 const value = parameters[key];
+//                 qs +=
+//                     encodeURIComponent(key) + "=" + encodeURIComponent(value) + "&";
+//             }
+//         }
+//         if (qs.length > 0) {
+//             qs = qs.substring(0, qs.length - 1); //chop off last "&"
+//             url = url + "?" + qs;
+//         }
+//         console.log(url);
+//         resolve(url);
+//     })
+// }
