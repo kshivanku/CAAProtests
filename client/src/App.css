@@ -11,6 +11,10 @@
   -ms-box-sizing: border-box !important;
 }
 
+body {
+  position: relative;
+}
+
 .cityDetailView {
   position: absolute;
   width: calc(var(--vw, 1vw) * 100);
@@ -24,6 +28,7 @@
   display: grid;
   grid-template-rows: 120px 1fr;
   grid-template-columns: 1fr minmax(0, 50em) 1fr;
+  overflow: hidden;
 }
 
 .cityDetailView_Header {
@@ -42,12 +47,12 @@
   max-width: 100%;
 }
 
-@media(min-width: 1024px) {
+@media(min-width: 60em) {
   .cityDetailView {
     top: 0;
     right: 0;
     height: calc(var(--vh, 1vh) * 100);
-    width: 400px;
+    width: 25em;
     grid-template-columns: calc(var(--vw, 1vw) * 100);
   }
   .cityDetailView_Header {
