@@ -23,10 +23,9 @@
   overflow: scroll;
   background-color: rgba(0, 0, 0);
   color: #ffffff;
-  /* padding: 0 16px; */
   display: grid;
   grid-template-rows: 120px 1fr;
-  grid-template-columns: 100vw;
+  grid-template-columns: auto max-content auto;
 }
 
 .cityDetailView_Header {
@@ -35,11 +34,12 @@
   width: inherit;
   justify-content: space-between;
   padding: 16px;
+  grid-column: span 3;
 }
 
 .cityDetailView_videoList {
   padding: 0 16px 100px 16px;
-  width: inherit;
+  grid-column: 2;
 }
 
 @media(min-width: 1024px) {
@@ -48,13 +48,16 @@
     right: 0;
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
-    width: 500px;
+    width: 400px;
+    grid-template-columns: 100vw;
   }
   .cityDetailView_Header {
     width: inherit;
+    grid-column: 1;
   }
   .cityDetailView_videoList {
     width: inherit;
+    grid-column: 1;
   }
 }
 
