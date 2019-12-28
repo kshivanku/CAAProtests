@@ -7,26 +7,10 @@ export function CityDetailView(props) {
     
     const {selectedCity, videoData, onCityDetailClose} = props;
     const isDesktop = useMediaQuery({query: '(min-device-width: 1024px)'})
-    const variants_desktop = {
-        open: {
-            x: 0,
-            opacity: 1
-        },
-        close: {
-            x: 300, 
-            opacity: 0
-        }
-    }
 
-    const variants_mobile = {
-        open: {
-            y: 0,
-            opacity: 1
-        },
-        close: {
-            y: 300, 
-            opacity: 0
-        }
+    const variants = {
+        open: isDesktop ? {x: 0,opacity: 1}  : {y: 0,opacity: 1},
+        close: isDesktop? {x: 300, opacity: 0} : {y: 300, opacity: 0}
     }
 
     return (
@@ -34,7 +18,7 @@ export function CityDetailView(props) {
           {selectedCity && (
             <motion.div 
                 className="cityDetailView"
-                variants =  {!isDesktop ? variants_desktop : variants_mobile}
+                variants =  {variants}
                 initial = "close"
                 animate = "open"
                 exit = "close"
