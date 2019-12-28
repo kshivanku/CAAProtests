@@ -10,7 +10,7 @@ export function CityDetailView(props) {
     const isDesktop = useMediaQuery({query: '(min-device-width: 1024px)'})
 
     const variants = {
-        open: isDesktop ? {x: 0,opacity: 1}  : {y: 0,opacity: 1},
+        open: isDesktop ? {x: 0, opacity: 1}  : {y: 0,opacity: 1},
         close: isDesktop? {x: 300, opacity: 0} : {y: 300, opacity: 0}
     }
 
@@ -23,6 +23,9 @@ export function CityDetailView(props) {
                 initial = "close"
                 animate = "open"
                 exit = "close"
+                drag = {isDesktop? false : "y"}
+                dragConstraints={{ top: '10vh', bottom: 0 }}
+                dragElastic={0.2}
             >   
                 <div className="cityDetailView_Header">
                     <h1>{selectedCity}</h1>
