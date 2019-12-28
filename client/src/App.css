@@ -5,7 +5,7 @@
 .cityDetailView {
   position: absolute;
   width: 80vw;
-  left: 10vw;
+  right: 10vw;
   height: 50vh;
   bottom: 0;
   overflow: scroll;
