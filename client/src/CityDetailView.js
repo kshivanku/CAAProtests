@@ -1,5 +1,5 @@
 import React from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+import {motion, AnimatePresence, useMotionValue} from 'framer-motion';
 import {TwitterVideoEmbed} from 'react-twitter-embed';
 import { useMediaQuery } from 'react-responsive';
 import close from './close.svg'
@@ -8,6 +8,7 @@ export function CityDetailView(props) {
     
     const {selectedCity, videoData, onCityDetailClose} = props;
     const isDesktop = useMediaQuery({query: '(min-device-width: 1024px)'})
+    const y = useMotionValue(0);
 
     const variants = {
         open: isDesktop ? {x: 0, opacity: 1}  : {y: 0,opacity: 1},
@@ -18,14 +19,20 @@ export function CityDetailView(props) {
         <AnimatePresence>
           {selectedCity && (
             <motion.div 
+                y = {y}
                 className="cityDetailView"
                 variants = {variants}
                 initial = "close"
                 animate = "open"
                 exit = "close"
-                drag = {isDesktop? false : "y"}
-                dragConstraints={{ top: '10vh', bottom: 0 }}
-                dragElastic={0.2}
+                // drag = {isDesktop? false : "y"}
+                // dragConstraints={{ top: 20, bottom: 20 }}
+                // dragElastic={0.2}
+                // onDragEnd = {() => {
+                //     if(y.get() < - 20) {
+
+                //     }
+                // }} 
             >   
                 <div className="cityDetailView_Header">
                     <h1>{selectedCity}</h1>
