@@ -2,6 +2,7 @@ import React from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {TwitterVideoEmbed} from 'react-twitter-embed';
 import { useMediaQuery } from 'react-responsive';
+import close from './close.svg'
 
 export function CityDetailView(props) {
     
@@ -18,14 +19,16 @@ export function CityDetailView(props) {
           {selectedCity && (
             <motion.div 
                 className="cityDetailView"
-                variants =  {variants}
+                variants = {variants}
                 initial = "close"
                 animate = "open"
                 exit = "close"
             >   
                 <div className="cityDetailView_Header">
                     <h1>{selectedCity}</h1>
-                    <button onClick={(e) => onCityDetailClose(e)}>Close</button>
+                    <button className="close_btn" onClick={(e) => onCityDetailClose(e)}>
+                        <img src={close} alt="close icon" />
+                    </button>
                 </div>
                 <div className="cityDetailView_videoList">
                     {videoData[selectedCity].videos.map((link, index) => {

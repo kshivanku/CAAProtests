@@ -45,8 +45,21 @@
   }
 }
 
-.marker_btn {
+.marker_btn, .close_btn {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+.close_btn {
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+
+.close_btn img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
 }
