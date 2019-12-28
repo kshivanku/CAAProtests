@@ -1,9 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {MapLayer} from './MapLayer.js';
 import {CityDetailView} from './CityDetailView.js'; 
-
 import './App.css';
-// import { urlencoded } from 'body-parser';
 
 const fetchJSON = async() => {
   const res = await fetch('/getVideoData');
@@ -30,7 +28,9 @@ function App() {
 
   const onMarkerClick = (e, city) => {
     e.preventDefault();
-    setSelectedCity(city)
+    if(selectedCity !== city) {
+      setSelectedCity(city);
+    }
   } 
 
   const onCityDetailClose = (e) => {
@@ -39,10 +39,10 @@ function App() {
   }
 
   return (
-    <>
-      <MapLayer onMarkerClick={onMarkerClick} videoData={videoData} totalCities={totalCities} />
+    <div className="app">
+      <MapLayer className="mapLayer" onMarkerClick={onMarkerClick} videoData={videoData} totalCities={totalCities} />
       <CityDetailView selectedCity={selectedCity} videoData={videoData} onCityDetailClose={onCityDetailClose} />
-    </>
+    </div>
   );
 }
 
