@@ -21,6 +21,11 @@
   align-items: center;
   width: 100%;
   justify-content: space-between;
+  padding: 16px;
+}
+
+.cityDetailView_videoList {
+  padding: 16px;
 }
 
 @media(min-width: 1024px) {

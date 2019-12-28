@@ -42,7 +42,6 @@ export function CityDetailView(props) {
                 initial = "close"
                 animate = "open"
                 exit = "close"
-                // transition = {{ease: 'easeOut', duration: 0.5}}
             >   <div className="cityDetailView_Header">
                     <h1>{selectedCity}</h1>
                     <button onClick={(e) => onCityDetailClose(e)}>Close</button>
