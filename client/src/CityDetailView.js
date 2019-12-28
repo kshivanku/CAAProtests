@@ -10,9 +10,11 @@ export function CityDetailView(props) {
     const isDesktop = useMediaQuery({query: '(min-device-width: 1024px)'})
     const y = useMotionValue(0);
 
+    const closeTransition = {ease: 'easeOut', duration: 0.4}
+    const openTransition = {type: 'spring', damping: 300}
     const variants = {
-        open: isDesktop ? {x: 0, opacity: 1}  : {y: 0,opacity: 1},
-        close: isDesktop? {x: 300, opacity: 0} : {y: 300, opacity: 0}
+        open: isDesktop ? {x: 0, opacity: 1, transition: openTransition}  : {y: 0,opacity: 1, transition: openTransition},
+        close: isDesktop? {x: 300, opacity: 0, transition: closeTransition} : {y: 300, opacity: 0, transition: closeTransition}
     }
 
     return (
