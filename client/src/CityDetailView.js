@@ -1,20 +1,18 @@
 import React from 'react';
 import {motion, AnimatePresence, useMotionValue} from 'framer-motion';
 import {TwitterVideoEmbed} from 'react-twitter-embed';
-import { useMediaQuery } from 'react-responsive';
 import close from './close.svg'
 
 export function CityDetailView(props) {
     
-    const {selectedCity, videoData, onCityDetailClose} = props;
-    const isDesktop = useMediaQuery({query: '(min-device-width: 1024px)'})
+    const {selectedCity, videoData, onCityDetailClose, isDesktop} = props;
     const y = useMotionValue(0);
 
     const closeTransition = {ease: 'easeOut', duration: 0.4}
     const openTransition = {type: 'spring', damping: 300}
     const variants = {
-        open: isDesktop ? {x: 0, opacity: 1, transition: openTransition}  : {y: 0,opacity: 1, transition: openTransition},
-        close: isDesktop? {x: 300, opacity: 0, transition: closeTransition} : {y: 300, opacity: 0, transition: closeTransition}
+        open: {x: 0, y: 0, opacity: 1, transition: openTransition},
+        close: isDesktop? {x: 300, y: 0, opacity: 0, transition: closeTransition} : {x: 0, y: 300, opacity: 0, transition: closeTransition}
     }
 
     return (

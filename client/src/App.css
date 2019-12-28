@@ -47,7 +47,7 @@ body {
   display: inline-block;
 }
 
-@media(min-width: 60em) {
+@media(min-width: 1024px) {
   .cityDetailView {
     top: 0;
     right: 0;
