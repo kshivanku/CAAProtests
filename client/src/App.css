@@ -28,7 +28,6 @@ body {
   display: grid;
   grid-template-rows: 120px 1fr;
   grid-template-columns: 1fr minmax(0, 50em) 1fr;
-  overflow: hidden;
 }
 
 .cityDetailView_Header {
