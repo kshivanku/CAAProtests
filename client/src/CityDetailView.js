@@ -1,8 +1,38 @@
 import React, {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
+import {TwitterVideoEmbed} from 'react-twitter-embed';
 
 export function CityDetailView(props) {
+    
     const {selectedCity, videoData, onCityDetailClose} = props;
+    const [embedTweetInfo, setEmbedTweetInfo] = useState(null);
+    useEffect(()=> {
+        {selectedCity && TwitterEmbed('https://twitter.com/alishakhan102/status/1208461878646542336?s=20')}
+    }, [selectedCity])
+
+    const TwitterEmbed = (url) => {
+        fetch('/getTwitterEmbedInfo', {
+            method: 'POST',
+            body: JSON.stringify({url: url}),
+            headers: {
+                'Content-Type': 'application/json'
+              },
+        })
+        .then(res => {
+            return res.json();
+        })
+        .then(body => {
+            console.log('inside body')
+            console.log(body);
+            console.log(body.html);
+            // var parser = new DOMParser();
+            // var doc = parser.parseFromString(body.html, 'text/html');
+            // console.log(doc)
+            setEmbedTweetInfo(body.html);
+        })
+        .catch(err => console.log(err))
+    }
+
     return (
         <AnimatePresence>
           {selectedCity && (
@@ -40,9 +70,19 @@ export function CityDetailView(props) {
                 }}
               >
                 <h1>{selectedCity}</h1>
-                {videoData[selectedCity].videos.map((link, index) => (
-                  <a href={link} key={index} target="_blank" style={{display: "block", marginBottom: '8px', color:'#fff'}}>{link} </a>
-                ))}
+                {/* {<div dangerouslySetInnerHTML={{__html: embedTweetInfo}}></div>} */}
+                {/* <p><iframe src="https://twitframe.com/show?url=https://twitter.com/alishakhan102/status/1208461878646542336?s=20" border="0" height="560px" width="550" frameBorder="0"></iframe></p>
+                <p>&nbsp;</p> */}
+                {videoData[selectedCity].videos.map((link, index) => {
+                    if(link.indexOf('twitter') != -1) {
+                        let id = link.split(/\/?\//)[4].split('?')[0];
+                        console.log(id);
+                        return <TwitterVideoEmbed id={id}/>
+                    }
+                    else {
+                        return <a href={link} key={index} target="_blank" style={{display: "block", marginBottom: '8px', color:'#fff'}}>{link} </a>
+                    }   
+                })}
               </div>
               
             </motion.div>

@@ -21,8 +21,6 @@ function App() {
   useEffect(()=> {
     fetchJSON()
       .then(res => {
-        console.log("Back inside useEffect");
-        console.log(res);
         setVideoData(res.cities);
         let citiesArray = Object.keys(res.cities);
         setTotalCities(citiesArray);
