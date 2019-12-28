@@ -4,7 +4,8 @@
 
 .cityDetailView {
   position: absolute;
-  width: 100vw;
+  width: 80vw;
+  left: 10vw;
   height: 50vh;
   bottom: 0;
   overflow: scroll;
@@ -19,13 +20,14 @@
 .cityDetailView_Header {
   display: flex;
   align-items: center;
-  width: 100%;
+  width: inherit;
   justify-content: space-between;
   padding: 16px;
 }
 
 .cityDetailView_videoList {
-  padding: 16px;
+  padding: 0 16px 100px 16px;
+  width: inherit;
 }
 
 @media(min-width: 1024px) {
