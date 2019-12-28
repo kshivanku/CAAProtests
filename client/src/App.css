@@ -1,5 +1,14 @@
 * {
   box-sizing: border-box;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
 }
 
 .cityDetailView {
