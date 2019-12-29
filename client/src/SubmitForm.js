@@ -21,7 +21,12 @@ export function SubmitForm(props) {
     const chevron_variants = {"open": {rotate: 0}, "close": {rotate: 180}}
     const toggleButton_variants = {"open": {opacity: 0}, "close": {opacity: 1}}
 
+    const handleScroll = () => {
+        window.scrollTo(0,0)
+    }
+
     useEffect(()=>{
+        window.addEventListener('scroll', handleScroll, true)
         if(isOpen) {
             setIsOpen(selectedCity === null)
         }
