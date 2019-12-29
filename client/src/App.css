@@ -118,9 +118,8 @@ body {
 }
 
 .submitFormContainer form {
-  grid-column: span 2;
   display: grid;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: 2.5em 1fr;
   grid-gap: 1em;
   margin: 2em 0 2em 0;
 }
@@ -129,7 +128,7 @@ body {
   grid-column: span 2;
   display: grid;
   grid-gap: inherit;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: 2.5em 1fr;
   grid-template-columns: subgrid;
   align-items: center;
 }
@@ -151,7 +150,7 @@ body {
   border: none;
   font-weight: bold;
   border-radius: 1em;
-  max-width: 20em;
+  max-width: 21em;
 }
 
 .sendVideoMessage {
