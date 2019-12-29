@@ -38,6 +38,10 @@ export function SubmitForm(props) {
         chevronControls.start({scale: 1})
     } 
 
+    const handleFocusOut = () => {
+        window.scrollTo(0,0)
+    }
+
     return(
         <motion.div 
             className="submitFormContainer"
@@ -77,17 +81,20 @@ export function SubmitForm(props) {
                 >
                     <h2>Add more protest videos to the map</h2>
                     <p>This is our chance to visualize India's response to CAA. Videos will be manually reviewed before being added</p>
-                    <form onSubmit={(e) => {
-                        e.preventDefault()
-                        onNewLinkSubmit({
-                            "link": linkEl.current.value,
-                            "city": cityEl.current.value
-                        })
-                        linkEl.current.value = '';
-                        cityEl.current.value = '';
-                        setIsThankYou(true);
-                        window.scrollTo(0, 0);
-                    }}>
+                    <form 
+                        onBlur = {handleFocusOut}
+                        onSubmit={(e) => {
+                            e.preventDefault()
+                            onNewLinkSubmit({
+                                "link": linkEl.current.value,
+                                "city": cityEl.current.value
+                            })
+                            linkEl.current.value = '';
+                            cityEl.current.value = '';
+                            setIsThankYou(true);
+                            window.scrollTo(0, 0);
+                        }}
+                    >
                         <label htmlFor="form_link" className="field">
                             <span className="form_label">Link:</span>
                             <input required id="form_link" type="url" ref={linkEl} placeholder="https://twitter.com/..."/>
@@ -111,10 +118,11 @@ export function SubmitForm(props) {
             {isThankYou && 
                 <div className="thankYouBody">
                     <h1>You are a rockstar!</h1>
-                    <p>We appreciate your contribution. We will review the link you submitted and add it as soon as we can</p>
+                    <p>We appreciate your contribution. We will review the link you submitted and add it to the map as soon as we can</p>
                     <motion.button 
                         onClick={() => handleCloseToggle()}
-                        whileHover = {{scale: 1.1}}
+                        whileHover = {{scale: 1.02}}
+                        whileTap = {{scale: 0.98}}
                         className= "doneButton"
                     >Ok
                     </motion.button>
