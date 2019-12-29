@@ -112,7 +112,7 @@ export function SubmitForm(props) {
                         </label>
                         <motion.button
                             type= "submit"
-                            className = "submitButton" 
+                            className = "primary_btn submitButton" 
                             whileHover = {{scale: 1.02}}
                             whileTap = {{scale: 0.98}}
                         >
@@ -130,7 +130,7 @@ export function SubmitForm(props) {
                         onClick={() => handleCloseToggle()}
                         whileHover = {{scale: 1.02}}
                         whileTap = {{scale: 0.98}}
-                        className= "doneButton"
+                        className= "primary_btn doneButton"
                     >Ok
                     </motion.button>
                     <motion.img 
