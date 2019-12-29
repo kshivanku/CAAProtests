@@ -44,7 +44,7 @@ function App() {
     <div className="app">
       <MapLayer className="mapLayer" onMarkerClick={onMarkerClick} videoData={videoData} totalCities={totalCities} />
       <CityDetailView selectedCity={selectedCity} videoData={videoData} onCityDetailClose={onCityDetailClose} desktopSize={desktopSize} />
-      <SubmitForm desktopSize={desktopSize}/>
+      <SubmitForm desktopSize={desktopSize} selectedCity={selectedCity}/>
     </div>
   );
 }

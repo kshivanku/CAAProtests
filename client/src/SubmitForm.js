@@ -5,7 +5,7 @@ import chevron_primary from './chevron-primary.svg'
 import chevron_white from './chevron-white.svg'
 
 export function SubmitForm(props) {
-    const {desktopSize} = props
+    const {desktopSize, selectedCity} = props
     const [isOpen, setIsOpen] = useState(window.innerWidth > desktopSize);
     const containerControls = useAnimation();
     const closeButtonControls = useAnimation();
@@ -17,13 +17,11 @@ export function SubmitForm(props) {
     const chevron_variants = {"open": {rotate: 0}, "close": {rotate: 180}}
     const toggleButton_variants = {"open": {opacity: 0}, "close": {opacity: 1}}
 
-    // useEffect(()=>{
-    //     console.log(`isOpen from effect = ${isOpen}`);
-    //     containerControls.start(container_variants[isOpen ? "open": "close"])
-    //     closeButtonControls.start(closeButton_variants[isOpen ? "open": "close"])
-    //     chevronControls.start(chevron_variants[isOpen ? "open": "close"])
-    //     toggleButtonLabelControls.start(toggleButton_variants[isOpen ? "open": "close"])
-    // }, [isOpen])
+    useEffect(()=>{
+        if(isOpen) {
+            setIsOpen(selectedCity === null)
+        }
+    }, [selectedCity])
 
     containerControls.start(container_variants[isOpen ? "open": "close"])
     closeButtonControls.start(closeButton_variants[isOpen ? "open": "close"])
