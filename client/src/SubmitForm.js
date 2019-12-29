@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {motion, useAnimation} from 'framer-motion'
+import {motion, useAnimation, useMotionValue} from 'framer-motion'
 import './App.css'
 import chevron_primary from './chevron-primary.svg'
 import chevron_white from './chevron-white.svg'
@@ -12,18 +12,23 @@ export function SubmitForm(props) {
     const chevronControls = useAnimation();
     const toggleButtonLabelControls = useAnimation();
 
-    const container_variants = {"open": {height: 'auto'},"close": {height: 50}}
+    const container_variants = {"open": {height: 500, top: `calc(var(--vh, 1vh) * 100 - 500px)`},"close": {height: 50, top: `calc(var(--vh, 1vh) * 100 - 50px)`}}
     const closeButton_variants = {"open": {backgroundColor: '#000'},"close": {backgroundColor: '#ff3c0a'}}
     const chevron_variants = {"open": {rotate: 0}, "close": {rotate: 180}}
     const toggleButton_variants = {"open": {opacity: 0}, "close": {opacity: 1}}
 
-    useEffect(()=>{
-        console.log(`isOpen from effect = ${isOpen}`);
-        containerControls.start(container_variants[isOpen ? "open": "close"])
-        closeButtonControls.start(closeButton_variants[isOpen ? "open": "close"])
-        chevronControls.start(chevron_variants[isOpen ? "open": "close"])
-        toggleButtonLabelControls.start(toggleButton_variants[isOpen ? "open": "close"])
-    }, [isOpen])
+    // useEffect(()=>{
+    //     console.log(`isOpen from effect = ${isOpen}`);
+    //     containerControls.start(container_variants[isOpen ? "open": "close"])
+    //     closeButtonControls.start(closeButton_variants[isOpen ? "open": "close"])
+    //     chevronControls.start(chevron_variants[isOpen ? "open": "close"])
+    //     toggleButtonLabelControls.start(toggleButton_variants[isOpen ? "open": "close"])
+    // }, [isOpen])
+
+    containerControls.start(container_variants[isOpen ? "open": "close"])
+    closeButtonControls.start(closeButton_variants[isOpen ? "open": "close"])
+    chevronControls.start(chevron_variants[isOpen ? "open": "close"])
+    toggleButtonLabelControls.start(toggleButton_variants[isOpen ? "open": "close"])
 
     return(
         <motion.div 

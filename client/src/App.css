@@ -19,7 +19,7 @@ body {
   position: absolute;
   width: calc(var(--vw, 1vw) * 100);
   height: calc(var(--vh, 1vh) * 90);
-  bottom: 0;
+  /* bottom: 0; */
   right: 0;
   overflow: scroll;
   background-color: rgba(0, 0, 0);
@@ -93,6 +93,7 @@ body {
 
 .submitFormContainer {
   position: absolute;
+  /* top: calc(var(--vh, 1vh) * 100 - 50px); */
   bottom: 0px;
   right: 0px;
   width: 100%;
