@@ -187,5 +187,35 @@ body {
   }
 }
 
+.thankYouBody {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center  ;
+}
+
+.thankYouBody h1 {
+  margin-bottom: 0.1em;
+}
+
+.thankYouBody img {
+  order: -1;
+  height: 12em;
+}
+
+.doneButton  {
+  background-color: #ff3c0a;
+  border: none;
+  font-size: 14px;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.90);
+  cursor: pointer;
+  font-weight: bold;
+  width: 10em;
+  height: 3em;
+  margin-top: 1em;
+}
+
 
 

@@ -3,6 +3,7 @@ import {motion, useAnimation, useMotionValue} from 'framer-motion'
 import './App.css'
 import chevron_primary from './chevron-primary.svg'
 import chevron_white from './chevron-white.svg'
+import fist from './fist.svg'
 
 export function SubmitForm(props) {
     const {desktopSize, selectedCity, onNewLinkSubmit} = props
@@ -31,6 +32,12 @@ export function SubmitForm(props) {
     chevronControls.start(chevron_variants[isOpen ? "open": "close"])
     toggleButtonLabelControls.start(toggleButton_variants[isOpen ? "open": "close"])
 
+    const handleCloseToggle = () => {
+        setIsOpen(!isOpen)
+        !isOpen && setIsThankYou(false)
+        chevronControls.start({scale: 1})
+    } 
+
     return(
         <motion.div 
             className="submitFormContainer"
@@ -49,11 +56,7 @@ export function SubmitForm(props) {
                 animate = {closeButtonControls}
                 onHoverStart = {() => chevronControls.start({scale: 1.3})}
                 onHoverEnd = {() => chevronControls.start({scale: 1})}
-                onClick={() => {
-                    setIsOpen(!isOpen)
-                    !isOpen && setIsThankYou(false)
-                    chevronControls.start({scale: 1})
-                }}
+                onClick={() => handleCloseToggle()}
             >
                 <motion.img 
                     src={isOpen ? chevron_primary : chevron_white} 
@@ -106,7 +109,25 @@ export function SubmitForm(props) {
                 </motion.div>
             }
             {isThankYou && 
-                <h1>Thank You!</h1>
+                <div className="thankYouBody">
+                    <h1>You are a rockstar!</h1>
+                    <p>We appreciate your contribution. We will review the link you submitted and add it as soon as we can</p>
+                    <motion.button 
+                        onClick={() => handleCloseToggle()}
+                        whileHover = {{scale: 1.1}}
+                        className= "doneButton"
+                    >Ok
+                    </motion.button>
+                    <motion.img 
+                        src={fist}
+                        initial = {{y:0}}
+                        animate = {{y:10}}
+                        transition = {{
+                            yoyo: 'Infinity',
+                            ease: 'easeInOut'
+                        }}
+                    />
+                </div>
             }
             
         </motion.div>
