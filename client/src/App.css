@@ -139,6 +139,7 @@ body {
   padding: 1em;
   opacity: 0.9;
   max-width: 50em;
+  font-size: 16px;
 }
 
 .submitFormContainer .submitButton {
@@ -177,6 +178,10 @@ body {
 .toggleCloseButton p {
   font-weight: bold;
   font-size: 1.2em;
+}
+
+.toggleCloseButton:focus {
+  outline: none;
 }
 
 
