@@ -4,7 +4,7 @@ import {motion, useAnimation} from 'framer-motion'
 export function IntroScreen() {
     const controls = useAnimation();
     const contentControls = useAnimation();
-    const close = {height: 0, transition: {ease: "easeOut", duration: 1}}
+    const close = {height: 0, transition: {ease: "easeInOut", duration: 1}}
     return (
         <motion.div
             className="introScreenContainer"
