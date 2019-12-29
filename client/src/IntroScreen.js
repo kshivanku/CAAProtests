@@ -14,7 +14,7 @@ export function IntroScreen() {
                 className="introScreenContent"
                 animate={contentControls}
             >
-                <h1>This is a visualization of all the protests against Citizenship Ammendment Act (CAA) across India</h1>
+                <h1>This is a visualization of all the protests against Citizenship Amendment Act (CAA) across India</h1>
                 <motion.button 
                     className="primary_btn"
                     whileHover={{scale: 1.02}}
