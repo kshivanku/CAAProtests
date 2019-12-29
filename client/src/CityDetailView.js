@@ -7,7 +7,7 @@ export function CityDetailView(props) {
     const {selectedCity, videoData, onCityDetailClose, desktopSize } = props;
     const y = useMotionValue(0);
 
-    const closeTransition = {ease: 'easeOut', duration: 0.4, staggerChildren: 0.1, when: "afterChildren", staggerDirection: -1}
+    const closeTransition = {ease: 'easeOut', duration: 0.2, staggerChildren: 0.05, when: "afterChildren", staggerDirection: -1}
     const openTransition = {type: 'spring', damping: 16, staggerChildren: 0.1, delayChildren: 0.3}
     // const variants = {
     //     open: {x: 0, y: 0, opacity: 1, transition: openTransition},
@@ -20,7 +20,7 @@ export function CityDetailView(props) {
     }
 
     const childVariants = {
-        open: {opacity: 1, y: 0, transition: {ease: 'easeOut'}}, close: {opacity: 0, y: 10, transition: {ease: 'easeOut'}}
+        open: {opacity: 1, y: 0, transition: {ease: 'easeOut'}}, close: {opacity: 0, y: 10, transition: {ease: 'linear'}}
     }
 
     return (

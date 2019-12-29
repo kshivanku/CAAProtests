@@ -117,10 +117,6 @@ body {
   padding: 0 20px 40px 20px;
 }
 
-/* .submitFormBody h2 {
-  margin-top: 0;
-} */
-
 .submitFormContainer form {
   grid-column: span 2;
   display: grid;
