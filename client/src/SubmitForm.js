@@ -15,7 +15,7 @@ export function SubmitForm(props) {
     const closeButtonControls = useAnimation();
     const chevronControls = useAnimation();
     const toggleButtonLabelControls = useAnimation();
-    const isScrolling;
+    let isScrolling = null;
 
     const container_variants = {"open": {height: 520, top: `calc(var(--vh, 1vh) * 100 - 520px)`},"close": {height: 50, top: `calc(var(--vh, 1vh) * 100 - 50px)`}}
     const closeButton_variants = {"open": {backgroundColor: '#000'},"close": {backgroundColor: '#ff3c0a'}}
