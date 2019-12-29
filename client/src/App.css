@@ -18,16 +18,16 @@ body {
 .cityDetailView {
   position: absolute;
   width: calc(var(--vw, 1vw) * 100);
-  /* right: 5vw;
-  right: calc(var(--vw, 1vw) * 5); */
   height: calc(var(--vh, 1vh) * 90);
   bottom: 0;
+  right: 0;
   overflow: scroll;
   background-color: rgba(0, 0, 0);
   color: #ffffff;
   display: grid;
   grid-template-rows: 120px 1fr;
   grid-template-columns: 1fr minmax(0, 33em) 1fr;
+  z-index: 10;
 }
 
 .cityDetailView_Header {
@@ -90,3 +90,98 @@ body {
   padding-bottom: 1.5em;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
+
+.submitFormContainer {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  background-color: #000;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px 8px 0 0;
+  -moz-box-shadow: rgba(0,0,0,.30) 0 2px 3px;
+  -webkit-box-shadow: rgba(0,0,0,.30) 0 2px 3px;
+  box-shadow: rgba(0,0,0,.30) 0 2px 3px;
+  z-index: 20;
+  overflow: hidden;
+}
+
+@media(min-width: 1024px) {
+  .submitFormContainer {
+    width: 320px;
+  }
+}
+
+.submitFormBody{
+  padding: 0 20px 40px 20px;
+}
+
+/* .submitFormBody h2 {
+  margin-top: 0;
+} */
+
+.submitFormContainer form {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 1em;
+  margin: 2em 0 2em 0;
+}
+
+.field {
+  grid-column: span 2;
+  display: grid;
+  grid-gap: inherit;
+  grid-template-columns: max-content 1fr;
+  grid-template-columns: subgrid;
+  align-items: center;
+}
+
+.field input {
+  border-radius: 0.5em;
+  border: none;
+  padding: 1em;
+  opacity: 0.9;
+  max-width: 50em;
+}
+
+.submitFormContainer .submitButton {
+  grid-column: 2;
+  height: 3em;
+  cursor: pointer;
+  background-color: #ff3c0a;
+  color: rgba(255, 255, 255, 0.80);
+  border: none;
+  font-weight: bold;
+  border-radius: 1em;
+  max-width: 20em;
+}
+
+.sendVideoMessage {
+  font-size: 0.9em;
+}
+
+.toggleCloseButton {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color: #000;
+  border: none;
+  border-radius: 8px 8px 0 0 ;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  padding: 5px 20px;
+  align-items: center;
+}
+
+.toggleCloseButton img{
+  margin-right: 0.5em;
+}
+
+.toggleCloseButton p {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+
+

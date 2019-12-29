@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {MapLayer} from './MapLayer.js';
 import {CityDetailView} from './CityDetailView.js'; 
+import {SubmitForm} from './SubmitForm.js'
 import './App.css';
 
 const fetchJSON = async() => {
@@ -15,7 +16,7 @@ function App() {
   const [selectedCity, setSelectedCity] = useState(null);
   const [videoData, setVideoData] = useState({});
   const [totalCities, setTotalCities] = useState([]);
-  const [isDesktop, setIsDesktop] = useState(false);
+  const desktopSize = 1024;
 
   useEffect(()=> {
     fetchJSON()
@@ -25,7 +26,6 @@ function App() {
         setTotalCities(citiesArray);
       })
       .catch(err => console.log(err))
-
   },[])
 
   const onMarkerClick = (e, city) => {
@@ -33,7 +33,6 @@ function App() {
     if(selectedCity !== city) {
       setSelectedCity(city);
     }
-    window.innerWidth > 1024 ? setIsDesktop(true) : setIsDesktop(false)
   } 
 
   const onCityDetailClose = (e) => {
@@ -44,7 +43,8 @@ function App() {
   return (
     <div className="app">
       <MapLayer className="mapLayer" onMarkerClick={onMarkerClick} videoData={videoData} totalCities={totalCities} />
-      <CityDetailView selectedCity={selectedCity} videoData={videoData} onCityDetailClose={onCityDetailClose} isDesktop={isDesktop} />
+      <CityDetailView selectedCity={selectedCity} videoData={videoData} onCityDetailClose={onCityDetailClose} desktopSize={desktopSize} />
+      <SubmitForm desktopSize={desktopSize}/>
     </div>
   );
 }
