@@ -181,5 +181,11 @@ body {
   font-size: 1.2em;
 }
 
+@media(max-width: 720px) {
+  .toggleCloseButton:focus {
+    outline: none;
+  }
+}
+
 
 

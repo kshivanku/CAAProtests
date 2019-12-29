@@ -8,8 +8,8 @@ export function MapLayer(props) {
     const [viewport, setViewport] = useState({
         latitude: 20.5937,
         longitude: 78.9629,
-        width: '100vw',
-        height: '100vh',
+        width: 'calc(var(--vw, 1vw) * 100)',
+        height: 'calc(var(--vh, 1vh) * 100)',
         zoom: 4
     })
 

@@ -15,7 +15,7 @@ export function SubmitForm(props) {
     const chevronControls = useAnimation();
     const toggleButtonLabelControls = useAnimation();
 
-    const container_variants = {"open": {height: 550, top: `calc(var(--vh, 1vh) * 100 - 550px)`},"close": {height: 50, top: `calc(var(--vh, 1vh) * 100 - 50px)`}}
+    const container_variants = {"open": {height: 520, top: `calc(var(--vh, 1vh) * 100 - 520px)`},"close": {height: 50, top: `calc(var(--vh, 1vh) * 100 - 50px)`}}
     const closeButton_variants = {"open": {backgroundColor: '#000'},"close": {backgroundColor: '#ff3c0a'}}
     const chevron_variants = {"open": {rotate: 0}, "close": {rotate: 180}}
     const toggleButton_variants = {"open": {opacity: 0}, "close": {opacity: 1}}
@@ -47,9 +47,12 @@ export function SubmitForm(props) {
                 variants = {closeButton_variants}
                 initial = {isOpen? "open" : "close"} 
                 animate = {closeButtonControls}
+                onHoverStart = {() => chevronControls.start({scale: 1.3})}
+                onHoverEnd = {() => chevronControls.start({scale: 1})}
                 onClick={() => {
                     setIsOpen(!isOpen)
                     !isOpen && setIsThankYou(false)
+                    chevronControls.start({scale: 1})
                 }}
             >
                 <motion.img 
