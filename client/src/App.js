@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react';
+import Firebase from 'firebase';
+import firebaseConfig from './config';
 import {MapLayer} from './MapLayer.js';
 import {CityDetailView} from './CityDetailView.js'; 
-import {SubmitForm} from './SubmitForm.js'
+import {SubmitForm} from './SubmitForm.js';
 import './App.css';
 
 const fetchJSON = async() => {
@@ -19,6 +21,7 @@ function App() {
   const desktopSize = 1024;
 
   useEffect(()=> {
+    Firebase.initializeApp(firebaseConfig);
     fetchJSON()
       .then(res => {
         setVideoData(res.cities);
@@ -27,6 +30,11 @@ function App() {
       })
       .catch(err => console.log(err))
   },[])
+
+  const onNewLinkSubmit = (newData) => {
+    let newPostKey = Firebase.database().ref('/').push();
+    newPostKey.set(newData);
+  }
 
   const onMarkerClick = (e, city) => {
     e.preventDefault();
@@ -44,7 +52,7 @@ function App() {
     <div className="app">
       <MapLayer className="mapLayer" onMarkerClick={onMarkerClick} videoData={videoData} totalCities={totalCities} />
       <CityDetailView selectedCity={selectedCity} videoData={videoData} onCityDetailClose={onCityDetailClose} desktopSize={desktopSize} />
-      <SubmitForm desktopSize={desktopSize} selectedCity={selectedCity}/>
+      <SubmitForm desktopSize={desktopSize} selectedCity={selectedCity} onNewLinkSubmit={onNewLinkSubmit}/>
     </div>
   );
 }

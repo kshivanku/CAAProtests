@@ -1,12 +1,15 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import {motion, useAnimation, useMotionValue} from 'framer-motion'
 import './App.css'
 import chevron_primary from './chevron-primary.svg'
 import chevron_white from './chevron-white.svg'
 
 export function SubmitForm(props) {
-    const {desktopSize, selectedCity} = props
+    const {desktopSize, selectedCity, onNewLinkSubmit} = props
     const [isOpen, setIsOpen] = useState(window.innerWidth > desktopSize);
+    const [isThankYou, setIsThankYou] = useState(false);
+    const linkEl = useRef(null);
+    const cityEl = useRef(null);
     const containerControls = useAnimation();
     const closeButtonControls = useAnimation();
     const chevronControls = useAnimation();
@@ -44,7 +47,10 @@ export function SubmitForm(props) {
                 variants = {closeButton_variants}
                 initial = {isOpen? "open" : "close"} 
                 animate = {closeButtonControls}
-                onClick={() => {setIsOpen(!isOpen)}}
+                onClick={() => {
+                    setIsOpen(!isOpen)
+                    !isOpen && setIsThankYou(false)
+                }}
             >
                 <motion.img 
                     src={isOpen ? chevron_primary : chevron_white} 
@@ -59,32 +65,46 @@ export function SubmitForm(props) {
                     animate={toggleButtonLabelControls}
                 >Add more protest videos to the map</motion.p>
             </motion.button>
-
-            <motion.div 
-                className="submitFormBody"
-            >
-                <h2>Add more protest videos to the map</h2>
-                <p>This is our chance to visualize India's response to CAA. Videos will be manually reviewed before being added</p>
-                <form action="">
-                    <label htmlFor="form_link" className="field">
-                        <span className="form_label">Link:</span>
-                        <input id="form_link" type="text" placeholder="https://twitter.com/..."/>
-                    </label>
-                    <label htmlFor="form_city" className="field">
-                        <span className="form_label">City:</span>
-                        <input id="form_city" type="text" placeholder="Where is the protest happening"/>
-                    </label>
-                    <motion.button
-                        className = "submitButton" 
-                        onClick={e => e.preventDefault()}
-                        whileHover = {{scale: 1.02}}
-                        whileTap = {{scale: 0.98}}
-                    >
-                        Submit for review
-                    </motion.button>
-                </form>
-                <p className="sendVideoMessage">Want to send us the video instead, our WhatApp is open at +91-xxx-xxx-xxxx</p>
-            </motion.div>
+            {!isThankYou &&
+                <motion.div 
+                    className="submitFormBody"
+                >
+                    <h2>Add more protest videos to the map</h2>
+                    <p>This is our chance to visualize India's response to CAA. Videos will be manually reviewed before being added</p>
+                    <form onSubmit={(e) => {
+                        e.preventDefault()
+                        onNewLinkSubmit({
+                            "link": linkEl.current.value,
+                            "city": cityEl.current.value
+                        })
+                        linkEl.current.value = '';
+                        cityEl.current.value = '';
+                        setIsThankYou(true);
+                    }}>
+                        <label htmlFor="form_link" className="field">
+                            <span className="form_label">Link:</span>
+                            <input required id="form_link" type="url" ref={linkEl} placeholder="https://twitter.com/..."/>
+                        </label>
+                        <label htmlFor="form_city" className="field">
+                            <span className="form_label">City:</span>
+                            <input required id="form_city" type="text" ref={cityEl} placeholder="Where is the protest happening"/>
+                        </label>
+                        <motion.button
+                            type= "submit"
+                            className = "submitButton" 
+                            whileHover = {{scale: 1.02}}
+                            whileTap = {{scale: 0.98}}
+                        >
+                            Submit for review
+                        </motion.button>
+                    </form>
+                    <p className="sendVideoMessage">Want to send us the video instead, our WhatApp is open at +91-xxx-xxx-xxxx</p>
+                </motion.div>
+            }
+            {isThankYou && 
+                <h1>Thank You!</h1>
+            }
+            
         </motion.div>
     )
 }
