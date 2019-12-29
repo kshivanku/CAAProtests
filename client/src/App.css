@@ -109,7 +109,7 @@ body {
 
 @media(min-width: 1024px) {
   .submitFormContainer {
-    width: 450px;
+    width: 380px;
   }
 }
 
@@ -153,7 +153,6 @@ body {
   border-radius: 1em;
   max-width: 16em;
   font-size: 14px;
-  margin-top: 0.4em;
 }
 
 .sendVideoMessage {
@@ -180,10 +179,6 @@ body {
 .toggleCloseButton p {
   font-weight: bold;
   font-size: 1.2em;
-}
-
-.toggleCloseButton:focus {
-  outline: none;
 }
 
 
