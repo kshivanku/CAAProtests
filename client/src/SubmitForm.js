@@ -83,6 +83,7 @@ export function SubmitForm(props) {
                         linkEl.current.value = '';
                         cityEl.current.value = '';
                         setIsThankYou(true);
+                        window.scrollTo(0, 0);
                     }}>
                         <label htmlFor="form_link" className="field">
                             <span className="form_label">Link:</span>
