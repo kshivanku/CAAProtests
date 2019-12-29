@@ -109,7 +109,7 @@ body {
 
 @media(min-width: 1024px) {
   .submitFormContainer {
-    width: 320px;
+    width: 450px;
   }
 }
 
@@ -144,14 +144,16 @@ body {
 
 .submitFormContainer .submitButton {
   grid-column: 2;
-  height: 3em;
+  height: 3.5em;
   cursor: pointer;
   background-color: #ff3c0a;
-  color: rgba(255, 255, 255, 0.80);
+  color: rgba(255, 255, 255, 0.90);
   border: none;
   font-weight: bold;
   border-radius: 1em;
-  max-width: 21em;
+  max-width: 16em;
+  font-size: 14px;
+  margin-top: 0.4em;
 }
 
 .sendVideoMessage {
