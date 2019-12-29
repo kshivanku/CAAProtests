@@ -4,7 +4,7 @@ import {motion, useAnimation} from 'framer-motion'
 export function IntroScreen() {
     const controls = useAnimation();
     const contentControls = useAnimation();
-    const close = {height: 0, transition: {duration: 0.5}}
+    const close = {height: 0, transition: {ease: "easeOut", duration: 1}}
     return (
         <motion.div
             className="introScreenContainer"
@@ -21,7 +21,7 @@ export function IntroScreen() {
                     whileTap={{scale:0.9}}
                     onClick = {()=> {
                         controls.start(close)
-                        contentControls.start({opacity: 0})
+                        contentControls.start({opacity: 0, transition: {duration: 0.1}})
                     }}
                 >Go
                 </motion.button>
