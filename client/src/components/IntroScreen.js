@@ -23,7 +23,7 @@ export function IntroScreen() {
                         controls.start(close)
                         contentControls.start({opacity: 0, transition: {duration: 0.1}})
                     }}
-                >Go
+                >Lets go!
                 </motion.button>
             </motion.div>
         </motion.div>

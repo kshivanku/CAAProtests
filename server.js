@@ -26,7 +26,7 @@ function tsvJSON(tsv, prevjson){
         let descriptionIndex = titleLine.split(/\t/).indexOf('Description');
         let latIndex = titleLine.split(/\t/).indexOf('Latitude (°N)');
         let longIndex = titleLine.split(/\t/).indexOf('Longitude (°E)');
-        let linkIndex = titleLine.split(/\t/).indexOf('Video link');
+        let linkIndex = titleLine.split(/\t/).indexOf('Link');
         let cityIndex = titleLine.split(/\t/).indexOf('Location');
         let prevTotalVideos = prevjson.totalVideos ? prevjson.totalVideos : 0 ;
         if(prevTotalVideos === lines.length) {
