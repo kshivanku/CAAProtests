@@ -56,7 +56,9 @@ export function CityDetailView(props) {
                                 <div className="linkCard" key={id + index}>
                                     <h2>{videoObj.title}</h2>
                                     <p>{videoObj.description}</p>
-                                    <TwitterVideoEmbed id={id} onLoad={e => {if(e){e.style.display = "inline-block"}}} />
+                                    <TwitterVideoEmbed id={id} 
+                                        onLoad={e => {if(e){e.style.display = "inline-block"}}} 
+                                    />
                                 </div>
                             )
                         }
