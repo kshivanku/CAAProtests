@@ -5,6 +5,7 @@ import {CityDetailView} from './CityDetailView.js';
 import {SubmitForm} from './SubmitForm.js';
 import {IntroScreen} from './IntroScreen';
 import './CSS/App.css'
+import SmokeElement from "smoke-effect-react";
 // import config from '../app_config'
 
 const fetchJSON = async() => {
@@ -64,6 +65,13 @@ function App() {
     <div className="app">
       <IntroScreen />
       <MapLayer className="mapLayer" onMarkerClick={onMarkerClick} videoData={videoData} totalCities={totalCities} />
+      <SmokeElement
+          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/quickText.png"
+          opacity="1"
+          smokeSrc="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Smoke-Element.png"
+          smokeOpacity="0.3"
+          className="smoke"
+        />
       <CityDetailView selectedCity={selectedCity} videoData={videoData} onCityDetailClose={onCityDetailClose} desktopSize={desktopSize} />
       <SubmitForm desktopSize={desktopSize} selectedCity={selectedCity} onNewLinkSubmit={onNewLinkSubmit}/>
     </div>
