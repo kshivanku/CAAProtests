@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'BarlowSemiCondensed';
-  src: local('BarlowSemiCondensed'), url(./fonts/BarlowSemiCondensed-Regular.ttf) format('ttf');
+  src: url(./fonts/BarlowSemiCondensed-Regular.ttf) format('truetype');
   font-weight: 400
 }
 @font-face {
   font-family: 'BarlowSemiCondensed';
-  src: local('BarlowSemiCondensed'), url(./fonts/BarlowSemiCondensed-SemiBold.ttf) format('ttf');
+  src: url(./fonts/BarlowSemiCondensed-SemiBold.ttf) format('truetype');
   font-weight: 600;
 }
 @font-face {
   font-family: 'BarlowSemiCondensed';
-  src: local('BarlowSemiCondensed'), url(./fonts/BarlowSemiCondensed-Black.ttf) format('ttf');
+  src: url(./fonts/BarlowSemiCondensed-Black.ttf) format('truetype');
   font-weight: 900
 }
 
