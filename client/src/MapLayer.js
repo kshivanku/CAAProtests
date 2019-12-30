@@ -27,7 +27,7 @@ export function MapLayer(props) {
             {...viewport} 
             mapboxApiAccessToken={"pk.eyJ1Ijoia3NoaXZhbmt1IiwiYSI6ImNpejRqcnpjMTA0bXEyeHF3aGdhNGx2MjQifQ.-5YZ6vX9kAU3CbEQlSta5g"}
             onViewportChange = {viewport => setViewport(viewport)}
-            mapStyle="mapbox://styles/kshivanku/ck4o1gm6303131enp3jldbqim"
+            mapStyle="mapbox://styles/kshivanku/ck4rqg7rq331v1cmttxjco1el"
         >
             {totalCities.map((city, index) => {
             return (
@@ -39,7 +39,7 @@ export function MapLayer(props) {
                     <button className='marker_btn' onClick={e => onMarkerClick(e, city)}>
                         <motion.p
                             style = {{
-                                backgroundColor: `rgba(255, 60, 10, 0.5)`,
+                                backgroundColor: `rgba(255, 60, 10, 0.75)`,
                                 width: '48px',
                                 height: '48px',
                                 lineHeight: '48px',
@@ -72,3 +72,6 @@ export function MapLayer(props) {
         </div>
     )
 }
+
+// STYLES:
+// mapbox://styles/kshivanku/ck4o1gm6303131enp3jldbqim

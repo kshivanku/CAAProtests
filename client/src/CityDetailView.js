@@ -65,7 +65,7 @@ export function CityDetailView(props) {
                                 <div className="linkCard" key={index}>
                                     <h2>{videoObj.title}</h2>
                                     <p>{videoObj.description}</p>
-                                    <a href={videoObj.link} target="_blank" style={{display: "block", marginBottom: '8px', color:'#fff'}}>{videoObj.link} </a>
+                                    <a href={videoObj.link} target="_blank" className='rawLink'>{videoObj.link} </a>
                                 </div>
                             )
                         }   
