@@ -27,8 +27,6 @@ const config = {
 
 function App() {
 
-  console.log(process.env.REACT_APP_DATABASE_URL);
-
   const [selectedCity, setSelectedCity] = useState(null);
   const [videoData, setVideoData] = useState({});
   const [totalCities, setTotalCities] = useState([]);
