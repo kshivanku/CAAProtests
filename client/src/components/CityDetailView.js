@@ -1,7 +1,7 @@
 import React from 'react';
 import {motion, AnimatePresence, useMotionValue} from 'framer-motion';
 import {TwitterVideoEmbed} from 'react-twitter-embed';
-import close from './close.svg'
+import close from '../icons/close.svg'
 
 export function CityDetailView(props) {
     const {selectedCity, videoData, onCityDetailClose, desktopSize } = props;

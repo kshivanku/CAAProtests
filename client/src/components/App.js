@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import Firebase from 'firebase';
-import firebaseConfig from './config';
+import config from '../config.js';
 import {MapLayer} from './MapLayer.js';
 import {CityDetailView} from './CityDetailView.js'; 
 import {SubmitForm} from './SubmitForm.js';
 import {IntroScreen} from './IntroScreen';
-import './App.css';
+import './CSS/App.css'
 
 const fetchJSON = async() => {
   const res = await fetch('/getVideoData');
@@ -22,7 +22,7 @@ function App() {
   const desktopSize = 1024;
 
   useEffect(()=> {
-    Firebase.initializeApp(firebaseConfig);
+    Firebase.initializeApp(config.firebaseConfig);
     fetchJSON()
       .then(res => {
         setVideoData(res.cities);

@@ -10,4 +10,6 @@ const firebaseConfig = {
 
 }
 
-export default firebaseConfig
+const mapboxApiAccessToken = 'pk.eyJ1Ijoia3NoaXZhbmt1IiwiYSI6ImNpejRqcnpjMTA0bXEyeHF3aGdhNGx2MjQifQ.-5YZ6vX9kAU3CbEQlSta5g';
+
+export default {firebaseConfig, mapboxApiAccessToken};
