@@ -5,7 +5,7 @@ import {CityDetailView} from './CityDetailView.js';
 import {SubmitForm} from './SubmitForm.js';
 import {IntroScreen} from './IntroScreen';
 import './CSS/App.css'
-import config from '../app_config.js'
+import config from '../app_config'
 
 const fetchJSON = async() => {
   const res = await fetch('/getVideoData');
