@@ -38,22 +38,14 @@ export function MapLayer(props) {
                 >
                     <button className='marker_btn' onClick={e => onMarkerClick(e, city)}>
                         <motion.p
-                            style = {{
-                                backgroundColor: `rgba(255, 60, 10, 0.75)`,
-                                width: '48px',
-                                height: '48px',
-                                lineHeight: '48px',
-                                color: '#fff',
-                                fontWeight: "bold",
-                                fontSize: '1.2em'
+                            style={{
+                                borderRadius: '24px'
                             }}
-                            className="marker_text"
+                            className="marker_txt"
                             initial = {{
-                                borderRadius: '15px',
                                 scale: 1
                             }}
                             animate= {{
-                                borderRadius: '24px',
                                 scale: 1.2
                             }}
                             transition = {{

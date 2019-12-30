@@ -62,6 +62,16 @@
   cursor: pointer;
 }
 
+.marker_txt {
+  background-color: rgba(255, 60, 10, 0.75);
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  color: #fff;
+  font-weight: bold;
+  font-size: '1.2em';
+}
+
 .close_btn {
   width: 48px;
   height: 48px;
