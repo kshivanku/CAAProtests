@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'BarlowSemiCondensed';
+  src: local('BarlowSemiCondensed'), url(./fonts/BarlowSemiCondensed-Regular.ttf) format('ttf');
+  font-weight: 400
+}
+@font-face {
+  font-family: 'BarlowSemiCondensed';
+  src: local('BarlowSemiCondensed'), url(./fonts/BarlowSemiCondensed-SemiBold.ttf) format('ttf');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'BarlowSemiCondensed';
+  src: local('BarlowSemiCondensed'), url(./fonts/BarlowSemiCondensed-Black.ttf) format('ttf');
+  font-weight: 900
+}
+
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box !important;
@@ -16,7 +32,7 @@ body {
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; */
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: 'BarlowSemiCondensed', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
