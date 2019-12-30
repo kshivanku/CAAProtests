@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import Firebase from 'firebase';
-import config from '../config.js';
 import {MapLayer} from './MapLayer.js';
 import {CityDetailView} from './CityDetailView.js'; 
 import {SubmitForm} from './SubmitForm.js';
@@ -20,9 +19,19 @@ function App() {
   const [videoData, setVideoData] = useState({});
   const [totalCities, setTotalCities] = useState([]);
   const desktopSize = 1024;
+  const config = {
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    databaseURL: process.env.REACT_APP_DATABASE_URL,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID,
+    measurementId: process.env.REACT_APP_MEASUREMENT_ID
+  }
 
   useEffect(()=> {
-    Firebase.initializeApp(config.firebaseConfig);
+    Firebase.initializeApp(config);
     fetchJSON()
       .then(res => {
         setVideoData(res.cities);

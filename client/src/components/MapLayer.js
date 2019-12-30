@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import ReactMapGL, {Marker} from 'react-map-gl'
 import {motion} from 'framer-motion'
-import config from '../config.js';
 
 export function MapLayer(props) {
 
@@ -26,7 +25,7 @@ export function MapLayer(props) {
         <div>
         <ReactMapGL 
             {...viewport} 
-            mapboxApiAccessToken={config.mapboxApiAccessToken}
+            mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_API_ACCESS_TOKEN}
             onViewportChange = {viewport => setViewport(viewport)}
             mapStyle="mapbox://styles/kshivanku/ck4rqg7rq331v1cmttxjco1el"
         >
