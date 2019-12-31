@@ -10,11 +10,28 @@ const port = process.env.PORT || 5000;
 const datasrc = "SHEET"
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-
-
-
-
 var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1U6HqFmMggr_N9mGh_P08yvJcohf3IdbTmTw59Sio9Ao/edit#gid=0';
+
+
+app.get('/getVideoData', async (req, res) => {
+    if(datasrc==="TSV"){
+      let rawtsv = fs.readFileSync('./RawData/VideoData.tsv', 'utf8')
+      let prevjson = JSON.parse(fs.readFileSync('./RawData/VideoData.json'))
+      let revisedJSON = await tsvJSON(rawtsv, prevjson);
+      fs.writeFileSync('./RawData/VideoData.json', JSON.stringify(revisedJSON, null, 2))
+      console.log("Sending back TSV Response")
+      res.send(revisedJSON)
+    }
+    if(datasrc==="SHEET"){
+      // let rawtsv = fs.readFileSync('./RawData/VideoData.tsv', 'utf8')
+      // let prevjson = JSON.parse(fs.readFileSync('./RawData/VideoData.json'))
+      let revisedJSON = await getSheetData()
+      fs.writeFileSync('./RawData/VideoData.json', JSON.stringify(revisedJSON, null, 2))
+      console.log("Sending back Sheet Response")
+      res.send(revisedJSON)
+    }
+
+})
 
 function getSheetData() {
   return new Promise((resolve) => {
@@ -72,26 +89,6 @@ function processSheetData (data, tabletop) {
         return(prevjson)
   }
 }
-
-app.get('/getVideoData', async (req, res) => {
-    if(datasrc==="TSV"){
-      let rawtsv = fs.readFileSync('./RawData/VideoData.tsv', 'utf8')
-      let prevjson = JSON.parse(fs.readFileSync('./RawData/VideoData.json'))
-      let revisedJSON = await tsvJSON(rawtsv, prevjson);
-      fs.writeFileSync('./RawData/VideoData.json', JSON.stringify(revisedJSON, null, 2))
-      console.log("Sending back TSV Response")
-      res.send(revisedJSON)
-    }
-    if(datasrc==="SHEET"){
-      // let rawtsv = fs.readFileSync('./RawData/VideoData.tsv', 'utf8')
-      // let prevjson = JSON.parse(fs.readFileSync('./RawData/VideoData.json'))
-      let revisedJSON = await getSheetData()
-      fs.writeFileSync('./RawData/VideoData.json', JSON.stringify(revisedJSON, null, 2))
-      console.log("Sending back Sheet Response")
-      res.send(revisedJSON)
-    }
-
-})
 
 function tsvJSON(tsv, prevjson){
     return new Promise((resolve, reject) => {
