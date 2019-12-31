@@ -3,17 +3,42 @@ let bodyParser = require('body-parser');
 let fs = require('fs');
 let request = require('request');
 const path = require('path');
-
+const Tabletop = require('tabletop'); //arjunvenkatraman added to load data from Google Sheets directly
+let arrayWithData = [];
 const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+
+
+
+var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1yTm89e7QStAhWzKzCR3dTdKlLC9ALfyeFox7SXJRhAU/edit#gid=0';
+
+function getData() {
+  return new Promise((resolve) => {
+    Tabletop.init({key: publicSpreadsheetUrl,
+      callback: function (data, tabletop) { resolve(showInfo(data, tabletop)); },
+      simpleSheet: true})
+  })
+}
+
+function showInfo (data, tabletop) {
+  //console.log('showInfo active');
+  arrayWithData.push(...data);
+  //console.log(arrayWithData, 'data is here')
+  return arrayWithData;
+}
+
 app.get('/getVideoData', async (req, res) => {
     let rawtsv = fs.readFileSync('./RawData/VideoData.tsv', 'utf8')
     let prevjson = JSON.parse(fs.readFileSync('./RawData/VideoData.json'))
     let revisedJSON = await tsvJSON(rawtsv, prevjson);
+    console.log(revisedJSON)
+    let gsheetJSON = await getData()
+    console.log(gsheetJSON, "from promise")
+
     fs.writeFileSync('./RawData/VideoData.json', JSON.stringify(revisedJSON, null, 2))
     res.send(revisedJSON)
 })
@@ -75,7 +100,7 @@ function tsvJSON(tsv, prevjson){
 if (process.env.NODE_ENV === 'production') {
     // Serve any static files
     app.use(express.static(path.join(__dirname, 'client/build')));
-      
+
     // Handle React routing, return all requests to React app
     app.get('*', function(req, res) {
       res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
