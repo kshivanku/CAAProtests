@@ -7,7 +7,7 @@ const Tabletop = require('tabletop'); //arjunvenkatraman added to load data from
 let arrayWithData = [];
 const app = express();
 const port = process.env.PORT || 5000;
-
+const datasrc = "SHEET"
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -16,31 +16,43 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1yTm89e7QStAhWzKzCR3dTdKlLC9ALfyeFox7SXJRhAU/edit#gid=0';
 
-function getData() {
+function getSheetData() {
   return new Promise((resolve) => {
     Tabletop.init({key: publicSpreadsheetUrl,
-      callback: function (data, tabletop) { resolve(showInfo(data, tabletop)); },
+      callback: function (data, tabletop) { resolve(processSheetData(data, tabletop)); },
       simpleSheet: true})
   })
 }
 
-function showInfo (data, tabletop) {
+function processSheetData (data, tabletop) {
   //console.log('showInfo active');
-  arrayWithData.push(...data);
+  // arrayWithData.push(...data);
   //console.log(arrayWithData, 'data is here')
-  return arrayWithData;
+  // return arrayWithData;
+  let prevTotalVideos = prevjson.totalVideos ? prevjson.totalVideos : 0 ;
+  if(prevTotalVideos === data.length) {
+      resolve(prevjson)
+  }
 }
 
 app.get('/getVideoData', async (req, res) => {
-    let rawtsv = fs.readFileSync('./RawData/VideoData.tsv', 'utf8')
-    let prevjson = JSON.parse(fs.readFileSync('./RawData/VideoData.json'))
-    let revisedJSON = await tsvJSON(rawtsv, prevjson);
-    console.log(revisedJSON)
-    let gsheetJSON = await getData()
-    console.log(gsheetJSON, "from promise")
+    if(datasrc==="TSV"){
+      let rawtsv = fs.readFileSync('./RawData/VideoData.tsv', 'utf8')
+      let prevjson = JSON.parse(fs.readFileSync('./RawData/VideoData.json'))
+      let revisedJSON = await tsvJSON(rawtsv, prevjson);
+      fs.writeFileSync('./RawData/VideoData.json', JSON.stringify(revisedJSON, null, 2))
+      console.log("Sending back TSV Response")
+      res.send(revisedJSON)
+    }
+    if(datasrc==="SHEET"){
+      // let rawtsv = fs.readFileSync('./RawData/VideoData.tsv', 'utf8')
+      let prevjson = JSON.parse(fs.readFileSync('./RawData/VideoData.json'))
+      let revisedJSON = await getSheetData(prevjson)
+      fs.writeFileSync('./RawData/VideoData.json', JSON.stringify(revisedJSON, null, 2))
+      console.log("Sending back Sheet Response")
+      res.send(revisedJSON)
+    }
 
-    fs.writeFileSync('./RawData/VideoData.json', JSON.stringify(revisedJSON, null, 2))
-    res.send(revisedJSON)
 })
 
 function tsvJSON(tsv, prevjson){
