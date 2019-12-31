@@ -13,12 +13,23 @@
   src: url(./fonts/BarlowSemiCondensed-Black.ttf) format('truetype');
   font-weight: 900
 }
-
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Signika:300,400,600,700&display=swap" rel="stylesheet">
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;
   -ms-box-sizing: border-box !important;
+}
+h1{
+  font-family: 'Signika', sans-serif;
+  font-weight:700;
+}
+h2{
+  font-family: 'Roboto', sans-serif;
+  font-weight:300;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  line-height: 24px;
 }
 *, *::before, *::after {
   box-sizing: border-box;
@@ -32,7 +43,7 @@ body {
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; */
-  font-family: 'BarlowSemiCondensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
