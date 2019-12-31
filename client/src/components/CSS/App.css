@@ -62,6 +62,11 @@
   cursor: pointer;
 }
 
+.marker_btn {
+  display: grid;
+  justify-items: center;
+}
+
 .marker_txt {
   background-color: rgba(255, 60, 10, 0.75);
   width: 48px;
@@ -70,6 +75,7 @@
   color: #fff;
   font-weight: bold;
   font-size: '1.2em';
+  margin-bottom: 0.3em;
 }
 
 .close_btn {

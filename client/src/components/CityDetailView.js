@@ -9,10 +9,6 @@ export function CityDetailView(props) {
 
     const closeTransition = {ease: 'easeOut', duration: 0.2, staggerChildren: 0.05, when: "afterChildren", staggerDirection: -1}
     const openTransition = {type: 'spring', damping: 16, staggerChildren: 0.1, delayChildren: 0.3}
-    // const variants = {
-    //     open: {x: 0, y: 0, opacity: 1, transition: openTransition},
-    //     close: (window.innerWidth > desktopSize) ? {x: 600, y: 0, opacity: 0, transition: closeTransition} : {x: 0, y: 300, opacity: 0, transition: closeTransition}
-    // }
 
     const variants = {
         open: (window.innerWidth > desktopSize) ? {width: '30em', height: 'calc(var(--vh, 1vh) * 100)', overflowY: 'scroll', transition: openTransition}:{width: 'calc(var(--vw, 1vw) * 100)', height: 'calc(var(--vh, 1vh) * 90)', overflowY: 'scroll', transition: openTransition},
@@ -54,8 +50,8 @@ export function CityDetailView(props) {
                             let id = videoObj.link.split(/\/?\//)[4].split('?')[0];
                             return (
                                 <div className="linkCard" key={id + index}>
-                                    <h2>{videoObj.title}</h2>
-                                    <p>{videoObj.description}</p>
+                                    <p>{videoObj.date}</p>
+                                    <h2>{videoObj.caption}</h2>
                                     <TwitterVideoEmbed id={id} 
                                         onLoad={e => {if(e){e.style.display = "inline-block"}}} 
                                     />
@@ -65,8 +61,8 @@ export function CityDetailView(props) {
                         else {
                             return (
                                 <div className="linkCard" key={index}>
-                                    <h2>{videoObj.title}</h2>
-                                    <p>{videoObj.description}</p>
+                                    <p>{videoObj.date}</p>
+                                    <h2>{videoObj.caption}</h2>
                                     <a href={videoObj.link} target="_blank" className='rawLink'>{videoObj.link} </a>
                                 </div>
                             )

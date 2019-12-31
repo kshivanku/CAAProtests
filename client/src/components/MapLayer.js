@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import ReactMapGL, {Marker} from 'react-map-gl';
 import {motion} from 'framer-motion';
-// import config from '../app_config';
 
 export function MapLayer(props) {
 
+    let clickedOnMarker = false;
     const {onMarkerClick, videoData, totalCities} = props;
     const [viewport, setViewport] = useState({
         latitude: 20.5937,
@@ -13,6 +13,8 @@ export function MapLayer(props) {
         height: 'calc(var(--vh, 1vh) * 100)',
         zoom: 4
     })
+    const [mouseDownPoint, setMouseDownPoint] = useState({x: 0, y: 0})
+    const [mouseUpPoint, setMouseUpPoint] = useState({x: 0, y: 0})
 
     useEffect(()=> {
         window.addEventListener('resize', () => {
@@ -20,10 +22,23 @@ export function MapLayer(props) {
             let newHeight = window.innerHeight;
             setViewport(prevState => {return {...prevState, width: newWidth, height: newHeight}});
           });
+        window.addEventListener('mousedown', e => setMouseDownPoint({x: e.clientX, y: e.clientY}));
+        window.addEventListener('mouseup', e => setMouseUpPoint({x:e.clientX, y:e.clientY}));
     }, [])
     
     return (
-        <div>
+        <div
+            onClick = {(e)=> {
+                if(!clickedOnMarker && 
+                    mouseDownPoint.x === mouseUpPoint.x && 
+                    mouseDownPoint.y === mouseUpPoint.y
+                    ){
+                        onMarkerClick(e, null); 
+                        clickedOnMarker=false
+                    }
+                }
+            }
+        >
         <ReactMapGL 
             {...viewport} 
             mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_API_ACCESS_TOKEN}
@@ -36,8 +51,10 @@ export function MapLayer(props) {
                     key={index}
                     latitude = {Number(videoData[city].coordinates.latitude)}
                     longitude = {Number(videoData[city].coordinates.longitude)}
+                    offsetLeft={-24} 
+                    offsetTop={-24}
                 >
-                    <button className='marker_btn' onClick={e => onMarkerClick(e, city)}>
+                    <button className='marker_btn' onClick={e => {console.log('clicked on marker'); onMarkerClick(e, city); clickedOnMarker=true}}>
                         <motion.p
                             style={{
                                 borderRadius: '24px'
@@ -56,6 +73,7 @@ export function MapLayer(props) {
                             }}
                             >{videoData[city].videos.length}
                         </motion.p>
+                        <p style={{color: '#fff'}}>{city}</p>
                     </button>
                 </Marker>
             )
