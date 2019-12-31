@@ -15,6 +15,7 @@ app.use(bodyParser.urlencoded({
 var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1U6HqFmMggr_N9mGh_P08yvJcohf3IdbTmTw59Sio9Ao/edit#gid=0';
 
 
+// arjunvenkatraman modified to choose datasrc
 app.get('/getVideoData', async (req, res) => {
   if (datasrc === "TSV") {
     let rawtsv = fs.readFileSync('./RawData/VideoData.tsv', 'utf8')
@@ -25,8 +26,6 @@ app.get('/getVideoData', async (req, res) => {
     res.send(revisedJSON)
   }
   if (datasrc === "SHEET") {
-    // let rawtsv = fs.readFileSync('./RawData/VideoData.tsv', 'utf8')
-    // let prevjson = JSON.parse(fs.readFileSync('./RawData/VideoData.json'))
     let revisedJSON = await getSheetData()
     fs.writeFileSync('./RawData/VideoData.json', JSON.stringify(revisedJSON, null, 2))
     console.log("Sending back Sheet Response")
@@ -35,6 +34,7 @@ app.get('/getVideoData', async (req, res) => {
 
 })
 
+// Pulling from Google Sheets with Tabletop - arjunvenkatraman
 function getSheetData() {
   return new Promise((resolve) => {
     Tabletop.init({
@@ -47,16 +47,12 @@ function getSheetData() {
   })
 }
 
+//Cleaning up the sheet data - arjunvenkatraman
 function processSheetData(data, tabletop) {
-  //console.log('showInfo active');
-  // arrayWithData.push(...data);
-  //console.log(arrayWithData, 'data is here')
-  // return arrayWithData;
   let prevjson = JSON.parse(fs.readFileSync('./RawData/VideoData.json'))
   let prevTotalVideos = prevjson.totalVideos ? prevjson.totalVideos : 0;
   if (prevTotalVideos === data.length) {
     console.log("No New Videos")
-
     return (prevjson)
   } else {
     let lines = data
