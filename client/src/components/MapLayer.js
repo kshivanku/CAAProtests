@@ -56,16 +56,9 @@ export function MapLayer(props) {
                 >
                     <button className='marker_btn' onClick={e => {console.log('clicked on marker'); onMarkerClick(e, city); clickedOnMarker=true}}>
                         <motion.p
-                            style={{
-                                borderRadius: '24px'
-                            }}
                             className="marker_txt"
-                            initial = {{
-                                scale: 1
-                            }}
-                            animate= {{
-                                scale: 1.2
-                            }}
+                            initial = {{scale: 1}}
+                            animate= {{scale: 1.2}}
                             transition = {{
                                 yoyo: Infinity,
                                 ease: 'easeOut',
