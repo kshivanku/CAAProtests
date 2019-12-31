@@ -29,9 +29,47 @@ function processSheetData (data, tabletop) {
   // arrayWithData.push(...data);
   //console.log(arrayWithData, 'data is here')
   // return arrayWithData;
+  let prevjson = JSON.parse(fs.readFileSync('./RawData/VideoData.json'))
   let prevTotalVideos = prevjson.totalVideos ? prevjson.totalVideos : 0 ;
   if(prevTotalVideos === data.length) {
-      resolve(prevjson)
+      console.log("No New Videos")
+
+      return(prevjson)
+  }
+  else{
+        let lines = data
+        for(let i = prevTotalVideos ; i < lines.length ; i++) {
+            let currentline = lines[i];
+            if(prevjson.cities && prevjson.cities[currentline['City']]) {
+                prevjson.cities[currentline['City']].videos.push(
+                    {
+                        link: currentline['Link'],
+                        caption: currentline['Caption'],
+                        date: currentline['Date']
+                    }
+                )
+            }
+            else {
+                if(!prevjson.cities) {
+                    prevjson.cities = {}
+                }
+                prevjson.cities[currentline['City']] = {
+                    videos: [
+                        {
+                            link: currentline['Link'],
+                            caption: currentline['Caption'],
+                            date: currentline['Date']
+                        }
+                    ],
+                    coordinates: {
+                        latitude: currentline['Latitude (°N)'],
+                        longitude: currentline['Longitude (°E)']
+                    }
+                }
+            }
+        }
+        prevjson.totalVideos = lines.length;
+        return(prevjson)
   }
 }
 
@@ -46,8 +84,8 @@ app.get('/getVideoData', async (req, res) => {
     }
     if(datasrc==="SHEET"){
       // let rawtsv = fs.readFileSync('./RawData/VideoData.tsv', 'utf8')
-      let prevjson = JSON.parse(fs.readFileSync('./RawData/VideoData.json'))
-      let revisedJSON = await getSheetData(prevjson)
+      // let prevjson = JSON.parse(fs.readFileSync('./RawData/VideoData.json'))
+      let revisedJSON = await getSheetData()
       fs.writeFileSync('./RawData/VideoData.json', JSON.stringify(revisedJSON, null, 2))
       console.log("Sending back Sheet Response")
       res.send(revisedJSON)
