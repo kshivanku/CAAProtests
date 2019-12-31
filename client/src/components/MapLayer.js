@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import ReactMapGL, {Marker} from 'react-map-gl';
 import {motion} from 'framer-motion';
-// import config from '../app_config';
 
 export function MapLayer(props) {
 
