@@ -49,14 +49,15 @@ function getSheetData() {
 
 //Cleaning up the sheet data - arjunvenkatraman
 function processSheetData(data, tabletop) {
-  let prevjson = JSON.parse(fs.readFileSync('./RawData/VideoData.json'))
-  let prevTotalVideos = prevjson.totalVideos ? prevjson.totalVideos : 0;
-  if (prevTotalVideos === data.length) {
-    console.log("No New Videos")
-    return (prevjson)
-  } else {
+  // let prevjson = JSON.parse(fs.readFileSync('./RawData/VideoData.json'))
+  let prevjson = {"cities":{},"totalVideos":0}
+  // let prevTotalVideos = prevjson.totalVideos ? prevjson.totalVideos : 0;
+  //if (prevTotalVideos === data.length) {
+  //  console.log("No New Videos")
+  //  return (prevjson)
+  //} else {
     let lines = data
-    for (let i = prevTotalVideos; i < lines.length; i++) {
+    for (let i = 0; i < lines.length; i++) {
       let currentline = lines[i];
       if (prevjson.cities && prevjson.cities[currentline['City']]) {
         prevjson.cities[currentline['City']].videos.push({
@@ -83,7 +84,7 @@ function processSheetData(data, tabletop) {
     }
     prevjson.totalVideos = lines.length;
     return (prevjson)
-  }
+  //}
 }
 
 function tsvJSON(tsv, prevjson) {
