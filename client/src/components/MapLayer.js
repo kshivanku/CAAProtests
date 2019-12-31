@@ -55,6 +55,7 @@ export function MapLayer(props) {
                             }}
                             >{videoData[city].videos.length}
                         </motion.p>
+                        <p style={{color: '#fff'}}>{city}</p>
                     </button>
                 </Marker>
             )
