@@ -7,14 +7,14 @@ const Tabletop = require('tabletop'); //arjunvenkatraman added to load data from
 let arrayWithData = [];
 const app = express();
 const port = process.env.PORT || 5000;
-const datasrc = "SHEET"
+const datasrc = "TSV"
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 
 
 
-var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1yTm89e7QStAhWzKzCR3dTdKlLC9ALfyeFox7SXJRhAU/edit#gid=0';
+var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1U6HqFmMggr_N9mGh_P08yvJcohf3IdbTmTw59Sio9Ao/edit#gid=0';
 
 function getSheetData() {
   return new Promise((resolve) => {
