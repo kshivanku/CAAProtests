@@ -12,15 +12,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1U6HqFmMggr_N9mGh_P08yvJcohf3IdbTmTw59Sio9Ao/edit#gid=0';
+const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1U6HqFmMggr_N9mGh_P08yvJcohf3IdbTmTw59Sio9Ao/edit#gid=0';
 
-
-// arjunvenkatraman modified to choose datasrc
+// Datasource check with datasrc var
 app.get('/getVideoData', async (req, res) => {
   if (datasrc === "TSV") {
     let rawtsv = fs.readFileSync('./RawData/VideoData.tsv', 'utf8')
-    let prevjson = JSON.parse(fs.readFileSync('./RawData/VideoData.json'))
-    let revisedJSON = await tsvJSON(rawtsv, prevjson);
+    let revisedJSON = await tsvJSON(rawtsv);
     fs.writeFileSync('./RawData/VideoData.json', JSON.stringify(revisedJSON, null, 2))
     console.log("Sending back TSV Response")
     res.send(revisedJSON)
@@ -34,7 +32,7 @@ app.get('/getVideoData', async (req, res) => {
 
 })
 
-// Pulling from Google Sheets with Tabletop - arjunvenkatraman
+// Pulling from Google Sheets with Tabletop 
 function getSheetData() {
   return new Promise((resolve) => {
     Tabletop.init({
@@ -47,47 +45,37 @@ function getSheetData() {
   })
 }
 
-//Cleaning up the sheet data - arjunvenkatraman
+//Cleaning up the sheet data 
 function processSheetData(data, tabletop) {
-  // let prevjson = JSON.parse(fs.readFileSync('./RawData/VideoData.json'))
-  let prevjson = {"cities":{},"totalVideos":0}
-  // let prevTotalVideos = prevjson.totalVideos ? prevjson.totalVideos : 0;
-  //if (prevTotalVideos === data.length) {
-  //  console.log("No New Videos")
-  //  return (prevjson)
-  //} else {
-    let lines = data
-    for (let i = 0; i < lines.length; i++) {
-      let currentline = lines[i];
-      if (prevjson.cities && prevjson.cities[currentline['City']]) {
-        prevjson.cities[currentline['City']].videos.push({
-          link: currentline['Link'],
-          caption: currentline['Caption'],
-          date: currentline['Date']
-        })
-      } else {
-        if (!prevjson.cities) {
-          prevjson.cities = {}
+    let newjson = {"cities":{},"totalVideos":0}
+    data.map(currentline => {
+        if(newjson.cities[currentline['City']]) {
+            newjson.cities[currentline['City']].videos.push({
+                link: currentline['Link'],
+                caption: currentline['Caption'],
+                date: currentline['Date']
+            })
         }
-        prevjson.cities[currentline['City']] = {
-          videos: [{
-            link: currentline['Link'],
-            caption: currentline['Caption'],
-            date: currentline['Date']
-          }],
-          coordinates: {
-            latitude: currentline['Latitude (°N)'],
-            longitude: currentline['Longitude (°E)']
-          }
+        else {
+            newjson.cities[currentline['City']] = {
+                videos: [{
+                    link: currentline['Link'],
+                    caption: currentline['Caption'],
+                    date: currentline['Date']
+                }],
+                coordinates: {
+                latitude: currentline['Latitude (°N)'],
+                longitude: currentline['Longitude (°E)']
+                }
+            }
         }
-      }
-    }
-    prevjson.totalVideos = lines.length;
-    return (prevjson)
-  //}
+    })
+    newjson.totalVideos = data.length;
+    return (newjson)
 }
 
-function tsvJSON(tsv, prevjson) {
+//Cleaning up the TSV data 
+function tsvJSON(tsv) {
   return new Promise((resolve, reject) => {
     var lines = tsv.split(/\r?\n/);
     let titleLine = lines.shift();
@@ -97,41 +85,36 @@ function tsvJSON(tsv, prevjson) {
     let longIndex = titleLine.split(/\t/).indexOf('Longitude (°E)');
     let linkIndex = titleLine.split(/\t/).indexOf('Link');
     let cityIndex = titleLine.split(/\t/).indexOf('City');
-    let prevTotalVideos = prevjson.totalVideos ? prevjson.totalVideos : 0;
-    if (prevTotalVideos === lines.length) {
-      resolve(prevjson)
-    } else {
-      for (let i = prevTotalVideos; i < lines.length; i++) {
-        let currentline = lines[i].split(/\t/);
-        if (prevjson.cities && prevjson.cities[currentline[cityIndex]]) {
-          prevjson.cities[currentline[cityIndex]].videos.push({
-            link: currentline[linkIndex],
-            caption: currentline[captionIndex],
-            date: currentline[dateIndex]
-          })
-        } else {
-          if (!prevjson.cities) {
-            prevjson.cities = {}
-          }
-          prevjson.cities[currentline[cityIndex]] = {
-            videos: [{
-              link: currentline[linkIndex],
-              caption: currentline[captionIndex],
-              date: currentline[dateIndex]
-            }],
-            coordinates: {
-              latitude: currentline[latIndex],
-              longitude: currentline[longIndex]
-            }
-          }
+    let newjson = {"cities":{},"totalVideos":0}
+
+    lines.map(line => {
+        let currentline = line.split(/\t/);
+        if(newjson.cities[currentline[cityIndex]]) {
+            newjson.cities[currentline[cityIndex]].videos.push({
+                link: currentline[linkIndex],
+                caption: currentline[captionIndex],
+                date: currentline[dateIndex]
+            })
         }
-      }
-      prevjson.totalVideos = lines.length;
-      resolve(prevjson)
-    }
-    reject({
-      error: 'something went wrong in tsv to JSON conversion'
+        else {
+            newjson.cities[currentline[cityIndex]] = {
+                videos: [{
+                    link: currentline[linkIndex],
+                    caption: currentline[captionIndex],
+                    date: currentline[dateIndex]
+                }],
+                coordinates: {
+                    latitude: currentline[latIndex],
+                    longitude: currentline[longIndex]
+                }
+            }
+        }
     })
+    newjson.totalVideos = lines.length;
+    resolve(newjson);
+    // reject({
+    //   error: 'something went wrong in tsv to JSON conversion'
+    // })
   })
 }
 
