@@ -46,32 +46,31 @@ export function MapLayer(props) {
             mapStyle="mapbox://styles/kshivanku/ck4rqg7rq331v1cmttxjco1el"
         >
             {totalCities.map((city, index) => {
-            return (
-                <Marker 
-                    key={index}
-                    latitude = {Number(videoData[city].coordinates.latitude)}
-                    longitude = {Number(videoData[city].coordinates.longitude)}
-                    offsetLeft={-24} 
-                    offsetTop={-24}
-                >
-                    <button className='marker_btn' onClick={e => {console.log('clicked on marker'); onMarkerClick(e, city); clickedOnMarker=true}}>
-                        <motion.p
-                            className="marker_txt"
-                            initial = {{scale: 1}}
-                            animate= {{scale: 1.2}}
-                            transition = {{
-                                yoyo: Infinity,
-                                ease: 'easeOut',
-                                duration: 0.5
-                            }}
-                            >{videoData[city].videos.length}
-                        </motion.p>
-                        <p style={{color: '#fff'}}>{city}</p>
-                    </button>
-                </Marker>
-            )
-            })}
-            
+                return (
+                    <Marker 
+                        key={index}
+                        latitude = {Number(videoData[city].coordinates.latitude)}
+                        longitude = {Number(videoData[city].coordinates.longitude)}
+                        offsetLeft={-24} 
+                        offsetTop={-24}
+                    >
+                        <button className='marker_btn' onClick={e => {console.log('clicked on marker'); onMarkerClick(e, city); clickedOnMarker=true}}>
+                            <motion.p
+                                className="marker_txt"
+                                initial = {{scale: 1}}
+                                animate= {{scale: 1.2}}
+                                transition = {{
+                                    yoyo: Infinity,
+                                    ease: 'easeOut',
+                                    duration: 0.5
+                                }}
+                                >{videoData[city].videos.length}
+                            </motion.p>
+                            <p style={{color: '#fff'}}>{city}</p>
+                        </button>
+                    </Marker>
+                )})
+            }    
         </ReactMapGL>
         </div>
     )

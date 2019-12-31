@@ -49,7 +49,7 @@ function getSheetData() {
 function processSheetData(data, tabletop) {
     let newjson = {"cities":{},"totalVideos":0}
     data.map(currentline => {
-        if(newjson.cities[currentline['City']]) {
+        if(newjson.cities[currentline['City']] !== undefined) {
             newjson.cities[currentline['City']].videos.push({
                 link: currentline['Link'],
                 caption: currentline['Caption'],
@@ -89,7 +89,7 @@ function tsvJSON(tsv) {
 
     lines.map(line => {
         let currentline = line.split(/\t/);
-        if(newjson.cities[currentline[cityIndex]]) {
+        if(newjson.cities[currentline[cityIndex]] != undefined) {
             newjson.cities[currentline[cityIndex]].videos.push({
                 link: currentline[linkIndex],
                 caption: currentline[captionIndex],
