@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {motion} from 'framer-motion'
 import Firebase from 'firebase';
 import {MapLayer} from './MapLayer.js';
 import {CityDetailView} from './CityDetailView.js'; 
@@ -65,13 +66,14 @@ function App() {
     <div className="app">
       <IntroScreen />
       <MapLayer className="mapLayer" onMarkerClick={onMarkerClick} videoData={videoData} totalCities={totalCities} />
+      <motion.div className="smoke" animate={{opacity: 0.5}}>
       <SmokeElement
           src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/quickText.png"
           opacity="1"
           smokeSrc="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Smoke-Element.png"
           smokeOpacity="0.3"
-          className="smoke"
         />
+      </motion.div>
       <CityDetailView selectedCity={selectedCity} videoData={videoData} onCityDetailClose={onCityDetailClose} desktopSize={desktopSize} />
       <SubmitForm desktopSize={desktopSize} selectedCity={selectedCity} onNewLinkSubmit={onNewLinkSubmit}/>
     </div>
