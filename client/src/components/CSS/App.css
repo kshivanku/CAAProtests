@@ -253,6 +253,29 @@
   pointer-events:none
 }
 
+.fond{
+	height:586px;
+	width:753px;
+    margin: 0 auto;
+	background-color:#fff;
+}
+.fume{
+	width:100vw; height:100vh;
+	background-image:url(../../images/SmokeBase2.png);
+	background-position:100px 0;
+	background-repeat:repeat;
+  -webkit-transform:rotate(90deg);
+  -moz-transform:rotate(90deg);
+  animation: defil 12s infinite;
+  animation-timing-function: linear;
+  opacity: 0.4;
+}
+
+@keyframes defil {
+  0%   {background-position:0 0;}
+  100% {background-position:0 5000px;}
+}
+
 
 
 

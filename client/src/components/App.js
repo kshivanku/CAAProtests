@@ -67,12 +67,13 @@ function App() {
       <IntroScreen />
       <MapLayer className="mapLayer" onMarkerClick={onMarkerClick} videoData={videoData} totalCities={totalCities} />
       <motion.div className="smoke" animate={{opacity: 0.5}}>
-      <SmokeElement
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/quickText.png"
-          opacity="1"
+        {/* <SmokeElement
+          src="../images/SmokeBase.png"
+          opacity="0.1"
           smokeSrc="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Smoke-Element.png"
-          smokeOpacity="0.3"
-        />
+          smokeOpacity="0.1"
+        /> */}
+        <div className="fume"></div>
       </motion.div>
       <CityDetailView selectedCity={selectedCity} videoData={videoData} onCityDetailClose={onCityDetailClose} desktopSize={desktopSize} />
       <SubmitForm desktopSize={desktopSize} selectedCity={selectedCity} onNewLinkSubmit={onNewLinkSubmit}/>
