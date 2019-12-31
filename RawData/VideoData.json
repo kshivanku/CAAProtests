@@ -1,782 +1,444 @@
-[
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/deeppatelj/status/1211255098971545606?s=20",
-    "Caption": "Protesters chant slogans against CAA and NRC even as Ahmedabad Police escorts them to Universitiy Police Station.",
-    "Date": "29/12/2019",
-    "City": "Ahmedabad",
-    "State": "Gujarat",
-    "Latitude (°N)": "23.0301",
-    "Longitude (°E)": "72.58",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
+{
+  "cities": {
+    "Ahmedabad": {
+      "videos": [
+        {
+          "link": "https://twitter.com/deeppatelj/status/1211255098971545606?s=20",
+          "caption": "Protesters chant slogans against CAA and NRC even as Ahmedabad Police escorts them to Universitiy Police Station.",
+          "date": "12/29/19"
+        },
+        {
+          "link": "https://twitter.com/satishjha/status/1211259947037724674?s=20",
+          "caption": "Police drag away protesters against CAA and NRC.",
+          "date": "12/30/19"
+        }
+      ],
+      "coordinates": {
+        "latitude": "23.0301",
+        "longitude": "72.58"
+      }
+    },
+    "Aligarh": {
+      "videos": [
+        {
+          "link": "https://twitter.com/MaskoorUsmani/status/1206258211679948800",
+          "caption": "AMU students bear signs of grave injuries after police stormed their campus to disperse anti-CAA protests. The right hand of a student was amputated after being hit by a tear gas shell.",
+          "date": "12/31/19"
+        }
+      ],
+      "coordinates": {
+        "latitude": "27.8922",
+        "longitude": "78.0618"
+      }
+    },
+    "\"Aurangabad, Bihar\"": {
+      "videos": [
+        {
+          "link": "https://twitter.com/alishakhan102/status/1208461878646542336?s=20",
+          "caption": "Aurangabad Police vandalising cars parked on the streets.",
+          "date": "1/2/20"
+        },
+        {
+          "link": "https://twitter.com/SyedYawerHussa1/status/1209296533645971456?s=08",
+          "caption": "Police hitting a car parked inside the premises of a house with lathi and brick",
+          "date": "1/3/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "24.7704",
+        "longitude": "84.38"
+      }
+    },
+    "Bengaluru": {
+      "videos": [
+        {
+          "link": "https://twitter.com/mirrorforyou3/status/1207731416655486976?s=20",
+          "caption": "\"Karnataka Tourism Minister, CT Ravi (BJP), making a statement to the press that situations like Godhra might arise if the majority loses its patience\"",
+          "date": "1/4/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "12.97",
+        "longitude": "77.56"
+      }
+    },
+    "Bijnor": {
+      "videos": [
+        {
+          "link": "https://twitter.com/sharmasupriya/status/1209041730235842560?s=19",
+          "caption": "\"Police dragging paralysed old man, gunshots being heard during the last couple of seconds of the video\"",
+          "date": "1/5/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "29.37",
+        "longitude": "78.13"
+      }
+    },
+    "Bulandshahr": {
+      "videos": [
+        {
+          "link": "https://twitter.com/GauravPandhi/status/1208069417013170176?s=20",
+          "caption": "Policemen damaging cars by lathi leading to cracked glasses on the cars",
+          "date": "1/6/20"
+        },
+        {
+          "link": "https://twitter.com/imMAK02/status/1208094891621806080?s=08",
+          "caption": "Police attacking multiple cars",
+          "date": "1/7/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "28.4104",
+        "longitude": "77.8484"
+      }
+    },
+    "Coimbatore": {
+      "videos": [
+        {
+          "link": "https://twitter.com/Akshayanath/status/1208084321480761345?s=20",
+          "caption": "Peaceful & massive crowd in Coimbatore.",
+          "date": "1/8/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "11",
+        "longitude": "76.95"
+      }
+    },
+    "Delhi": {
+      "videos": [
+        {
+          "link": "https://twitter.com/Amitjanhit/status/1208229532022398978?s=20 ",
+          "caption": "Turning a peaceful protest into a violent one. Charging lathis at the protestors",
+          "date": "1/9/20"
+        },
+        {
+          "link": "https://twitter.com/t_d_h_nair/status/1208039740374732802?s=20",
+          "caption": "Police damaging property by throwing bricks",
+          "date": "1/10/20"
+        },
+        {
+          "link": "https://twitter.com/CNNnews18/status/1208046028479352832",
+          "caption": "Jama Masjid protestors suffer head injuries after being hit on the head",
+          "date": "1/11/20"
+        },
+        {
+          "link": "https://twitter.com/zoyaqureshi_/status/1208030356647088130?s=20",
+          "caption": "The protestors are water cannoned and lathi charged on Darya Ganj street",
+          "date": "1/12/20"
+        },
+        {
+          "link": "https://twitter.com/saahilmenghani/status/1208062858669350912?s=20",
+          "caption": "The police literally quoting the PM on “we know what they look like” to randomly pick up someone who looks Muslim",
+          "date": "1/13/20"
+        },
+        {
+          "link": "https://twitter.com/DevjyotGhoshal/status/1208621623299002368",
+          "caption": " Protestors are being attacked by lathis and tear gas. The attack has left many students severely injured. Students at AMU have needed medical amputation of arms/limbs",
+          "date": "1/14/20"
+        },
+        {
+          "link": "https://twitter.com/thewire_in/status/1208099148148264960?s=20",
+          "caption": "Juveniles beaten up at the Daryaganj police station",
+          "date": "1/15/20"
+        },
+        {
+          "link": "https://twitter.com/sumqqq/status/1208029006961893376?s=20",
+          "caption": "\"The police is chasing protestors and beating them in the streets of Daryaganj, New delhi\"",
+          "date": "1/16/20"
+        },
+        {
+          "link": "https://twitter.com/royradhika7/status/1208135563372445696?s=20",
+          "caption": "\"Police hitting a minor with lathis. 7pm, Jama Masjid - Sound on, please. Hear the sound the lathis make when they hit a minor, hear the cops shout “Maaro, maaro”. This is just horrifying.\"",
+          "date": "1/17/20"
+        },
+        {
+          "link": "https://twitter.com/Zebaism/status/1210542010492436480?s=20",
+          "caption": "This is how Delhi Police chased down peaceful protesters at Kautilya Marg- they were on their way to UP Bhawan",
+          "date": "1/18/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "28.67",
+        "longitude": "77.23"
+      }
+    },
+    "Firozabad": {
+      "videos": [
+        {
+          "link": "https://twitter.com/HemaniBhandari/status/1211493218778398721?s=20",
+          "caption": "\"Among the six (at least) shot dead in Firozabad was a differently abled who has left behind a 3-yr-old girl, one with an ailing dependent mother. They were taken to hospital on wooden carts, burried at 3am. \"",
+          "date": "1/19/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "27.15",
+        "longitude": "78.3949"
+      }
+    },
+    "Gorakhpur": {
+      "videos": [
+        {
+          "link": "https://www.telegraphindia.com/india/blood-stains-uttar-pradesh-streets/cid/1729075?utm_source=twitter&utm_medium=social&utm_campaign=tt_daily_twit",
+          "caption": "Police attacking civilians on the basis of suspicion. RSS workers caught damaging shops in Gorakhpur",
+          "date": "1/20/20"
+        },
+        {
+          "link": "https://twitter.com/azaadindiacol/status/1208488755473993728?s=20",
+          "caption": "The protestors are being lathi charged in Gorakhpur (Ajay Singh Bisht’s hometown)",
+          "date": "1/21/20"
+        },
+        {
+          "link": "https://twitter.com/imMAK02/status/1208428070425649157?s=20",
+          "caption": "A minor muslim boy being beaten by the Gorakhpur police. Police ganging up on and attacking lone men passing by. ",
+          "date": "1/22/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "26.7504",
+        "longitude": "83.38"
+      }
+    },
+    "Hyderabad": {
+      "videos": [
+        {
+          "link": "https://twitter.com/bemusedlawyer/status/1208439278541295618?s=20",
+          "caption": "(Peaceful) Hyderabad roars against the Citizenship Amendment Act. ",
+          "date": "1/23/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "17.4",
+        "longitude": "78.48"
+      }
+    },
+    "Jabalpur": {
+      "videos": [
+        {
+          "link": "https://twitter.com/KhanIrshad0/status/1209189532261855233?s=19",
+          "caption": "Police attacks cars in muslim doctor's compound. Signboard shows the doctor's name. ",
+          "date": "1/24/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "23.1751",
+        "longitude": "79.9551"
+      }
+    },
+    "Kanpur": {
+      "videos": [
+        {
+          "link": "https://twitter.com/Dilsedesh/status/1208420756008255490?s=19",
+          "caption": "Pro BJP civilians with police saying camera holder to put the camera aside and let the police fire. Many pro bjp civilians seen beating men with police ",
+          "date": "1/25/20"
+        },
+        {
+          "link": "https://twitter.com/vinodkapri/status/1210250703664373761",
+          "caption": "Police damaging private property ",
+          "date": "1/26/20"
+        },
+        {
+          "link": "https://twitter.com/vinodkapri/status/1210250703664373761?s=09",
+          "caption": "\"Attacking private property of people not even involved in protests. Talaq Mahal, Kanpur\"",
+          "date": "1/27/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "26.44",
+        "longitude": "80.33"
+      }
+    },
+    "Lucknow": {
+      "videos": [
+        {
+          "link": "https://www.thehindu.com/news/national/a-first-person-account-by-the-hindu-correspondent-omar-rashid-of-how-he-was-picked-up-threatened-and-released-by-cops/article30361909.ece",
+          "caption": "Journalist Omar Rashid and Robin Verma arrested and assaulted by the police on suspecting that they were a part of the protest and on the basis that Rashid was a Kashmiri.   A “The Hindu” journalist arrested in UP or no reason because he was Kashmiri",
+          "date": "1/28/20"
+        },
+        {
+          "link": "https://www.thequint.com/news/india/sadaf-zabeen-arrested-beaten-by-police",
+          "caption": "Woman school teacher arrested and beaten brutally. Sadaf Jafar being arrested on questioning the police for not taking strict actions against the stone pelters",
+          "date": "1/29/20"
+        },
+        {
+          "link": "https://twitter.com/MirrorNow/status/1208315524486254592?s=20",
+          "caption": "One of the casualties is a 8-year old. 8. Years. Old.",
+          "date": "1/30/20"
+        },
+        {
+          "link": "https://twitter.com/doamuslims/status/1208021114296946689?s=20",
+          "caption": "Police throwing stones at Muslims praying in Lucknow. Police pelting stones on people due to which some people also throwing back stones",
+          "date": "1/31/20"
+        },
+        {
+          "link": "https://twitter.com/DesiPoliticks/status/1209173205040160774?s=08",
+          "caption": "Police charging towards peaceful procession of protestors from behind ",
+          "date": "2/1/20"
+        },
+        {
+          "link": "https://twitter.com/AapAfroz/status/1209072154001596417?s=08",
+          "caption": "Police attacking cars in Husainabad Lucknow ",
+          "date": "2/2/20"
+        },
+        {
+          "link": "https://twitter.com/srivatsayb/status/1206886926289997825?s=08",
+          "caption": "Civilians with BJP stickers throwing stones on students .",
+          "date": "2/3/20"
+        },
+        {
+          "link": "https://twitter.com/cjwerleman/status/1209163918033080322?s=19",
+          "caption": "Pro BJP men attacking lone Muslim man",
+          "date": "2/4/20"
+        },
+        {
+          "link": "https://twitter.com/neobie14/status/1208691872866226176?s=19",
+          "caption": "Police breaking locks of shops as woman saying in video",
+          "date": "2/5/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "26.855",
+        "longitude": "80.915"
+      }
+    },
+    "Mangalore": {
+      "videos": [
+        {
+          "link": "https://twitter.com/srivatsayb/status/1208052736370954241?s=20",
+          "caption": "Police firing the mob at the protest",
+          "date": "2/6/20"
+        },
+        {
+          "link": "https://twitter.com/writesalman/status/1208069776884428800?s=20",
+          "caption": "Police lathi-charged on people who weren't even in the protests.",
+          "date": "2/7/20"
+        },
+        {
+          "link": "https://twitter.com/KKAdeeb1/status/1209938288951214080?s=19",
+          "caption": "\"Mushraf, 16 yr old student was just standing outside his college Matha Education Center waiting for bus, immediately a bunch of police came & attacked him mercilessly.\"",
+          "date": "2/8/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "12.9",
+        "longitude": "74.85"
+      }
+    },
+    "Meerut": {
+      "videos": [
+        {
+          "link": "https://twitter.com/zebatweets/status/1210418886392201217?s=20",
+          "caption": "\"In Uttar Pradesh's Meerut, we found CCTV footage showing police striking CCTV cameras with batons before screen goes blank.   Five men were killed by bullets in the area that day. Families accuse police. Police deny charges.\"",
+          "date": "2/9/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "29.0004",
+        "longitude": "77.7"
+      }
+    },
+    "Mumbai": {
+      "videos": [
+        {
+          "link": "https://twitter.com/AzmiShabana/status/1207698719115808768",
+          "caption": "Peaceful",
+          "date": "2/10/20"
+        },
+        {
+          "link": "https://twitter.com/advsanwar/status/1208728309623873538?s=20",
+          "caption": "\"Peaceful. Protest in Dharavi, Asia's largest slum in Mumbai \"",
+          "date": "2/11/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "19.017",
+        "longitude": "72.857"
+      }
+    },
+    "Murshidabad": {
+      "videos": [
+        {
+          "link": "https://www.telegraphindia.com/states/west-bengal/stone-gang-in-fake-skullcap-held-by-murshidabad-police/cid/1728657",
+          "caption": "\"Alleged BJP workers pelting stones at an engine, dressed in skull caps fomenting violence\"",
+          "date": "2/12/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "24.17",
+        "longitude": "88.28"
+      }
+    },
+    "Muzaffarnagar": {
+      "videos": [
+        {
+          "link": "https://twitter.com/yogital/status/1210514405730873345?s=19",
+          "caption": "Forcible entry into households and subsequent looting and threats",
+          "date": "2/13/20"
+        },
+        {
+          "link": "https://twitter.com/UAH_India/status/1211117998745894912?s=20",
+          "caption": "\"Moulana Syed raza hussaini (82), a shia scholar, was dragged out from Madarsa & brutally beaten up by cops in Muzaffarnagar, UP.\"",
+          "date": "2/14/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "29.485",
+        "longitude": "77.695"
+      }
+    },
+    "Nagpur": {
+      "videos": [
+        {
+          "link": "https://twitter.com/shraddhs/status/1208215489157054464",
+          "caption": "Peaceful protest in Nagpur",
+          "date": "2/15/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "21.17",
+        "longitude": "79.09"
+      }
+    },
+    "Patna": {
+      "videos": [
+        {
+          "link": "https://twitter.com/neobie14/status/1208661457585549312?s=19",
+          "caption": "Police destroying vehicles",
+          "date": "2/16/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "25.625",
+        "longitude": "85.13"
+      }
+    },
+    "Pune": {
+      "videos": [
+        {
+          "link": "https://twitter.com/CPPuneCity/status/1208057982929391616",
+          "caption": "Peaceful",
+          "date": "2/17/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "18.53",
+        "longitude": "73.85"
+      }
+    },
+    "Vaniyambadi": {
+      "videos": [
+        {
+          "link": "https://twitter.com/itssinghswati/status/1207995229455839233?s=20",
+          "caption": "(Peaceful) National Anthem in one voice.  Video from #CAA_NRC_Protests at Vaniyambadi in Tamil Nadu.  ",
+          "date": "2/18/20"
+        }
+      ],
+      "coordinates": {
+        "latitude": "12.68",
+        "longitude": "78.63"
+      }
+    }
   },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/satishjha/status/1211259947037724674?s=20",
-    "Caption": "Police drag away protesters against CAA and NRC.",
-    "Date": "29/12/2019",
-    "City": "Ahmedabad",
-    "State": "Gujarat",
-    "Latitude (°N)": "23.0301",
-    "Longitude (°E)": "72.58",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/MaskoorUsmani/status/1206258211679948800",
-    "Caption": "AMU students bear signs of grave injuries after police stormed their campus to disperse anti-CAA protests. The right hand of a student was amputated after being hit by a tear gas shell.",
-    "Date": "15/12/2019",
-    "City": "Aligarh",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "27.8922",
-    "Longitude (°E)": "78.0618",
-    "Who are the victims?": "Students",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": "0"
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/Repositoryindia/status/1210547886934511616?s=09",
-    "Caption": "TWEET UNAVAILABLE NOW.",
-    "Date": "",
-    "City": "Aligarh",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "27.8922",
-    "Longitude (°E)": "78.0618",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/alishakhan102/status/1208461878646542336?s=20",
-    "Caption": "Police damaging vehicles & their mirrors with lathis",
-    "Date": "",
-    "City": "Aurangabad, Bihar",
-    "State": "Bihar",
-    "Latitude (°N)": "24.7704",
-    "Longitude (°E)": "84.38",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": "0"
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/SyedYawerHussa1/status/1209296533645971456?s=08",
-    "Caption": "Police hitting a car parked inside the premises of a house with lathi and brick",
-    "Date": "",
-    "City": "Aurangabad, Bihar",
-    "State": "Bihar",
-    "Latitude (°N)": "24.7704",
-    "Longitude (°E)": "84.38",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/mirrorforyou3/status/1207731416655486976?s=20",
-    "Caption": "Karnataka Tourism Minister, CT Ravi (BJP), making a statement to the press that situations like Godhra might arise if the majority loses its patience",
-    "Date": "",
-    "City": "Bengaluru",
-    "State": "Karnataka",
-    "Latitude (°N)": "12.97",
-    "Longitude (°E)": "77.56",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": "0"
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/sharmasupriya/status/1209041730235842560?s=19",
-    "Caption": "Police dragging paralysed old man, gunshots being heard during the last couple of seconds of the video",
-    "Date": "",
-    "City": "Bijnor",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "29.37",
-    "Longitude (°E)": "78.13",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/GauravPandhi/status/1208069417013170176?s=20",
-    "Caption": "Policemen damaging cars by lathi leading to cracked glasses on the cars",
-    "Date": "",
-    "City": "Bulandshahr",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "28.4104",
-    "Longitude (°E)": "77.8484",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": "0"
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/imMAK02/status/1208094891621806080?s=08",
-    "Caption": "Police attacking multiple cars",
-    "Date": "",
-    "City": "Bulandshahr",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "28.4104",
-    "Longitude (°E)": "77.8484",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/Akshayanath/status/1208084321480761345?s=20",
-    "Caption": "Peaceful & massive crowd in Coimbatore.",
-    "Date": "",
-    "City": "Coimbatore",
-    "State": "Tamil Nadu",
-    "Latitude (°N)": "11",
-    "Longitude (°E)": "76.95",
-    "Who are the victims?": "-",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/Amitjanhit/status/1208229532022398978?s=20 ",
-    "Caption": "Turning a peaceful protest into a violent one. Charging lathis at the protestors",
-    "Date": "",
-    "City": "Delhi",
-    "State": "New Delhi",
-    "Latitude (°N)": "28.67",
-    "Longitude (°E)": "77.23",
-    "Who are the victims?": "Residents",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": "0"
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/t_d_h_nair/status/1208039740374732802?s=20",
-    "Caption": "Police damaging property by throwing bricks",
-    "Date": "",
-    "City": "Delhi",
-    "State": "New Delhi",
-    "Latitude (°N)": "28.67",
-    "Longitude (°E)": "77.23",
-    "Who are the victims?": "Residents",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": "0"
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/CNNnews18/status/1208046028479352832",
-    "Caption": "Jama Masjid protestors suffer head injuries after being hit on the head",
-    "Date": "",
-    "City": "Delhi",
-    "State": "New Delhi",
-    "Latitude (°N)": "28.67",
-    "Longitude (°E)": "77.23",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": "0"
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/zoyaqureshi_/status/1208030356647088130?s=20",
-    "Caption": "The protestors are water cannoned and lathi charged on Darya Ganj street",
-    "Date": "",
-    "City": "Delhi",
-    "State": "New Delhi",
-    "Latitude (°N)": "28.67",
-    "Longitude (°E)": "77.23",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": "0"
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/saahilmenghani/status/1208062858669350912?s=20",
-    "Caption": "The police literally quoting the PM on “we know what they look like” to randomly pick up someone who looks Muslim",
-    "Date": "",
-    "City": "Delhi",
-    "State": "New Delhi",
-    "Latitude (°N)": "28.67",
-    "Longitude (°E)": "77.23",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": "0"
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/DevjyotGhoshal/status/1208621623299002368",
-    "Caption": " Protestors are being attacked by lathis and tear gas. The attack has left many students severely injured. Students at AMU have needed medical amputation of arms/limbs",
-    "Date": "",
-    "City": "Delhi",
-    "State": "New Delhi",
-    "Latitude (°N)": "28.67",
-    "Longitude (°E)": "77.23",
-    "Who are the victims?": "Students",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": "0"
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/thewire_in/status/1208099148148264960?s=20",
-    "Caption": "Juveniles beaten up at the Daryaganj police station",
-    "Date": "",
-    "City": "Delhi",
-    "State": "New Delhi",
-    "Latitude (°N)": "28.67",
-    "Longitude (°E)": "77.23",
-    "Who are the victims?": "Children",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": "0"
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/sumqqq/status/1208029006961893376?s=20",
-    "Caption": "The police is chasing protestors and beating them in the streets of Daryaganj, New delhi",
-    "Date": "",
-    "City": "Delhi",
-    "State": "New Delhi",
-    "Latitude (°N)": "28.67",
-    "Longitude (°E)": "77.23",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/royradhika7/status/1208135563372445696?s=20",
-    "Caption": "Police hitting a minor with lathis. 7pm, Jama Masjid - Sound on, please. Hear the sound the lathis make when they hit a minor, hear the cops shout “Maaro, maaro”. This is just horrifying.",
-    "Date": "",
-    "City": "Delhi",
-    "State": "New Delhi",
-    "Latitude (°N)": "28.67",
-    "Longitude (°E)": "77.23",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/Zebaism/status/1210542010492436480?s=20",
-    "Caption": "This is how Delhi Police chased down peaceful protesters at Kautilya Marg- they were on their way to UP Bhawan",
-    "Date": "",
-    "City": "Delhi",
-    "State": "New Delhi",
-    "Latitude (°N)": "28.67",
-    "Longitude (°E)": "77.23",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/HemaniBhandari/status/1211493218778398721?s=20",
-    "Caption": "Among the six (at least) shot dead in Firozabad was a differently abled who has left behind a 3-yr-old girl, one with an ailing dependent mother. They were taken to hospital on wooden carts, burried at 3am. ",
-    "Date": "",
-    "City": "Firozabad",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "27.15",
-    "Longitude (°E)": "78.3949",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://www.telegraphindia.com/india/blood-stains-uttar-pradesh-streets/cid/1729075?utm_source=twitter&utm_medium=social&utm_campaign=tt_daily_twit",
-    "Caption": "Police attacking civilians on the basis of suspicion. RSS workers caught damaging shops in Gorakhpur",
-    "Date": "",
-    "City": "Gorakhpur",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "26.7504",
-    "Longitude (°E)": "83.38",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": "0"
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/azaadindiacol/status/1208488755473993728?s=20",
-    "Caption": "The protestors are being lathi charged in Gorakhpur (Ajay Singh Bisht’s hometown)",
-    "Date": "",
-    "City": "Gorakhpur",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "26.7504",
-    "Longitude (°E)": "83.38",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": "0"
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/imMAK02/status/1208428070425649157?s=20",
-    "Caption": "A minor muslim boy being beaten by the Gorakhpur police. Police ganging up on and attacking lone men passing by. ",
-    "Date": "",
-    "City": "Gorakhpur",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "26.7504",
-    "Longitude (°E)": "83.38",
-    "Who are the victims?": "Children",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": "0"
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/bemusedlawyer/status/1208439278541295618?s=20",
-    "Caption": "(Peaceful) Hyderabad roars against the Citizenship Amendment Act. ",
-    "Date": "",
-    "City": "Hyderabad",
-    "State": "Telangana",
-    "Latitude (°N)": "17.4",
-    "Longitude (°E)": "78.48",
-    "Who are the victims?": "-",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/KhanIrshad0/status/1209189532261855233?s=19",
-    "Caption": "Police attacks cars in muslim doctor's compound. Signboard shows the doctor's name. ",
-    "Date": "",
-    "City": "Jabalpur",
-    "State": "Madhya Pradesh",
-    "Latitude (°N)": "23.1751",
-    "Longitude (°E)": "79.9551",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/Dilsedesh/status/1208420756008255490?s=19",
-    "Caption": "Pro BJP civilians with police saying camera holder to put the camera aside and let the police fire. Many pro bjp civilians seen beating men with police ",
-    "Date": "",
-    "City": "Kanpur",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "26.44",
-    "Longitude (°E)": "80.33",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/vinodkapri/status/1210250703664373761",
-    "Caption": "Police damaging private property\n",
-    "Date": "",
-    "City": "Kanpur",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "26.44",
-    "Longitude (°E)": "80.33",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/vinodkapri/status/1210250703664373761?s=09",
-    "Caption": "Attacking private property of people not even involved in protests. Talaq Mahal, Kanpur",
-    "Date": "",
-    "City": "Kanpur",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "26.44",
-    "Longitude (°E)": "80.33",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://www.thehindu.com/news/national/a-first-person-account-by-the-hindu-correspondent-omar-rashid-of-how-he-was-picked-up-threatened-and-released-by-cops/article30361909.ece",
-    "Caption": "Journalist Omar Rashid and Robin Verma arrested and assaulted by the police on suspecting that they were a part of the protest and on the basis that Rashid was a Kashmiri. \n\nA “The Hindu” journalist arrested in UP or no reason because he was Kashmiri",
-    "Date": "",
-    "City": "Lucknow",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "26.855",
-    "Longitude (°E)": "80.915",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": "0"
-  },
-  {
-    "Issue": "",
-    "Link": "https://www.thequint.com/news/india/sadaf-zabeen-arrested-beaten-by-police",
-    "Caption": "Woman school teacher arrested and beaten brutally. Sadaf Jafar being arrested on questioning the police for not taking strict actions against the stone pelters",
-    "Date": "",
-    "City": "Lucknow",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "26.855",
-    "Longitude (°E)": "80.915",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": "0"
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/MirrorNow/status/1208315524486254592?s=20",
-    "Caption": "One of the casualties is a 8-year old. 8. Years. Old.",
-    "Date": "",
-    "City": "Lucknow",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "26.855",
-    "Longitude (°E)": "80.915",
-    "Who are the victims?": "Children",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": "0"
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/doamuslims/status/1208021114296946689?s=20",
-    "Caption": "Police throwing stones at Muslims praying in Lucknow. Police pelting stones on people due to which some people also throwing back stones",
-    "Date": "",
-    "City": "Lucknow",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "26.855",
-    "Longitude (°E)": "80.915",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/DesiPoliticks/status/1209173205040160774?s=08",
-    "Caption": "Police charging towards peaceful procession of protestors from behind ",
-    "Date": "",
-    "City": "Lucknow",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "26.855",
-    "Longitude (°E)": "80.915",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/AapAfroz/status/1209072154001596417?s=08",
-    "Caption": "Police attacking cars in Husainabad Lucknow ",
-    "Date": "",
-    "City": "Lucknow",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "26.855",
-    "Longitude (°E)": "80.915",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/srivatsayb/status/1206886926289997825?s=08",
-    "Caption": "Civilians with BJP stickers throwing stones on students .",
-    "Date": "",
-    "City": "Lucknow",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "26.855",
-    "Longitude (°E)": "80.915",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/cjwerleman/status/1209163918033080322?s=19",
-    "Caption": "Pro BJP men attacking lone Muslim man",
-    "Date": "",
-    "City": "Lucknow",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "26.855",
-    "Longitude (°E)": "80.915",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/neobie14/status/1208691872866226176?s=19",
-    "Caption": "Police breaking locks of shops as woman saying in video",
-    "Date": "",
-    "City": "Lucknow",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "26.855",
-    "Longitude (°E)": "80.915",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/srivatsayb/status/1208052736370954241?s=20",
-    "Caption": "Police firing the mob at the protest",
-    "Date": "",
-    "City": "Mangalore",
-    "State": "Karnataka",
-    "Latitude (°N)": "12.9",
-    "Longitude (°E)": "74.85",
-    "Who are the victims?": "Residents",
-    "No. of civilian deaths": "2",
-    "No. of injured civilians": "2",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": "0"
-  },
-  {
-    "Issue": "Needs Fact-Check",
-    "Link": "https://twitter.com/writesalman/status/1208069776884428800?s=20",
-    "Caption": "Police lathi-charged on people who weren't even in the protests.",
-    "Date": "",
-    "City": "Mangalore",
-    "State": "Karnataka",
-    "Latitude (°N)": "12.9",
-    "Longitude (°E)": "74.85",
-    "Who are the victims?": "Students, vendors, women & children",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/KKAdeeb1/status/1209938288951214080?s=19",
-    "Caption": "Mushraf, 16 yr old student was just standing outside his college Matha Education Center waiting for bus, immediately a bunch of police came & attacked him mercilessly.",
-    "Date": "",
-    "City": "Mangalore",
-    "State": "Karnataka",
-    "Latitude (°N)": "12.9",
-    "Longitude (°E)": "74.85",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/zebatweets/status/1210418886392201217?s=20",
-    "Caption": "In Uttar Pradesh's Meerut, we found CCTV footage showing police striking CCTV cameras with batons before screen goes blank. \n\nFive men were killed by bullets in the area that day. Families accuse police. Police deny charges.",
-    "Date": "",
-    "City": "Meerut",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "29.0004",
-    "Longitude (°E)": "77.7",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/AzmiShabana/status/1207698719115808768",
-    "Caption": "Peaceful",
-    "Date": "",
-    "City": "Mumbai",
-    "State": "Maharashtra",
-    "Latitude (°N)": "19.017",
-    "Longitude (°E)": "72.857",
-    "Who are the victims?": "-",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/advsanwar/status/1208728309623873538?s=20",
-    "Caption": "Peaceful. Protest in Dharavi, Asia's largest slum in Mumbai ",
-    "Date": "",
-    "City": "Mumbai",
-    "State": "Maharashtra",
-    "Latitude (°N)": "19.017",
-    "Longitude (°E)": "72.857",
-    "Who are the victims?": "-",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://www.telegraphindia.com/states/west-bengal/stone-gang-in-fake-skullcap-held-by-murshidabad-police/cid/1728657",
-    "Caption": "Alleged BJP workers pelting stones at an engine, dressed in skull caps fomenting violence",
-    "Date": "",
-    "City": "Murshidabad",
-    "State": "West Bengal",
-    "Latitude (°N)": "24.17",
-    "Longitude (°E)": "88.28",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": "0"
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/yogital/status/1210514405730873345?s=19",
-    "Caption": "Forcible entry into households and subsequent looting and threats",
-    "Date": "",
-    "City": "Muzaffarnagar",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "29.485",
-    "Longitude (°E)": "77.695",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/UAH_India/status/1211117998745894912?s=20",
-    "Caption": "Moulana Syed raza hussaini (82), a shia scholar, was dragged out from Madarsa & brutally beaten up by cops in Muzaffarnagar, UP.",
-    "Date": "",
-    "City": "Muzaffarnagar",
-    "State": "Uttar Pradesh",
-    "Latitude (°N)": "29.485",
-    "Longitude (°E)": "77.695",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/shraddhs/status/1208215489157054464",
-    "Caption": "Peaceful protest in Nagpur",
-    "Date": "",
-    "City": "Nagpur",
-    "State": "Maharashtra",
-    "Latitude (°N)": "21.17",
-    "Longitude (°E)": "79.09",
-    "Who are the victims?": "-",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/neobie14/status/1208661457585549312?s=19",
-    "Caption": "Police destroying vehicles",
-    "Date": "",
-    "City": "Patna",
-    "State": "Bihar",
-    "Latitude (°N)": "25.625",
-    "Longitude (°E)": "85.13",
-    "Who are the victims?": "",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "Original post unavailable",
-    "Link": "https://twitter.com/CPPuneCity/status/1208057982929391616",
-    "Caption": "Peaceful",
-    "Date": "",
-    "City": "Pune",
-    "State": "Maharashtra",
-    "Latitude (°N)": "18.53",
-    "Longitude (°E)": "73.85",
-    "Who are the victims?": "-",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  },
-  {
-    "Issue": "",
-    "Link": "https://twitter.com/itssinghswati/status/1207995229455839233?s=20",
-    "Caption": "(Peaceful) National Anthem in one voice. \nVideo from #CAA_NRC_Protests at Vaniyambadi in Tamil Nadu.  ",
-    "Date": "",
-    "City": "Vaniyambadi",
-    "State": "Tamil Nadu",
-    "Latitude (°N)": "12.68",
-    "Longitude (°E)": "78.63",
-    "Who are the victims?": "-",
-    "No. of civilian deaths": "",
-    "No. of injured civilians": "",
-    "No. police personnel injured": "",
-    "No. police personnel deaths": ""
-  }
-]
+  "totalVideos": 51
+}

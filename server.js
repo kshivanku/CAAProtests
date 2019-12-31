@@ -59,12 +59,12 @@ function tsvJSON(tsv, prevjson){
     return new Promise((resolve, reject) => {
         var lines=tsv.split(/\r?\n/);
         let titleLine = lines.shift();
-        let titleIndex = titleLine.split(/\t/).indexOf('Title');
-        let descriptionIndex = titleLine.split(/\t/).indexOf('Description');
+        let captionIndex = titleLine.split(/\t/).indexOf('Caption');
+        let dateIndex = titleLine.split(/\t/).indexOf('Date');
         let latIndex = titleLine.split(/\t/).indexOf('Latitude (°N)');
         let longIndex = titleLine.split(/\t/).indexOf('Longitude (°E)');
-        let linkIndex = titleLine.split(/\t/).indexOf('Video link');
-        let cityIndex = titleLine.split(/\t/).indexOf('Location');
+        let linkIndex = titleLine.split(/\t/).indexOf('Link');
+        let cityIndex = titleLine.split(/\t/).indexOf('City');
         let prevTotalVideos = prevjson.totalVideos ? prevjson.totalVideos : 0 ;
         if(prevTotalVideos === lines.length) {
             resolve(prevjson)
@@ -76,8 +76,8 @@ function tsvJSON(tsv, prevjson){
                     prevjson.cities[currentline[cityIndex]].videos.push(
                         {
                             link: currentline[linkIndex],
-                            title: currentline[titleIndex],
-                            description: currentline[descriptionIndex]
+                            caption: currentline[captionIndex],
+                            date: currentline[dateIndex]
                         }
                     )
                 }
@@ -89,8 +89,8 @@ function tsvJSON(tsv, prevjson){
                         videos: [
                             {
                                 link: currentline[linkIndex],
-                                title: currentline[titleIndex],
-                                description: currentline[descriptionIndex]
+                                caption: currentline[captionIndex],
+                                date: currentline[dateIndex]
                             }
                         ],
                         coordinates: {

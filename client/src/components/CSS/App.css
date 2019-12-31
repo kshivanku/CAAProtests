@@ -26,6 +26,7 @@
   justify-content: space-between;
   padding: 20px;
   grid-column: span 3;
+  border-bottom: 1px solid #333;
 }
 
 .cityDetailView_videoList {
@@ -59,6 +60,22 @@
   background: none;
   border: none;
   cursor: pointer;
+}
+
+.marker_btn {
+  display: grid;
+  justify-items: center;
+}
+
+.marker_txt {
+  background-color: rgba(255, 60, 10, 0.75);
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  color: #fff;
+  font-weight: bold;
+  font-size: '1.2em';
+  margin-bottom: 0.3em;
 }
 
 .close_btn {

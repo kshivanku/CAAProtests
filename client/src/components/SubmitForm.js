@@ -1,9 +1,8 @@
 import React, {useState, useEffect, useRef} from 'react'
-import {motion, useAnimation, useMotionValue} from 'framer-motion'
-import './App.css'
-import chevron_primary from './chevron-primary.svg'
-import chevron_white from './chevron-white.svg'
-import fist from './fist.svg'
+import {motion, useAnimation} from 'framer-motion'
+import chevron_primary from '../icons/chevron-primary.svg'
+import chevron_white from '../icons/chevron-white.svg'
+import fist from '../icons/fist.svg'
 
 export function SubmitForm(props) {
     const {desktopSize, selectedCity, onNewLinkSubmit} = props
@@ -131,7 +130,7 @@ export function SubmitForm(props) {
                         whileHover = {{scale: 1.02}}
                         whileTap = {{scale: 0.98}}
                         className= "primary_btn doneButton"
-                    >Ok
+                    >Alright
                     </motion.button>
                     <motion.img 
                         src={fist}

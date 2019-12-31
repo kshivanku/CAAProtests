@@ -2,6 +2,10 @@
   "name": "caaprotests",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "12.14.0",
+    "npm": "6.13.4"
+  },
   "main": "server.js",
   "scripts": {
     "client": "cd client && yarn start",
