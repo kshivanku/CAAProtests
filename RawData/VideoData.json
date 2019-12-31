@@ -73,6 +73,11 @@
           "link": "https://twitter.com/sharmasupriya/status/1209041730235842560?s=19",
           "caption": "UP police arrest an elderly man with a paralysed leg, identified as Shamsuddin, during a lathi-charge raid amidst scenes of chaos punctuated by a gunshot.",
           "date": "20/12/2019"
+        },
+        {
+          "link": "https://twitter.com/imMAK02/status/1211216619906535426?s=20",
+          "caption": "videos from Bijnor, Uttar Pradesh where local goons are attacking Muslims and beating them",
+          "date": "20/12/2019"
         }
       ],
       "coordinates": {
@@ -162,6 +167,11 @@
           "link": "https://twitter.com/Zebaism/status/1210542010492436480?s=20",
           "caption": "Protesters are chased away and rounded up by Delhi Police even as a bunch of women try to stop them. ",
           "date": "27/12/2019"
+        },
+        {
+          "link": "https://twitter.com/someshjha7/status/1210555709726711809?s=20",
+          "caption": "Delhi Police not allowing protesters to assemble outside the UP Bhawan. Further, the police took people out of autorickshaws to Mandir Marg and Connaught Place police stations. None of the cops were willing to produce the Section 144 order",
+          "date": "27/12/2019"
         }
       ],
       "coordinates": {
@@ -228,6 +238,11 @@
           "link": "https://twitter.com/neobie14/status/1208691872866226176?s=19",
           "caption": "THIS IS A REPEAT OF THE VIDEO IN ROW 6, AND IS IN AURANGABAD BIHAR, NOT LUCKNOW UP.",
           "date": ""
+        },
+        {
+          "link": "https://twitter.com/arvindgunasekar/status/1210937431970721793?s=20",
+          "caption": "Priyanka Gandhi being physically stopped by UP Police while on her way to visit the family of an Ex IPS officer",
+          "date": "28/12/2019"
         }
       ],
       "coordinates": {
@@ -344,6 +359,11 @@
           "link": "https://twitter.com/zebatweets/status/1210418886392201217?s=20",
           "caption": "Meerut Police don riot gear before breaking a CCTV camera during anti-CAA protests. Five men were killed by bullets in the area that day. Families accuse police. Police deny charges. The state's residents have claimed the police has damaged several such surveillance cameras.",
           "date": "20/12/2019"
+        },
+        {
+          "link": "https://twitter.com/ndtv/status/1210770174359433218?s=20",
+          "caption": "UP police asking Civilians to go back to Pakistan",
+          "date": "27/12/2019"
         }
       ],
       "coordinates": {
@@ -391,8 +411,13 @@
         },
         {
           "link": "https://twitter.com/UAH_India/status/1211117998745894912?s=20",
-          "caption": "Maulana Asad Raza Hussaini (72), a well-known Shia cleric, allegedly physically abused, arrested and then later on released by UP Police during mass crackdown on protests taking place in the state against the CAA and NRC.",
+          "caption": "Maulana Asad Raza Hussaini (82), a well-known Shia cleric, allegedly physically abused, arrested and then later on released by UP Police during mass crackdown on protests taking place in the state against the CAA and NRC.",
           "date": "20/12/2019"
+        },
+        {
+          "link": "https://twitter.com/yogital/status/1210514494872420352?s=20",
+          "caption": "She says police told her and her family to leave, and that her home would soon become theirs. She says there were also some people in plain clothes with the police.",
+          "date": "27/12/2019"
         }
       ],
       "coordinates": {
@@ -404,7 +429,7 @@
       "videos": [
         {
           "link": "https://twitter.com/shraddhs/status/1208215489157054464",
-          "caption": "A large peaceful crowd gathers in Nagpur, which also happens to be the headquarters of Rashtriya Swayamsevak Sangh (RSS), to protest protest against the Citizenship Amendment Act. The Act was passed by Modi-led BJP government, which currently comprises a number of RSS members.",
+          "caption": "A large peaceful crowd gathers in Nagpur to protest protest against the Citizenship Amendment Act",
           "date": "20/12/2019"
         }
       ],
@@ -451,7 +476,20 @@
         "latitude": "12.68",
         "longitude": "78.63"
       }
+    },
+    "Chennai": {
+      "videos": [
+        {
+          "link": "https://twitter.com/Mugilan__C/status/1211130905172926464?s=20",
+          "caption": "7 including a boy has been detained by Chennai police for staging Kolam(Rangoli) protest against in Besant Nagar.",
+          "date": "29/12/2019"
+        }
+      ],
+      "coordinates": {
+        "latitude": "13.09",
+        "longitude": "80.28"
+      }
     }
   },
-  "totalVideos": 52
+  "totalVideos": 58
 }
