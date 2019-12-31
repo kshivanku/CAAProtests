@@ -35,6 +35,8 @@ export function MapLayer(props) {
                     key={index}
                     latitude = {Number(videoData[city].coordinates.latitude)}
                     longitude = {Number(videoData[city].coordinates.longitude)}
+                    offsetLeft={-20} 
+                    offsetTop={-20}
                 >
                     <button className='marker_btn' onClick={e => onMarkerClick(e, city)}>
                         <motion.p
