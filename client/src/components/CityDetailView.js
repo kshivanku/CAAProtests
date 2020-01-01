@@ -6,8 +6,9 @@ import close from '../icons/close.svg'
 export function CityDetailView(props) {
     const {selectedCity, videoData, onCityDetailClose, desktopSize } = props;
     let currentScrollValue = useMotionValue(0);
+    let touchStart = 0;
+    let touchEnd = 0;
     let prevScrollValue = useMotionValue(0);
-    let isDragging = false;
     const containerAnimControls = useAnimation();
     const headerAnimControls = useAnimation();
     const bodyAnimControls = useAnimation();
@@ -41,11 +42,13 @@ export function CityDetailView(props) {
 
     useEffect(()=> {
         handleInOutAnimation()
-        window.addEventListener('touchmove', function() {isDragging = true;})
+        window.addEventListener('touchstart', function(e){touchStart=e.changedTouches[0].clientY})
         window.addEventListener('touchend', function(e) {
-            if(currentScrollValue.get() <= 0 && isDragging) {
+            touchEnd = e.changedTouches[0].clientY;
+            if(currentScrollValue.get() <= 0 && touchEnd > touchStart) {
                 onCityDetailClose();
-                isDragging = false;
+                touchStart = 0;
+                touchEnd = 0;
             }
         });
         // window.addEventListener('wheel', function() {
