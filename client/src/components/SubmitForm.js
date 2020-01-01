@@ -61,7 +61,7 @@ export function SubmitForm(props) {
             drag="y"
             dragConstraints={{top: 0, bottom:0}}
             dragMomentum={false}
-            onDragEnd={(e, info) => {if(info.point.y > 10 || info.point.y < -10) {handleCloseToggle()}}}
+            onDragEnd={(e, info) => {if((info.point.y > 10 && isOpen) || (info.point.y < -10 && !isOpen)) {handleCloseToggle()}}}
         >
             <motion.button 
                 className="toggleCloseButton"
