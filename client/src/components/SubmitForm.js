@@ -58,6 +58,10 @@ export function SubmitForm(props) {
                 type: 'spring',
                 damping: 16
             }}
+            drag="y"
+            dragConstraints={{top: 0, bottom:0}}
+            dragMomentum={false}
+            onDragEnd={(e, info) => {if(info.point.y > 10 || info.point.y < -10) {handleCloseToggle()}}}
         >
             <motion.button 
                 className="toggleCloseButton"
