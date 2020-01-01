@@ -55,7 +55,7 @@ function App() {
   } 
 
   const onCityDetailClose = (e) => {
-    e.preventDefault();
+    e && e.preventDefault();
     setSelectedCity(null)
   }
 
