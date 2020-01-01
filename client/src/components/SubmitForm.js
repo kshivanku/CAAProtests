@@ -134,7 +134,7 @@ export function SubmitForm(props) {
                         whileHover = {{scale: 1.02}}
                         whileTap = {{scale: 0.98}}
                         className= "primary_btn doneButton"
-                    >Alright
+                    >OK
                     </motion.button>
                     <motion.img 
                         src={fist}

@@ -19,7 +19,8 @@ export function IntroScreen() {
                 initial = {{y: 10, opacity: 0}}
                 animate={contentControls}
             >
-                <h1>This is a visualization of all the protests against Citizenship Amendment Act (CAA) across India</h1>
+                <h1>India has been on the streets this winter to save the secular fabric of the country</h1>
+                <p>Several have died since these protests began early December 2019. Here is a map of the protests across the country.</p>
                 <motion.button 
                     className="primary_btn"
                     whileHover={{scale: 1.02}}
@@ -28,7 +29,7 @@ export function IntroScreen() {
                         controls.start(close)
                         contentControls.start({opacity: 0, transition: {duration: 0.1}})
                     }}
-                >Lets go!
+                >Enter
                 </motion.button>
             </motion.div>
         </motion.div>
