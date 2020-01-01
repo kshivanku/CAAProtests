@@ -17,7 +17,7 @@ export function SubmitForm(props) {
     let isScrolling = null;
 
     const container_variants = {"open": {height: 520, top: `calc(var(--vh, 1vh) * 100 - 520px)`},"close": {height: 50, top: `calc(var(--vh, 1vh) * 100 - 50px)`}}
-    const closeButton_variants = {"open": {backgroundColor: '#000'},"close": {backgroundColor: '#ff3c0a'}}
+    const closeButton_variants = {"open": {backgroundColor: '#1f2532'},"close": {backgroundColor: '#FF5853'}}
     const chevron_variants = {"open": {rotate: 0}, "close": {rotate: 180}}
     const toggleButton_variants = {"open": {opacity: 0}, "close": {opacity: 1}}
 

@@ -43,7 +43,7 @@ export function MapLayer(props) {
             {...viewport} 
             mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_API_ACCESS_TOKEN}
             onViewportChange = {viewport => setViewport(viewport)}
-            mapStyle="mapbox://styles/kshivanku/ck4rqg7rq331v1cmttxjco1el"
+            mapStyle="mapbox://styles/kshivanku/ck4vr9icb2z261clkwtwf076v"
         >
             {totalCities.map((city, index) => {
                 return (
