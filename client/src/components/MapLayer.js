@@ -54,7 +54,7 @@ export function MapLayer(props) {
                         offsetLeft={-24} 
                         offsetTop={-24}
                     >
-                        <button className='marker_btn' onClick={e => {console.log('clicked on marker'); onMarkerClick(e, city); clickedOnMarker=true}}>
+                        <button className='marker_btn' onClick={e => {onMarkerClick(e, city); clickedOnMarker=true}}>
                             <motion.p
                                 className="marker_txt"
                                 initial = {{scale: 1}}

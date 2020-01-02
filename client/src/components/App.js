@@ -37,6 +37,9 @@ function App() {
       .then(res => {
         setVideoData(res.cities);
         let citiesArray = Object.keys(res.cities);
+        let urlLocation = window.location.href
+        let hashCity = urlLocation.split('#')[1];
+        if(hashCity !== undefined && hashCity.length>1) {setSelectedCity(hashCity)}
         setTotalCities(citiesArray);
       })
       .catch(err => console.log(err))
@@ -49,6 +52,7 @@ function App() {
 
   const onMarkerClick = (e, city) => {
     e.preventDefault();
+    city ? (window.location.hash = city) : (window.location.hash = "");
     if(selectedCity !== city) {
       setSelectedCity(city);
     }
