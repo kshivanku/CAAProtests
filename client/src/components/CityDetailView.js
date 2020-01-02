@@ -99,7 +99,7 @@ export function CityDetailView(props) {
                     animate={bodyAnimControls}
                     
                 >
-                    {videoData[selectedCity].videos.map((videoObj, index) => {
+                    {videoData[selectedCity].videos.slice(0).reverse().map((videoObj, index) => {
                         if(videoObj.link.indexOf('twitter.com') !== -1) {
                             let id = videoObj.link.split(/\/?\//)[4].split('?')[0];
                             return (
