@@ -42,6 +42,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   position: fixed;
   overflow: hidden;
+  overscroll-behavior: contain;
   --accent-color-1: #FF5853;
   --base-black-1: #1f2532;
   --base-white-1: #fffcf2;
