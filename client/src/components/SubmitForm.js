@@ -36,11 +36,7 @@ export function SubmitForm(props) {
         !isOpen && setIsThankYou(false)
         chevronControls.start({scale: 1})
     } 
-
-    const handleFocusOut = () => {
-        window.scrollTo(0,0)
-    }
-
+    
     return(
         <motion.div 
             className="submitFormContainer"
@@ -85,7 +81,6 @@ export function SubmitForm(props) {
                     <h2>Add more protest videos to the map</h2>
                     <p>This is our chance to visualize India's response to CAA. Videos will be manually reviewed before being added</p>
                     <form 
-                        onBlur = {handleFocusOut}
                         onSubmit={(e) => {
                             e.preventDefault()
                             onNewLinkSubmit({
