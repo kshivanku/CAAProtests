@@ -5,7 +5,6 @@ export const initGA = (trackingID) => {
  }
 
  export const PageView = (cityName) => {  
-    console.log(`In pageview for ${cityName}`)
     ReactGA.pageview(cityName); 
 }
 

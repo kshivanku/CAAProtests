@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import ReactMapGL, {Marker} from 'react-map-gl';
 import {motion} from 'framer-motion';
-import { Event, PageView } from "./Tracking";
+import {PageView } from "./Tracking";
 
 export function MapLayer(props) {
 

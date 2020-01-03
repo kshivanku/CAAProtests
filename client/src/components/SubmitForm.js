@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react'
 import {motion, useAnimation} from 'framer-motion'
+import { Event } from "./Tracking";
 import chevron_primary from '../icons/chevron-primary.svg'
 import chevron_white from '../icons/chevron-white.svg'
 import fist from '../icons/fist.svg'
@@ -33,10 +34,11 @@ export function SubmitForm(props) {
 
     const handleCloseToggle = () => {
         setIsOpen(!isOpen)
+        !isOpen && Event("UserAction", "Opened submit link form", window.innerWidth > desktopSize ? "DESKTOP": "MOBILE")
         !isOpen && setIsThankYou(false)
         chevronControls.start({scale: 1})
     } 
-    
+
     return(
         <motion.div 
             className="submitFormContainer"
@@ -59,7 +61,9 @@ export function SubmitForm(props) {
                 animate = {closeButtonControls}
                 onHoverStart = {() => chevronControls.start({scale: 1.3})}
                 onHoverEnd = {() => chevronControls.start({scale: 1})}
-                onClick={() => handleCloseToggle()}
+                onClick={() => {
+                    handleCloseToggle();
+                }}
             >
                 <motion.img 
                     src={isOpen ? chevron_primary : chevron_white} 
