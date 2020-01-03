@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import ReactMapGL, {Marker} from 'react-map-gl';
 import {motion} from 'framer-motion';
+import { Event, PageView } from "./Tracking";
 
 export function MapLayer(props) {
 
@@ -58,7 +59,7 @@ export function MapLayer(props) {
                         offsetLeft={-24} 
                         offsetTop={-24}
                     >
-                        <button className='marker_btn' onClick={e => {onMarkerClick(e, city); clickedOnMarker=true}}>
+                        <button className='marker_btn' onClick={e => {onMarkerClick(e, city); clickedOnMarker=true; PageView(city)}}>
                             <motion.div
                                 className="marker_txt"
                                 style = {{

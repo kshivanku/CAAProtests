@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Firebase from 'firebase';
-import ReactGA from 'react-ga';
+import {PageView, initGA} from './Tracking';
 import {MapLayer} from './MapLayer.js';
 import {CityDetailView} from './CityDetailView.js'; 
 import {SubmitForm} from './SubmitForm.js';
@@ -26,17 +26,14 @@ const config = {
 }
 
 function App() {
-
   const [selectedCity, setSelectedCity] = useState(null);
   const [videoData, setVideoData] = useState({});
   const [totalCities, setTotalCities] = useState([]);
   const desktopSize = 1024;
 
-  ReactGA.initialize('UA-155279746-1');
-  ReactGA.pageview('/homepage')
-
   useEffect(()=> {
     Firebase.initializeApp(config);
+    initGA(process.env.REACT_APP_GA_TRACKING_ID);
     fetchJSON()
       .then(res => {
         setVideoData(res.cities);
@@ -46,9 +43,12 @@ function App() {
         if(hashCity !== undefined && hashCity.length>1) {
           let formattedHashCity = hashCity.charAt(0).toUpperCase() + hashCity.slice(1);
           if(citiesArray.indexOf(formattedHashCity) !== -1) {
-            setSelectedCity(formattedHashCity)
+            setSelectedCity(formattedHashCity);
+            PageView(formattedHashCity);
           }
+          else{PageView('/');}
         }
+        else {PageView('/');}
         setTotalCities(citiesArray);
       })
       .catch(err => console.log(err))
