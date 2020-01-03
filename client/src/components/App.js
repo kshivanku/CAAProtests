@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Firebase from 'firebase';
+import ReactGA from 'react-ga';
 import {MapLayer} from './MapLayer.js';
 import {CityDetailView} from './CityDetailView.js'; 
 import {SubmitForm} from './SubmitForm.js';
@@ -30,6 +31,9 @@ function App() {
   const [videoData, setVideoData] = useState({});
   const [totalCities, setTotalCities] = useState([]);
   const desktopSize = 1024;
+
+  ReactGA.initialize('UA-155279746-1');
+  ReactGA.pageview('/homepage')
 
   useEffect(()=> {
     Firebase.initializeApp(config);
