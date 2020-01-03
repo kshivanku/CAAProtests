@@ -1,4 +1,4 @@
-import React, { useEffect, isValidElement } from 'react';
+import React, { useEffect } from 'react';
 import {motion, useMotionValue, useAnimation, AnimatePresence} from 'framer-motion';
 import {TwitterVideoEmbed} from 'react-twitter-embed';
 import close from '../icons/close.svg'
@@ -8,7 +8,7 @@ export function CityDetailView(props) {
     let currentScrollValue = useMotionValue(0);
     let touchStart = 0;
     let touchEnd = 0;
-    let prevScrollValue = useMotionValue(0);
+    // let prevScrollValue = useMotionValue(0);
     const containerAnimControls = useAnimation();
     const headerAnimControls = useAnimation();
     const bodyAnimControls = useAnimation();

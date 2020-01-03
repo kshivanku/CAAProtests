@@ -1,7 +1,9 @@
 import React, {useEffect} from 'react';
 import {motion, useAnimation} from 'framer-motion'
+import {PageView} from './Tracking';
 
-export function IntroScreen() {
+export function IntroScreen(props) {
+    const {selectedCity} = props;
     const controls = useAnimation();
     const contentControls = useAnimation();
     const close = {height: 0, transition: {ease: "easeInOut", duration: 1}}
@@ -26,6 +28,7 @@ export function IntroScreen() {
                     whileHover={{scale: 1.02}}
                     whileTap={{scale:0.9}}
                     onClick = {()=> {
+                        selectedCity ? PageView(selectedCity) : PageView('Homepage')
                         controls.start(close)
                         contentControls.start({opacity: 0, transition: {duration: 0.1}})
                     }}

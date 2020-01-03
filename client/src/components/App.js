@@ -34,6 +34,7 @@ function App() {
   useEffect(()=> {
     Firebase.initializeApp(config);
     initGA(process.env.REACT_APP_GA_TRACKING_ID);
+    PageView('Intro')
     fetchJSON()
       .then(res => {
         setVideoData(res.cities);
@@ -44,11 +45,8 @@ function App() {
           let formattedHashCity = hashCity.charAt(0).toUpperCase() + hashCity.slice(1);
           if(citiesArray.indexOf(formattedHashCity) !== -1) {
             setSelectedCity(formattedHashCity);
-            PageView(formattedHashCity);
           }
-          else{PageView('/');}
         }
-        else {PageView('/');}
         setTotalCities(citiesArray);
       })
       .catch(err => console.log(err))
@@ -74,7 +72,7 @@ function App() {
 
   return (
     <div className="app">
-      <IntroScreen />
+      <IntroScreen selectedCity={selectedCity}/>
       <MapLayer className="mapLayer" onMarkerClick={onMarkerClick} videoData={videoData} totalCities={totalCities} />
       <CityDetailView selectedCity={selectedCity} videoData={videoData} onCityDetailClose={onCityDetailClose} desktopSize={desktopSize} />
       <SubmitForm desktopSize={desktopSize} selectedCity={selectedCity} onNewLinkSubmit={onNewLinkSubmit}/>
