@@ -7,7 +7,7 @@ const Tabletop = require('tabletop'); //arjunvenkatraman added to load data from
 let arrayWithData = [];
 const app = express();
 const port = process.env.PORT || 5000;
-const datasrc = "SHEET"
+const datasrc = "SHEET" // "TSV" or "SHEET"
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
@@ -49,10 +49,7 @@ function getSheetData() {
 function processSheetData(data, tabletop) {
     let newjson = {"cities":{},"totalVideos":0}
     data.map(currentline => {
-        console.log(currentline)
-        console.log(Number(currentline['Latitude (°N)']))
         if(!isNaN(currentline['Latitude (°N)']) && !isNaN(currentline['Longitude (°E)'])) {
-            console.log('inside')
             if(newjson.cities[currentline['City']] !== undefined) {
                 newjson.cities[currentline['City']].videos.push({
                     link: currentline['Link'],
@@ -94,23 +91,25 @@ function tsvJSON(tsv) {
 
     lines.map(line => {
         let currentline = line.split(/\t/);
-        if(newjson.cities[currentline[cityIndex]] != undefined) {
-            newjson.cities[currentline[cityIndex]].videos.push({
-                link: currentline[linkIndex],
-                caption: currentline[captionIndex],
-                date: currentline[dateIndex]
-            })
-        }
-        else {
-            newjson.cities[currentline[cityIndex]] = {
-                videos: [{
+        if(!isNaN(currentline['Latitude (°N)']) && !isNaN(currentline['Longitude (°E)'])) {
+            if(newjson.cities[currentline[cityIndex]] != undefined) {
+                newjson.cities[currentline[cityIndex]].videos.push({
                     link: currentline[linkIndex],
                     caption: currentline[captionIndex],
                     date: currentline[dateIndex]
-                }],
-                coordinates: {
-                    latitude: currentline[latIndex],
-                    longitude: currentline[longIndex]
+                })
+            }
+            else {
+                newjson.cities[currentline[cityIndex]] = {
+                    videos: [{
+                        link: currentline[linkIndex],
+                        caption: currentline[captionIndex],
+                        date: currentline[dateIndex]
+                    }],
+                    coordinates: {
+                        latitude: currentline[latIndex],
+                        longitude: currentline[longIndex]
+                    }
                 }
             }
         }
