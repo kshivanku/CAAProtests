@@ -39,7 +39,7 @@ function App() {
         let citiesArray = Object.keys(res.cities);
         let urlLocation = window.location.href
         let hashCity = urlLocation.split('#')[1];
-        if(hashCity !== undefined && hashCity.length>1) {setSelectedCity(hashCity)}
+        if(hashCity !== undefined && hashCity.length>1) {setSelectedCity(hashCity.charAt(0).toUpperCase() + hashCity.slice(1))}
         setTotalCities(citiesArray);
       })
       .catch(err => console.log(err))
