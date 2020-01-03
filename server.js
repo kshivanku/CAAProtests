@@ -49,23 +49,28 @@ function getSheetData() {
 function processSheetData(data, tabletop) {
     let newjson = {"cities":{},"totalVideos":0}
     data.map(currentline => {
-        if(newjson.cities[currentline['City']] !== undefined) {
-            newjson.cities[currentline['City']].videos.push({
-                link: currentline['Link'],
-                caption: currentline['Caption'],
-                date: currentline['Date']
-            })
-        }
-        else {
-            newjson.cities[currentline['City']] = {
-                videos: [{
+        console.log(currentline)
+        console.log(Number(currentline['Latitude (°N)']))
+        if(!isNaN(currentline['Latitude (°N)']) && !isNaN(currentline['Longitude (°E)'])) {
+            console.log('inside')
+            if(newjson.cities[currentline['City']] !== undefined) {
+                newjson.cities[currentline['City']].videos.push({
                     link: currentline['Link'],
                     caption: currentline['Caption'],
                     date: currentline['Date']
-                }],
-                coordinates: {
-                latitude: currentline['Latitude (°N)'],
-                longitude: currentline['Longitude (°E)']
+                })
+            }
+            else {
+                newjson.cities[currentline['City']] = {
+                    videos: [{
+                        link: currentline['Link'],
+                        caption: currentline['Caption'],
+                        date: currentline['Date']
+                    }],
+                    coordinates: {
+                    latitude: currentline['Latitude (°N)'],
+                    longitude: currentline['Longitude (°E)']
+                    }
                 }
             }
         }
