@@ -16,6 +16,10 @@ export function MapLayer(props) {
     const [mouseDownPoint, setMouseDownPoint] = useState({x: 0, y: 0})
     const [mouseUpPoint, setMouseUpPoint] = useState({x: 0, y: 0})
 
+    const isZoomFriendly = (size) => {
+        return (viewport.zoom < 6 && size <= 3) ? false : true;
+    }
+
     useEffect(()=> {
         window.addEventListener('resize', () => {
             let newWidth = window.innerWidth;
@@ -42,7 +46,7 @@ export function MapLayer(props) {
         <ReactMapGL 
             {...viewport} 
             mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_API_ACCESS_TOKEN}
-            onViewportChange = {viewport => setViewport(viewport)}
+            onViewportChange = {viewport => {console.log(viewport); setViewport(viewport)}}
             mapStyle="mapbox://styles/kshivanku/ck4vr9icb2z261clkwtwf076v"
         >
             {totalCities.map((city, index) => {
@@ -55,8 +59,13 @@ export function MapLayer(props) {
                         offsetTop={-24}
                     >
                         <button className='marker_btn' onClick={e => {onMarkerClick(e, city); clickedOnMarker=true}}>
-                            <motion.p
+                            <motion.div
                                 className="marker_txt"
+                                style = {{
+                                    width: `calc(1rem + 0.2 * ${String(videoData[city].videos.length)}rem)`, 
+                                    height: `calc(1rem + 0.2 * ${String(videoData[city].videos.length)}rem)`, 
+                                    lineHeight: `calc(1rem + 0.2 * ${String(videoData[city].videos.length)}rem)`
+                                }}
                                 initial = {{scale: 1}}
                                 animate= {{scale: 1.2}}
                                 transition = {{
@@ -64,9 +73,9 @@ export function MapLayer(props) {
                                     ease: 'easeOut',
                                     duration: 0.5
                                 }}
-                                >{videoData[city].videos.length}
-                            </motion.p>
-                            <p style={{color: '#fff'}}>{city}</p>
+                                ><p>{isZoomFriendly(videoData[city].videos.length) && videoData[city].videos.length}</p>
+                            </motion.div>
+                            {isZoomFriendly(videoData[city].videos.length) && <p style={{color: '#fffcf2'}}>{city}</p>}
                         </button>
                     </Marker>
                 )})

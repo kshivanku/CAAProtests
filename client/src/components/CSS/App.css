@@ -70,14 +70,20 @@
 .marker_txt {
   background-color: var(--accent-color-1);
   opacity: 0.80;
-  width: 3rem;
-  height: 3rem;
-  line-height: 3rem;
+  /* width: 3rem;
+  height: 3rem; 
+  line-height: 3rem; */
   color: var(--base-white-1);
   font-weight: bold;
   font-size: '1.2em';
-  margin-bottom: 0.3rem;
+  margin-bottom: 0rem;
   border-radius: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.marker_txt p{
+  flex-grow: 1;
 }
 
 .close_btn {
