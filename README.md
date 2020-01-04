@@ -2,7 +2,7 @@
 
 ![](https://user-images.githubusercontent.com/126868/71761067-af576800-2e94-11ea-94ca-7c0b4ee370de.gif)
 
-Law makers, law breakers is a citizen led project that aims to objectively document field evidence of democratic protest against the state and the state’s response to it.
+**Law makers, law breakers** is a citizen led project that aims to objectively document field evidence of democratic protest against the state and the state’s response to it.
 
 Genuine submissions of unedited videos, photos and objective reporting documenting the protests in India and the world against the CAA & NRC are solicited from the public and curated as per the [content policy](https://github.com/kshivanku/CAAProtests/wiki/Content-policy).
 
@@ -51,7 +51,6 @@ Please join the [Slack group](https://t.co/dDJd1IIatV?amp=1) if interested to co
 
 The app is built using create-react-app, has a firebase database and deployed on Heroku.
 
-**Installation**
 Clone and run the following to start the express server:
 
     git clone https://github.com/kshivanku/CAAProtests.git
