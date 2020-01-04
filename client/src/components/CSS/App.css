@@ -245,9 +245,13 @@
   margin-bottom: 0.1rem;
 }
 
+.thankYouBody p {
+  margin-bottom: 0.5rem;
+}
+
 .thankYouBody img {
   order: -1;
-  height: 12rem;
+  height: 10rem;
 }
 
 .doneButton  {

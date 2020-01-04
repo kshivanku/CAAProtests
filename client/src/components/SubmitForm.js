@@ -16,7 +16,7 @@ export function SubmitForm(props) {
     const chevronControls = useAnimation();
     const toggleButtonLabelControls = useAnimation();
 
-    const container_variants = {"open": {height: 520, top: `calc(var(--vh, 1vh) * 100 - 520px)`},"close": {height: 50, top: `calc(var(--vh, 1vh) * 100 - 50px)`}}
+    const container_variants = {"open": {height: 470, top: `calc(var(--vh, 1vh) * 100 - 470px)`},"close": {height: 50, top: `calc(var(--vh, 1vh) * 100 - 50px)`}}
     const closeButton_variants = {"open": {backgroundColor: '#1f2532'},"close": {backgroundColor: '#FF5853'}}
     const chevron_variants = {"open": {rotate: 0}, "close": {rotate: 180}}
     const toggleButton_variants = {"open": {opacity: 0}, "close": {opacity: 1}}
@@ -114,7 +114,7 @@ export function SubmitForm(props) {
                             Submit for review
                         </motion.button>
                     </form>
-                    <p className="sendVideoMessage">Want to send us the video instead, our WhatApp is open at +91-xxx-xxx-xxxx</p>
+                    {/* <p className="sendVideoMessage">Want to send us the video instead, our WhatApp is open at +91-xxx-xxx-xxxx</p> */}
                 </motion.div>
             }
             {isThankYou && 
