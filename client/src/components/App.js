@@ -86,7 +86,7 @@ function App() {
 
   return (
     <div className="app">
-      {/* <IntroScreen selectedCity={selectedCity} desktopSize={desktopSize}/> */}
+      <IntroScreen selectedCity={selectedCity} desktopSize={desktopSize}/>
       {isAboutOpen && <About handleAboutClose={handleAboutClose} desktopSize={desktopSize} />}
       <SecNav handleAboutClicked = {handleAboutClicked}/>
       <MapLayer className="mapLayer" onMarkerClick={onMarkerClick} videoData={videoData} totalCities={totalCities} />
