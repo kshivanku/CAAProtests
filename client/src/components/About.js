@@ -2,9 +2,10 @@ import React from 'react'
 import {motion, AnimatePresence} from 'framer-motion'
 import close from '../icons/close.svg'
 import twitterlogo from '../icons/twitterlogo.svg'
+import {Event} from "./Tracking"
 
 export function About(props) {
-    let {handleAboutClose} = props
+    let {handleAboutClose, desktopSize} = props
     let containerVariants = {
         open: {opacity: 1},
         close: {opacity: 0, transition: {when: 'afterChildren'}}
@@ -33,14 +34,14 @@ export function About(props) {
                     <div className="aboutContentBody">
                         <p>
                             <span style={{fontWeight: "bold"}}>Law Makers, Law Breakers </span> 
-                            is a project that aims to objectively document how we, the citizens of India, are opposing the Citizenship Ammendment Act, a deeply unpopular and unconstitutional law, brought by the government of India, in Dec 2019. 
+                            is a project that aims to objectively document how we, the citizens of India, are opposing the Citizenship Amendment Act, a deeply unpopular and unconstitutional law, brought by the government of India, in Dec 2019. 
                         </p>
                         
                         <div className="aboutTwitterSection">
                             <img src={twitterlogo}/>
                             <div>
                                 <p className="smalltext">Join the conversation on Twitter:</p>
-                                <p className="twittername"><a href="#" >@mycountryawake</a></p>
+                                <p className="twittername"><a href="#" onClick={()=> Event("UserAction", "Navigated to Twitter", window.innerWidth > desktopSize ? "DESKTOP": "MOBILE")}>@mycountryawake</a></p>
                             </div>
                         </div>
                         <div className="aboutCAAcontent">
