@@ -72,6 +72,16 @@ function processSheetData(data, tabletop) {
             }
         }
     })
+    let sortable = [];
+    for (let city in newjson.cities) {
+        sortable.push([city, newjson.cities[city]]);
+    }
+    sortable.sort((a,b) => (a[1].videos.length > b[1].videos.length) ? 1 : ((b[1].videos.length > a[1].videos.length) ? -1 : 0));
+    let objSorted = {}
+    sortable.forEach(function(item){
+        objSorted[item[0]]=item[1]
+    })
+    newjson.cities = objSorted
     newjson.totalVideos = data.length;
     return (newjson)
 }
