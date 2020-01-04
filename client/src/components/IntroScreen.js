@@ -26,9 +26,9 @@ export function IntroScreen(props) {
                     nation by strongly opposing the Citizenship Amendment Act (CAA) and National 
                     Register of Citizens (NRC). Over 20 civilians have died since these protests 
                     began early in December 2019.<span style={{fontWeight: "bold"}}> This map depicts protests from across the country. </span> 
-                    While protests held in some part of the country were peaceful, protests in some 
-                    parts received violent response from those armed with power and ammunition; 
-                    causing damage to life, property and morale of the citizens.
+                    While protests held in some parts of the country were peaceful, others were met 
+                    with a violent and brutal response from those armed with power and ammunition, 
+                    causing serious damage to life, property and morale of the citizens.
                 </p>
                 <motion.button 
                     className="primary_btn"

@@ -184,7 +184,7 @@
         },
         {
           "link": "https://twitter.com/shivangi_rajora/status/1212359831228518400",
-          "caption": "Three day vigil against CAA at IIM Bangalore",
+          "caption": "Students of the Indian Institute of Management, Bengaluru reciting the preamble of the Constitution in Kannada even as peaceful protests continue across the state.",
           "date": "01/01/2020"
         }
       ],
@@ -337,12 +337,12 @@
         },
         {
           "link": "https://twitter.com/_sabanaqvi/status/1212030449272283136",
-          "caption": "Protesters at Shaheen Bagh, fast becoming the face of anti-CAA protests that have swept across the nation, chanting slogans of freedom. The protesters, comprising a large number of women, have faced a bitter cold season in the capital to continue protesting even as the organiser officially called off the demonstration claiming it is being physically threatened by the BJP.",
+          "caption": "Protesters at Shaheen Bagh chanting slogans of freedom. The protesters, comprising a large number of women, have faced a bitter cold season in the capital to continue protesting",
           "date": "31/12/2019"
         },
         {
           "link": "https://twitter.com/Omarwaziri/status/1212292309770878976",
-          "caption": "Protesters at Shaheen Bagh, fast becoming the face of anti-CAA protests that have swept across the nation, chanting slogans of freedom. The protesters, comprising a large number of women, have faced a bitter cold season in the capital to continue protesting even as the organiser officially called off the demonstration claiming it is being physically threatened by the BJP.",
+          "caption": "Protesters at Shaheen Bagh chanting slogans of freedom. The protesters, comprising a large number of women, have faced a bitter cold season in the capital to continue protesting",
           "date": "31/12/2019"
         },
         {
@@ -426,8 +426,8 @@
         },
         {
           "link": "https://twitter.com/Shaad_Smith/status/1209675956299821056",
-          "caption": "Accounts of several cases of police brutality.",
-          "date": ""
+          "caption": "Several accounts of police brutality that was unleashed by the state on protesters opposing the newly amended Citizenship Act.",
+          "date": "UNCONFIRMED"
         }
       ],
       "coordinates": {
@@ -444,7 +444,7 @@
         },
         {
           "link": "https://www.youtube.com/watch?v=hzG79jwGkSM",
-          "caption": "Left-aligned student unions held a statewide protest against the CAA, National Register of Citizens (NRC) and National Population Register NPR) in universities and colleges across Chandigarh.",
+          "caption": "Left-aligned student unions held a statewide protest against the Citizen Amendment Act (CAA), National Register of Citizens (NRC) and National Population Register NPR) in universities and colleges across Chandigarh.",
           "date": "01/01/2020"
         }
       ],
@@ -615,8 +615,8 @@
           "date": "31/12/2019"
         },
         {
-          "link": "https://twitter.com/AhhadHussain/status/1213388237378486272",
-          "caption": "The Million March",
+          "link": "https://www.theweek.in/news/india/2020/01/04/the-week-morning-brief-million-march-in-hyderabad-against-caa-us-iran-tension.html",
+          "caption": "AP and Telangana Joint Action Committee is expecting several lakh people will join their call for a huge protest against the CAA-NRC.",
           "date": "04/01/2020"
         }
       ],
@@ -753,7 +753,7 @@
       "videos": [
         {
           "link": "https://twitter.com/deeppatelj/status/1211255098971545606?s=20",
-          "caption": "Protesters chant slogans against CAA and NRC even as Ahmedabad Police escorts them to Universitiy Police Station.",
+          "caption": "Protesters chant slogans against CAA and NRC even as Ahmedabad Police detains them to Universitiy Police Station.",
           "date": "29/12/2019"
         },
         {
@@ -779,7 +779,33 @@
         "latitude": "10.015",
         "longitude": "76.2239"
       }
+    },
+    "Malerkotla": {
+      "videos": [
+        {
+          "link": "https://twitter.com/UmarKhalidJNU/status/1213164713678229504",
+          "caption": "A bandh was observed against CAA-NRC in Muslim-dominated Malerkotla town. Former JNU student leader Umar Khalid addressed the gathering as the protesters raised slogans against UP police and criticised it for “atrocities” on people there.",
+          "date": "03/01/2020"
+        }
+      ],
+      "coordinates": {
+        "latitude": "30.53",
+        "longitude": "75.88"
+      }
+    },
+    "Raipur": {
+      "videos": [
+        {
+          "link": "https://twitter.com/dipankarghose31/status/1213409121585618946",
+          "caption": "Protesters sing songs, hold peaceful rally against the newly amended Citizenship Act.",
+          "date": "04/01/2020"
+        }
+      ],
+      "coordinates": {
+        "latitude": "21.235",
+        "longitude": "81.635"
+      }
     }
   },
-  "totalVideos": 100
+  "totalVideos": 102
 }
