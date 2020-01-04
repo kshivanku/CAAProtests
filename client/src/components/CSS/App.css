@@ -414,7 +414,7 @@
 
 .aboutCard img{
   max-width: 3rem;
-  height: 100%;
+  height: auto;
   margin-right: 1rem;
   border-radius: 8px;
 }
@@ -431,6 +431,7 @@
 .socialLink {
   font-weight: bold;
   margin-top: 0;
+  color: var(--accent-color-1);
 }
 
 .aboutCAAcontent {

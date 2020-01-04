@@ -72,7 +72,7 @@ export function About(props) {
                                 <img src={twitterlogo}/>
                                 <div>
                                     <p className="smalltext">Join the conversation on Twitter:</p>
-                                    <p className="socialLink"><a className="link" href="https://twitter.com/mycountryawake" target="_blank" onClick={()=> Event("UserAction", "Navigated to Twitter", window.innerWidth > desktopSize ? "DESKTOP": "MOBILE")}>@mycountryawake</a></p>
+                                    <p className="socialLink">@mycountryawake</p>
                                 </div>
                             </motion.div>
                         </a>
@@ -85,7 +85,7 @@ export function About(props) {
                                 <img src={githublogo}/>
                                 <div>
                                     <p className="smalltext">Contribute to the project:</p>
-                                    <p className="socialLink"><a className="link" target="_blank" href="https://github.com/kshivanku/CAAProtests" onClick={()=> Event("UserAction", "Navigated to Github", window.innerWidth > desktopSize ? "DESKTOP": "MOBILE")}>Github Repo</a></p>
+                                    <p className="socialLink">Github Repo</p>
                                 </div>
                             </motion.div>
                         </a>
