@@ -326,7 +326,6 @@
 }
 
 .secNavContainer a {
-  opacity: 0.5;
   color: var(--base-white-1);
   text-decoration: none;
   background-repeat: no-repeat;
@@ -334,8 +333,8 @@
   background-position: center right;
 }
 
-.secNavContainer a:active {
-  opacity: 1;
+.secNavContainer a:hover {
+  font-weight: bold;
 }
 
 @media(min-width: 1024px) {
