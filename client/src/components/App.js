@@ -89,7 +89,7 @@ function App() {
       <IntroScreen selectedCity={selectedCity} desktopSize={desktopSize}/>
       {isAboutOpen && <About handleAboutClose={handleAboutClose} desktopSize={desktopSize} />}
       <SecNav handleAboutClicked = {handleAboutClicked}/>
-      <MapLayer className="mapLayer" onMarkerClick={onMarkerClick} videoData={videoData} totalCities={totalCities} />
+      <MapLayer className="mapLayer" onMarkerClick={onMarkerClick} videoData={videoData} totalCities={totalCities} desktopSize={desktopSize}/>
       {selectedCity && <CityDetailView selectedCity={selectedCity} videoData={videoData} onCityDetailClose={onCityDetailClose} desktopSize={desktopSize} />}
       <SubmitForm desktopSize={desktopSize} selectedCity={selectedCity} onNewLinkSubmit={onNewLinkSubmit}/>
     </div>

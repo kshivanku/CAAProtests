@@ -6,13 +6,13 @@ import {PageView } from "./Tracking";
 export function MapLayer(props) {
 
     let clickedOnMarker = false;
-    const {onMarkerClick, videoData, totalCities} = props;
+    const {onMarkerClick, videoData, totalCities, desktopSize} = props;
     const [viewport, setViewport] = useState({
-        latitude: 20.5937,
-        longitude: 78.9629,
+        latitude: 21.2787,
+        longitude: 81.8661,
         width: 'calc(var(--vw, 1vw) * 100)',
         height: 'calc(var(--vh, 1vh) * 100)',
-        zoom: 4
+        zoom: (window.innerWidth < desktopSize ? 3 : 4)
     })
     const [mouseDownPoint, setMouseDownPoint] = useState({x: 0, y: 0})
     const [mouseUpPoint, setMouseUpPoint] = useState({x: 0, y: 0})
