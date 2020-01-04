@@ -71,7 +71,7 @@ export function About(props) {
                             >
                                 <img src={twitterlogo}/>
                                 <div>
-                                    <p className="smalltext">Join the conversation on Twitter:</p>
+                                    <p className="smalltext">Reach out to us:</p>
                                     <p className="socialLink">@mycountryawake</p>
                                 </div>
                             </motion.div>
