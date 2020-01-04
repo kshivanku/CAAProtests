@@ -7,12 +7,12 @@ import {Event} from "./Tracking"
 export function About(props) {
     let {handleAboutClose, desktopSize} = props
     let containerVariants = {
-        open: {opacity: 1},
-        close: {opacity: 0, transition: {when: 'afterChildren'}}
+        open: {opacity: 1, transition: {type: 'spring', damping: 16, staggerChildren: 0.2}},
+        close: {opacity: 0, transition: {ease: 'easeOut', duration: 1}}
     }
     let contentVariants = {
         open: {opacity: 1, y: 0},
-        close: {opacity: 0, y: 20}
+        close: {opacity: 0, y: 50}
     }
     let scrollValue = useMotionValue(0);
     let touchStart = 0;
@@ -32,13 +32,18 @@ export function About(props) {
 
     return(
         <AnimatePresence>
-            <motion.div
+            <motion.div 
                 className = "aboutContainer"
                 variants = {containerVariants}
                 initial = "close"
                 animate = "open"
                 exit= "close"
-            >   
+            >
+                <motion.div
+                    className = "aboutBGscreen"
+                    variants = {containerVariants}
+                    onClick = {() => handleAboutClose()}
+                />   
                 <motion.div
                     className = "aboutContent"
                     variants = {contentVariants}
