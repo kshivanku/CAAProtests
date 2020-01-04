@@ -301,7 +301,7 @@
   position: absolute;
   top: 1.3rem;
   right: 1.3rem;
-  z-index: 25;
+  z-index: 5;
   padding-left: 0;
 }
 
@@ -346,6 +346,16 @@
   .secNavContainer li {
     margin-right: 0;
   }
+}
+
+.aboutContainer {
+  width: calc(var(--vw, 1vw) * 100);
+  height: calc(var(--vh, 1vh) * 100);
+  position: absolute;
+  z-index: 40;
+  top: 0;
+  left: 0;
+  background-color: var(--base-black-1);
 }
 
 
