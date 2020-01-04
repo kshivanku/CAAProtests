@@ -314,7 +314,7 @@
 }
 
 .secNavContainer a {
-  opacity: 50%;
+  opacity: 0.5;
   color: var(--base-white-1);
   text-decoration: none;
   background-repeat: no-repeat;
@@ -323,7 +323,7 @@
 }
 
 .secNavContainer a:active {
-  opacity: 100%;
+  opacity: 1;
 }
 
 @media(min-width: 1024px) {
@@ -335,7 +335,7 @@
     content: attr(datacontent);
   }
   .secNavContainer a:hover {
-    opacity: 100%;
+    opacity: 1;
   }
 }
 
