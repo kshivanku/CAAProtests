@@ -5,6 +5,7 @@ import {MapLayer} from './MapLayer.js';
 import {CityDetailView} from './CityDetailView.js'; 
 import {SubmitForm} from './SubmitForm.js';
 import {IntroScreen} from './IntroScreen';
+import {SecNav} from './SecNav.js'
 import './CSS/App.css'
 
 const fetchJSON = async() => {
@@ -70,9 +71,14 @@ function App() {
     setSelectedCity(null)
   }
 
+  const handleAboutClicked = () => {
+    console.log('about clicked')
+  }
+
   return (
     <div className="app">
-      <IntroScreen selectedCity={selectedCity}/>
+      <IntroScreen selectedCity={selectedCity} desktopSize={desktopSize}/>
+      <SecNav handleAboutClicked = {handleAboutClicked}/>
       <MapLayer className="mapLayer" onMarkerClick={onMarkerClick} videoData={videoData} totalCities={totalCities} />
       <CityDetailView selectedCity={selectedCity} videoData={videoData} onCityDetailClose={onCityDetailClose} desktopSize={desktopSize} />
       <SubmitForm desktopSize={desktopSize} selectedCity={selectedCity} onNewLinkSubmit={onNewLinkSubmit}/>
