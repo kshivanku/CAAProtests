@@ -32,7 +32,6 @@ The citizenship laws of India prohibits any illegal immigrants from gaining citi
 - 10th December 2019: The bill is passed in the Lok Sabha (lower house) with a simple majority (311 for / 80 against)
 - 11th December 2019: The bill is passed in the Lok Sabha (upper house) with a simple majority  (125 for / 105 against).  Protests erupt in the capital of Assam. Internet is suspended and restrictions imposed on public movement.
 - 12th December 2019: The bill was declared an act of law by the President of India https://indiancitizenshiponline.nic.in/UserGuide/E-gazette_2019_20122019.pdf . Student led protests erupt in New Delhi followed by other major cities in India and around the world.
-- 13th December 2019
 
 </details>
 
