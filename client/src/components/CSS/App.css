@@ -21,7 +21,6 @@
 
 .cityDetailView_Header {
   display: flex;
-  align-items: center;
   width: inherit;
   justify-content: space-between;
   padding: 1.3rem;
@@ -89,7 +88,7 @@
 .close_btn {
   width: 3rem;
   height: 3rem;
-  position: relative;
+  align-self: center;
 }
 
 .close_btn img {
@@ -355,8 +354,91 @@
   z-index: 40;
   top: 0;
   left: 0;
-  background-color: var(--base-black-1);
+  background-color: rgb(31, 37, 50, 0.8);
+  display: grid;
 }
+
+.aboutContent {
+  align-self: center;
+  justify-self: center;
+  background-color: var(--base-white-1);
+  border-radius: 8px;
+  height: calc(var(--vh, 1vh) * 90);
+  width: calc(var(--vw, 1vw) * 90);
+  max-height: 40rem;
+  max-width: 30rem;
+  padding: 1.3rem 1.3rem 0 1.3rem;
+  overflow: scroll;
+}
+
+.aboutContentHeader {
+  display: flex;
+}
+
+.aboutContentHeader h1 {
+  flex-grow: 1;
+  font-family: var(--display-font), sans-serif;
+}
+
+.aboutTwitterSection {
+  display: flex;
+  align-items: center;
+  /* border-top: 1px solid var(--base-black-1);
+  border-bottom: 1px solid var(--base-black-1); */
+  background-color: rgba(255, 255, 255);
+  padding: 1.3rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.aboutTwitterSection img{
+  max-width: 3rem;
+  height: 100%;
+  margin-right: 1rem;
+  border-radius: 8px;
+}
+
+.aboutTwitterSection .smalltext {
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.twittername {
+  font-weight: bold;
+  margin-top: 0;
+  color: var(--accent-color-1);
+  
+}
+.twittername a:visited, .aboutCAAcontent a:visited {
+  color: var(--accent-color-1);
+}
+
+.aboutCAAcontent {
+  background-color: #dad6d6;
+  margin-left: -1.3rem;
+  margin-right: -1.3rem;
+  padding: 1.3rem;
+  margin-top: 2rem;
+}
+
+.aboutCAAcontent ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.aboutCAAcontent h4 {
+  margin-bottom: 0;
+}
+
+.aboutCAAcontent li {
+  padding: 0.5rem 0;
+}
+
+.aboutCAAcontent a {
+  color: var(--accent-color-1);
+}
+
+
 
 
 

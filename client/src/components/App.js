@@ -78,10 +78,16 @@ function App() {
     setIsAboutOpen(true);
   }
 
+  const handleAboutClose = () => {
+    console.log('here')
+    window.location.hash = "/"
+    setIsAboutOpen(false);
+  }
+
   return (
     <div className="app">
       <IntroScreen selectedCity={selectedCity} desktopSize={desktopSize}/>
-      {/* {isAboutOpen && <About />} */}
+      {isAboutOpen && <About handleAboutClose={handleAboutClose}/>}
       <SecNav handleAboutClicked = {handleAboutClicked}/>
       <MapLayer className="mapLayer" onMarkerClick={onMarkerClick} videoData={videoData} totalCities={totalCities} />
       <CityDetailView selectedCity={selectedCity} videoData={videoData} onCityDetailClose={onCityDetailClose} desktopSize={desktopSize} />
