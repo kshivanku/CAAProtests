@@ -15,7 +15,7 @@ export function SecNav(props) {
                     handleAboutClicked();
                     PageView('About');
             }}></a></li>
-            <li><a 
+            {/* <li><a 
                 href="https://twitter.com/mycountryawake" 
                 id="twitterNav" 
                 target="_blank" 
@@ -23,7 +23,7 @@ export function SecNav(props) {
                 style={{backgroundImage: `url(${twitter})`}}
                 onClick = {() => Event("UserAction", "Navigated to Twitter", window.innerWidth > desktopSize ? "DESKTOP": "MOBILE")}
             >
-            </a></li>
+            </a></li> */}
         </ul>
     )
 }
