@@ -42,6 +42,7 @@ export function CityDetailView(props) {
     }
 
     useEffect(()=> {
+        cityDetailViewEl.current.scrollTo(0,0);
         handleInOutAnimation();
         cityDetailViewEl.current.addEventListener('touchstart', function(e){touchStart=e.changedTouches[0].clientY})
         cityDetailViewEl.current.addEventListener('touchend', function(e) {
