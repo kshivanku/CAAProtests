@@ -16,7 +16,7 @@ export function SecNav(props) {
                     PageView('About');
             }}></a></li>
             <li><a 
-                href="https://twitter.com/narendramodi" 
+                href="https://twitter.com/mycountryawake" 
                 id="twitterNav" 
                 target="_blank" 
                 datacontent="Twitter" 
