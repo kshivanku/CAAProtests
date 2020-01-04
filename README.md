@@ -23,15 +23,15 @@ While protests have been largely peaceful, some of them have turned violent and 
 
 ## Timeline of events
 
-The citizenship laws of India prohibits any illegal immigrants from gaining citizenship. There are an estimated 5-20 million illegal immigrants in India residing in its population of 1.353 billion https://data.worldbank.org/indicator/SP.POP.TOTL?locations=IN (<2%). The actual number is unknown.
+The citizenship laws of India prohibits any illegal immigrants from gaining citizenship. There are an estimated 5-20 million illegal immigrants in India residing in its population of [1.353 billion](https://data.worldbank.org/indicator/SP.POP.TOTL?locations=IN) (<2%). The actual number is unknown.
 
 
-- 2016: The Government of India claims to have upto 20 million undocumented migrants mostly from Bangladesh https://www.business-standard.com/article/pti-stories/two-crore-illegal-bangladeshi-living-in-india-govt-116111601110_1.html and other neighbouring countries residing illegally . In 2014, the government under a different ruling party claimed 12 million immigrants.
-- 31st August 2019: A 9 year excercise called the National Register of Citizens (NRC) https://en.wikipedia.org/wiki/National_Register_of_Citizens_for_Assam to document legal residents in the state of Assam which is known to have the most migrants revealed over 1.9 million people who had no legal documents and were excluded from the citizen’s register . This included 0.5 million Bengali Hindus and 0.7 million Bengali muslims, many of who claim to be legal citizens without the correct documents https://www.thehinducentre.com/the-arena/current-issues/article29724344.ece. Those excluded have 120 days to appeal the decision in a Foreigners’ Tribunal.
-- 9th December 2019: A redrafted Citizenship (Amendment) Bill is introduced in the Lok Sabha - India’s lower house of parliament that allows illegal immigrants who are non muslims eligibility for citizenship if they migrated for fear of religious persecution. https://timesofindia.indiatimes.com/india/five-lakh-bengali-hindu-nrc-rejects-will-get-citizenship/articleshow/72465093.cms
-- 10th December 2019: The bill is passed in the Lok Sabha (lower house) with a simple majority (311 for / 80 against)
-- 11th December 2019: The bill is passed in the Lok Sabha (upper house) with a simple majority  (125 for / 105 against).  Protests erupt in the capital of Assam. Internet is suspended and restrictions imposed on public movement.
-- 12th December 2019: The bill was declared an act of law by the President of India https://indiancitizenshiponline.nic.in/UserGuide/E-gazette_2019_20122019.pdf . Student led protests erupt in New Delhi followed by other major cities in India and around the world.
+- 2016: The [Government of India claims to have upto 20 million undocumented migrants mostly from Bangladesh](https://www.business-standard.com/article/pti-stories/two-crore-illegal-bangladeshi-living-in-india-govt-116111601110_1.html) and other neighbouring countries residing illegally . In 2014, the government under a different ruling party claimed 12 million immigrants.
+- 31st August 2019: A 9 year excercise called the [National Register of Citizens (NRC)](https://en.wikipedia.org/wiki/National_Register_of_Citizens_for_Assam) to document legal residents in the state of Assam which is known to have the most migrants revealed over 1.9 million people who had no legal documents and were excluded from the citizen’s register . This [included 0.5 million Bengali Hindus and 0.7 million Bengali muslims, many of who claim to be legal citizens without the correct documents](https://www.thehinducentre.com/the-arena/current-issues/article29724344.ece). Those excluded have 120 days to appeal the decision in a Foreigners’ Tribunal.
+- 9th December 2019: A redrafted Citizenship (Amendment) Bill is introduced in the Lok Sabha - India’s lower house of parliament that [allows non muslim refugees from certain countries eligibility for citizenship if they migrated for fear of religious persecution](https://timesofindia.indiatimes.com/india/five-lakh-bengali-hindu-nrc-rejects-will-get-citizenship/articleshow/72465093.cms). 
+- 10th December 2019: The bill is passed in the Lok Sabha (lower house) with a majority (311 for / 80 against)
+- 11th December 2019: [The bill is passed in the Rajya Sabha (upper house)](https://m.economictimes.com/news/politics-and-nation/citizenship-amendment-bill-passed-in-rajya-sabha/videoshow/72479144.cms) with a majority (125 for / 105 against).  Protests erupt in the capital of Assam. Internet is suspended and restrictions imposed on public movement.
+- 12th December 2019: The bill was [declared an act of law by the President of India](https://indiancitizenshiponline.nic.in/UserGuide/E-gazette_2019_20122019.pdf). Student led protests erupt in New Delhi followed by other major cities in India and around the world.
 
 </details>
 
@@ -39,11 +39,11 @@ The citizenship laws of India prohibits any illegal immigrants from gaining citi
 
 Volunteers are invited to contribute to any of the following tasks:
 
-- Content curation
+- Content curation and fact checking
 - Site UX and design
 - Web development
 
-Please join the [Slack group](https://t.co/dDJd1IIatV?amp=1) if interested to coordinate.
+Get in touch on twitter [@mycountryawake](https://twitter.com/mycountryawake) or email `anticaanrcdata@gmail.com` or directly [report an issue](https://github.com/kshivanku/CAAProtests/issues)
 
 
 ## Development
