@@ -17,7 +17,7 @@ export function SubmitForm(props) {
     const toggleButtonLabelControls = useAnimation();
 
     const container_variants = {"open": {height: 470, top: `calc(var(--vh, 1vh) * 100 - 470px)`},"close": {height: 50, top: `calc(var(--vh, 1vh) * 100 - 50px)`}}
-    const closeButton_variants = {"open": {backgroundColor: '#1f2532'},"close": {backgroundColor: '#FF5853'}}
+    const closeButton_variants = {"open": {backgroundColor: '#1f2532'},"close": {backgroundColor: (window.innerWidth < desktopSize ? '#2d3142' : '#FF5853')}}
     const chevron_variants = {"open": {rotate: 0}, "close": {rotate: 180}}
     const toggleButton_variants = {"open": {opacity: 0}, "close": {opacity: 1}}
 
