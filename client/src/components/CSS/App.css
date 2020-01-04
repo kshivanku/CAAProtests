@@ -17,6 +17,8 @@
   grid-template-rows: 7rem 1fr;
   grid-template-columns: 1fr minmax(0, 33rem) 1fr;
   z-index: 10;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .cityDetailView_Header {
