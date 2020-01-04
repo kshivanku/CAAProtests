@@ -1,6 +1,7 @@
 import React, {useEffect, useRef} from 'react'
 import {motion, AnimatePresence, useMotionValue} from 'framer-motion'
 import close from '../icons/close.svg'
+import githublogo from '../icons/github.svg'
 import twitterlogo from '../icons/twitterlogo.svg'
 import {Event} from "./Tracking"
 
@@ -57,25 +58,55 @@ export function About(props) {
                     <div className="aboutContentBody">
                         <p>
                             <span style={{fontWeight: "bold"}}>Law Makers, Law Breakers </span> 
-                            is a project that aims to objectively document how we, the citizens of India, are opposing the Citizenship Amendment Act, a deeply unpopular and unconstitutional law, brought by the government of India, in Dec 2019. 
+                            is a citizen led project that aims to objectively document field evidence of democratic protest against the state 
+                            and the state’s response to it.Genuine submissions of unedited videos, photos and objective reporting documenting 
+                            the protests in India and the world against the CAA and NRC are solicited from the public and curated as per the&nbsp;  
+                            <a className="link" href="https://github.com/kshivanku/CAAProtests/wiki/Content-policy">content policy</a>. 
                         </p>
-                        
-                        <div className="aboutTwitterSection">
-                            <img src={twitterlogo}/>
-                            <div>
-                                <p className="smalltext">Join the conversation on Twitter:</p>
-                                <p className="twittername"><a href="#" onClick={()=> Event("UserAction", "Navigated to Twitter", window.innerWidth > desktopSize ? "DESKTOP": "MOBILE")}>@mycountryawake</a></p>
-                            </div>
-                        </div>
+                        <a href="https://twitter.com/mycountryawake" className="aboutCardContainer" target="_blank" onClick={()=> Event("UserAction", "Navigated to Twitter", window.innerWidth > desktopSize ? "DESKTOP": "MOBILE")}>
+                            <motion.div 
+                                className="aboutCard"
+                                initial={{scale: 1}}
+                                whileHover = {{scale: 1.03}}
+                            >
+                                <img src={twitterlogo}/>
+                                <div>
+                                    <p className="smalltext">Join the conversation on Twitter:</p>
+                                    <p className="socialLink"><a className="link" href="https://twitter.com/mycountryawake" target="_blank" onClick={()=> Event("UserAction", "Navigated to Twitter", window.innerWidth > desktopSize ? "DESKTOP": "MOBILE")}>@mycountryawake</a></p>
+                                </div>
+                            </motion.div>
+                        </a>
+                        <a href="https://github.com/kshivanku/CAAProtests" className="aboutCardContainer" target="_blank" onClick={()=> Event("UserAction", "Navigated to Github", window.innerWidth > desktopSize ? "DESKTOP": "MOBILE")}>
+                            <motion.div 
+                                className="aboutCard"
+                                initial={{scale: 1}}
+                                whileHover = {{scale: 1.03}}
+                            >
+                                <img src={githublogo}/>
+                                <div>
+                                    <p className="smalltext">Contribute to the project:</p>
+                                    <p className="socialLink"><a className="link" target="_blank" href="https://github.com/kshivanku/CAAProtests" onClick={()=> Event("UserAction", "Navigated to Github", window.innerWidth > desktopSize ? "DESKTOP": "MOBILE")}>Github Repo</a></p>
+                                </div>
+                            </motion.div>
+                        </a>
                         <div className="aboutCAAcontent">
                             <h3>About protests against the CAA</h3>
                             <p>
-                                The Citizenship Amendment Act protests, also known as the CAA and NRC protests, the Citizenship (Amendment) Bill and National Register of Citizens protests, or the CAB and NRC protests, are a series of ongoing protests in India, against the Citizenship (Amendment) Act (CAA), which was enacted into law on 12 December 2019, and against proposals to enact a nationwide National Register of Citizens (NRC)
+                                On the 11th of December 2019, the Citizenship (Amendment) act (CAA) was passed as a law from both houses of the Indian parliament. 
+                                The act fast tracked the citizenship process to refugees of eligible religions, which was previously not granted to any illegal immigrant.
+                                While any suspected immigrant of the dominant Hindu faith and most minority faiths have a path to Indian citizenship via the CAA, muslims 
+                                who account for the second largest faith in the country (14.2% of population) are excluded from using it to gain citizenship and are at 
+                                higher risk of being rendered stateless. <br />
+                            </p>
+                            <p>
+                                The law has since sparked widespread protests by the Indian public for being against the secular spirit of the Indian constitution that 
+                                guaranteed against the state’s discrimination based on religion.
                             </p>
                             <h4>Further reading on CAA</h4>
                             <ul>
-                                <li><a href="http://censusindia.gov.in/2011-Common/ActsAndRules.html" target="_blank">Official copy of the Act</a></li>
-                                <li><a href="https://en.wikipedia.org/wiki/Citizenship_Amendment_Act_protests" target="_blank">CAA on wikipedia</a></li>
+                                <li><a className="link" href="https://github.com/kshivanku/CAAProtests" target="_blank">Our summary of CAA</a></li>
+                                <li><a className="link" href="http://censusindia.gov.in/2011-Common/ActsAndRules.html" target="_blank">Official copy of the Act</a></li>
+                                <li><a className="link" href="https://en.wikipedia.org/wiki/Citizenship_Amendment_Act_protests" target="_blank">CAA on wikipedia</a></li>
                             </ul>
                         </div>
                     </div>
