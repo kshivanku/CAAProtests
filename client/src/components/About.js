@@ -104,9 +104,9 @@ export function About(props) {
                             </p>
                             <h4>Further reading on CAA</h4>
                             <ul>
-                                <li><a className="link" href="https://github.com/kshivanku/CAAProtests" target="_blank">Our summary of CAA</a></li>
-                                <li><a className="link" href="http://censusindia.gov.in/2011-Common/ActsAndRules.html" target="_blank">Official copy of the Act</a></li>
-                                <li><a className="link" href="https://en.wikipedia.org/wiki/Citizenship_Amendment_Act_protests" target="_blank">CAA on wikipedia</a></li>
+                                <li><a className="link" href="https://github.com/kshivanku/CAAProtests/blob/master/ABOUT_CAA_NRC.md" target="_blank">Our summary of the CAA & NRC</a></li>
+                                <li><a className="link" href="http://censusindia.gov.in/2011-Common/ActsAndRules.html" target="_blank">Official text of the Citizenship (Amendment) act</a></li>
+                                <li><a className="link" href="https://en.wikipedia.org/wiki/Citizenship_Amendment_Act_protests" target="_blank">Wikipedia artice on CAA protest</a></li>
                             </ul>
                         </div>
                     </div>
