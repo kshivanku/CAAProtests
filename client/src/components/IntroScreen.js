@@ -21,8 +21,15 @@ export function IntroScreen(props) {
                 initial = {{y: 10, opacity: 0}}
                 animate={contentControls}
             >
-                <h1>India has been on the streets this winter to save the secular fabric of the country</h1>
-                <p>Several have died since these protests began early December 2019. Here is a map of the protests across the country.</p>
+                <h1>Law Makers, Law Breakers</h1>
+                <p> India has been on the streets this winter to save the secular fabric of the 
+                    nation by strongly opposing the Citizenship Amendment Act (CAA) and National 
+                    Register of Citizens (NRC). Over 20 civilians have died since these protests 
+                    began early in December 2019.<span style={{fontWeight: "bold"}}> This map depicts protests from across the country. </span> 
+                    While protests held in some part of the country were peaceful, protests in some 
+                    parts received violent response from those armed with power and ammunition; 
+                    causing damage to life, property and morale of the citizens.
+                </p>
                 <motion.button 
                     className="primary_btn"
                     whileHover={{scale: 1.02}}
@@ -32,7 +39,7 @@ export function IntroScreen(props) {
                         controls.start(close)
                         contentControls.start({opacity: 0, transition: {duration: 0.1}})
                     }}
-                >Enter
+                >View the map
                 </motion.button>
             </motion.div>
         </motion.div>

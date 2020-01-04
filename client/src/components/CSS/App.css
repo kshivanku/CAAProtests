@@ -274,7 +274,7 @@
   display: grid;
   grid-template-columns: 1fr minmax(320px, 500px) 1fr;
   align-items: center;
-  overflow: hidden;
+  overflow: scroll;
   font-family: var(--display-font), var(--body-font), sans-serif;
 }
 
@@ -286,7 +286,14 @@
 
 .introScreenContent p {
   font-family: var(--body-font), sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+@media(min-width: 1024px) {
+  .introScreenContent p{
+    font-size: 1.2rem;
+  }
 }
 
 .introScreenContent button {
@@ -394,6 +401,10 @@
 .aboutContentHeader h1 {
   flex-grow: 1;
   font-family: var(--display-font), sans-serif;
+}
+
+.aboutContentBody p, .aboutCAAcontent p{
+  line-height: 1.4;
 }
 
 .aboutCardContainer {

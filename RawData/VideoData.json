@@ -148,6 +148,21 @@
           "date": "18/12/2019"
         },
         {
+          "link": "https://twitter.com/DigitalBhagt/status/1209554830617796608",
+          "caption": "Nearly one lakh people gathered in Quddus Saheb Eidgah as part of a peaceful protest to oppose the Citizenship Amendment Act (CAA).",
+          "date": "23/12/2019"
+        },
+        {
+          "link": "https://twitter.com/Gauri_News/status/1209046618181267456",
+          "caption": "Protestors a 'Satyagrah' march towards Quddus Saheb Eidgah to protest against the CAA.",
+          "date": "23/12/2019"
+        },
+        {
+          "link": "https://twitter.com/sou_tweeting/status/1209461429050499072",
+          "caption": "About 800 people gathered at Maurya Hotel Circle in the heart of Bengaluru for a candlelight vigil to commemorate the victims of police brutality during protests against the Citizenship Amendment Act (CAA).",
+          "date": "24/12/2019"
+        },
+        {
           "link": "https://twitter.com/aishyinabubble/status/1210159497005674496",
           "caption": "Hundreds of women turned up at the protest organised by various women's groups in the city.",
           "date": "26/12/2019"
@@ -171,21 +186,6 @@
           "link": "https://twitter.com/shivangi_rajora/status/1212359831228518400",
           "caption": "Three day vigil against CAA at IIM Bangalore",
           "date": "01/01/2020"
-        },
-        {
-          "link": "https://twitter.com/DigitalBhagt/status/1209554830617796608",
-          "caption": "Nearly one lakh people gathered in Quddus Saheb Eidgah as part of a peaceful protest to oppose the Citizenship Amendment Act (CAA).",
-          "date": "23/12/2020"
-        },
-        {
-          "link": "https://twitter.com/Gauri_News/status/1209046618181267456",
-          "caption": "Protestors a 'Satyagrah' march towards Quddus Saheb Eidgah to protest against the CAA.",
-          "date": "23/12/2020"
-        },
-        {
-          "link": "https://twitter.com/sou_tweeting/status/1209461429050499072",
-          "caption": "About 800 people gathered at Maurya Hotel Circle in the heart of Bengaluru for a candlelight vigil to commemorate the victims of police brutality during protests against the Citizenship Amendment Act (CAA).",
-          "date": "24/12/2020"
         }
       ],
       "coordinates": {
@@ -435,6 +435,24 @@
         "longitude": "74.85"
       }
     },
+    "Chandigarh": {
+      "videos": [
+        {
+          "link": "https://twitter.com/ptcnews/status/1207611862226849792",
+          "caption": "Sudents, alumni, parents and faculty members from Punjab University take part in a peaceful protest against the CAA.",
+          "date": "19/12/2019"
+        },
+        {
+          "link": "https://www.youtube.com/watch?v=hzG79jwGkSM",
+          "caption": "Left-aligned student unions held a statewide protest against the CAA, National Register of Citizens (NRC) and National Population Register NPR) in universities and colleges across Chandigarh.",
+          "date": "01/01/2020"
+        }
+      ],
+      "coordinates": {
+        "latitude": "30.72",
+        "longitude": "76.78"
+      }
+    },
     "Bijnor": {
       "videos": [
         {
@@ -595,6 +613,11 @@
           "link": "https://twitter.com/pathan_sumaya/status/1212096625838977024",
           "caption": "Anti-CAA demonstrators organised a 'flash' protest and took oath to safeguard the Constitution at the historical Charminar. At least six students were arrested after they took part in the protest.",
           "date": "31/12/2019"
+        },
+        {
+          "link": "https://twitter.com/AhhadHussain/status/1213388237378486272",
+          "caption": "The Million March",
+          "date": "04/01/2020"
         }
       ],
       "coordinates": {
@@ -756,25 +779,7 @@
         "latitude": "10.015",
         "longitude": "76.2239"
       }
-    },
-    "Chandigarh": {
-      "videos": [
-        {
-          "link": "https://www.youtube.com/watch?v=hzG79jwGkSM",
-          "caption": "Left-aligned student unions held a statewide protest against the CAA, National Register of Citizens (NRC) and National Population Register NPR) in universities and colleges across Chandigarh.",
-          "date": "01/01/2020"
-        },
-        {
-          "link": "https://twitter.com/ptcnews/status/1207611862226849792",
-          "caption": "Sudents, alumni, parents and faculty members from Punjab University take part in a peaceful protest against the CAA.",
-          "date": "19/12/2020"
-        }
-      ],
-      "coordinates": {
-        "latitude": "30.72",
-        "longitude": "76.78"
-      }
     }
   },
-  "totalVideos": 99
+  "totalVideos": 100
 }
