@@ -62,7 +62,8 @@ function App() {
 
   const onMarkerClick = (e, city) => {
     e.preventDefault();
-    city ? (window.location.hash = city) : (window.location.hash = "");
+    if(city){window.location.hash = city; window.scrollTo({top: 0, left: 0, behavior: 'smooth'})}
+    else{window.location.hash = ""}
     if(selectedCity !== city) {
       setSelectedCity(city);
     }
@@ -79,7 +80,6 @@ function App() {
   }
 
   const handleAboutClose = () => {
-    console.log('here')
     window.location.hash = "/"
     setIsAboutOpen(false);
   }
@@ -87,10 +87,10 @@ function App() {
   return (
     <div className="app">
       <IntroScreen selectedCity={selectedCity} desktopSize={desktopSize}/>
-      {isAboutOpen && <About handleAboutClose={handleAboutClose} desktopSize={desktopSize}/>}
+      {isAboutOpen && <About handleAboutClose={handleAboutClose} desktopSize={desktopSize} />}
       <SecNav handleAboutClicked = {handleAboutClicked}/>
       <MapLayer className="mapLayer" onMarkerClick={onMarkerClick} videoData={videoData} totalCities={totalCities} />
-      <CityDetailView selectedCity={selectedCity} videoData={videoData} onCityDetailClose={onCityDetailClose} desktopSize={desktopSize} />
+      {selectedCity && <CityDetailView selectedCity={selectedCity} videoData={videoData} onCityDetailClose={onCityDetailClose} desktopSize={desktopSize} />}
       <SubmitForm desktopSize={desktopSize} selectedCity={selectedCity} onNewLinkSubmit={onNewLinkSubmit}/>
     </div>
   );

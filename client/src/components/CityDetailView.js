@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import {motion, useMotionValue, useAnimation, AnimatePresence} from 'framer-motion';
 import {TwitterVideoEmbed} from 'react-twitter-embed';
 import close from '../icons/close.svg'
@@ -8,6 +8,7 @@ export function CityDetailView(props) {
     let currentScrollValue = useMotionValue(0);
     let touchStart = 0;
     let touchEnd = 0;
+    const cityDetailViewEl = useRef(null)
     // let prevScrollValue = useMotionValue(0);
     const containerAnimControls = useAnimation();
     const headerAnimControls = useAnimation();
@@ -41,16 +42,17 @@ export function CityDetailView(props) {
     }
 
     useEffect(()=> {
-        handleInOutAnimation()
-        window.addEventListener('touchstart', function(e){touchStart=e.changedTouches[0].clientY})
-        window.addEventListener('touchend', function(e) {
-            touchEnd = e.changedTouches[0].clientY;
-            if(currentScrollValue.get() <= 0 && touchEnd > touchStart) {
-                onCityDetailClose();
-                touchStart = 0;
-                touchEnd = 0;
-            }
+        handleInOutAnimation();
+        cityDetailViewEl.current.addEventListener('touchstart', function(e){touchStart=e.changedTouches[0].clientY})
+        cityDetailViewEl.current.addEventListener('touchend', function(e) {
+        touchEnd = e.changedTouches[0].clientY;
+        if(currentScrollValue.get() <= 0 && touchEnd > touchStart) {
+            onCityDetailClose();
+            touchStart = 0;
+            touchEnd = 0;
+        }
         });
+
         // window.addEventListener('wheel', function() {
         //     setTimeout(()=> {
         //         if(currentScrollValue.get() === prevScrollValue.get()) {
@@ -66,9 +68,9 @@ export function CityDetailView(props) {
 
     return (
         <AnimatePresence>
-          {selectedCity && (
             <motion.div
                 className="cityDetailView"
+                ref = {cityDetailViewEl}
                 variants={variants}
                 initial="close"
                 exit="close"
@@ -125,7 +127,6 @@ export function CityDetailView(props) {
                 </motion.div>  
               
             </motion.div>
-          )}
         </AnimatePresence>
     )
 }

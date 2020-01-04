@@ -1,5 +1,5 @@
-import React from 'react'
-import {motion, AnimatePresence} from 'framer-motion'
+import React, {useEffect, useRef} from 'react'
+import {motion, AnimatePresence, useMotionValue} from 'framer-motion'
 import close from '../icons/close.svg'
 import twitterlogo from '../icons/twitterlogo.svg'
 import {Event} from "./Tracking"
@@ -14,6 +14,22 @@ export function About(props) {
         open: {opacity: 1, y: 0},
         close: {opacity: 0, y: 20}
     }
+    let scrollValue = useMotionValue(0);
+    let touchStart = 0;
+    let touchEnd = 0;
+    const aboutContent = useRef(null);
+    useEffect(()=> {
+        aboutContent.current.addEventListener('touchstart', function(e){touchStart=e.changedTouches[0].clientY})
+        aboutContent.current.addEventListener('touchend', function(e) {
+            touchEnd = e.changedTouches[0].clientY;
+            if(scrollValue.get() <= 0 && touchEnd > touchStart) {
+                touchStart = 0;
+                touchEnd = 0;
+                handleAboutClose();
+            }
+        });
+    }, [])
+
     return(
         <AnimatePresence>
             <motion.div
@@ -26,6 +42,8 @@ export function About(props) {
                 <motion.div
                     className = "aboutContent"
                     variants = {contentVariants}
+                    ref = {aboutContent}
+                    onScroll = {(e) => {scrollValue.set(e.nativeEvent.target.scrollTop)}}
                 >
                     <div className="aboutContentHeader">
                         <h1>Law Makers, Law Breakers</h1>
