@@ -1,5 +1,6 @@
 # Law makers, law breakers
 
+![](https://user-images.githubusercontent.com/126868/71761067-af576800-2e94-11ea-94ca-7c0b4ee370de.gif)
 
 Law makers, law breakers is a citizen led project that aims to objectively document field evidence of democratic protest against the state and the state’s response to it.
 
