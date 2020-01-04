@@ -46,7 +46,7 @@ export function MapLayer(props) {
         >
         <ReactMapGL 
             {...viewport} 
-            mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_API_ACCESS_TOKEN}
+            mapboxApiAccessToken={"pk.eyJ1Ijoia3NoaXZhbmt1IiwiYSI6ImNpejRqcnpjMTA0bXEyeHF3aGdhNGx2MjQifQ.-5YZ6vX9kAU3CbEQlSta5g"}
             onViewportChange = {viewport => {setViewport(viewport)}}
             mapStyle="mapbox://styles/kshivanku/ck4vr9icb2z261clkwtwf076v"
         >
