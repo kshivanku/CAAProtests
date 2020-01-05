@@ -82,8 +82,13 @@ export function SubmitForm(props) {
                 <motion.div 
                     className="submitFormBody"
                 >
-                    <h2>Add more protest videos to the map</h2>
-                    <p>This is our chance to visualize India's response to CAA. Videos will be manually reviewed before being added</p>
+                    <h2>Add more protests to the map</h2>
+                    <p>
+                        Have a link to a protest that you didn’t find here? 
+                        Send it to us, we'll&nbsp;
+                        <a href="https://github.com/kshivanku/CAAProtests/wiki/Content-policy" className="link">review</a> 
+                        &nbsp;and add it as soon as we can.
+                    </p>
                     <form 
                         onSubmit={(e) => {
                             e.preventDefault()
@@ -99,7 +104,7 @@ export function SubmitForm(props) {
                     >
                         <label htmlFor="form_link" className="field">
                             <span className="form_label">Link:</span>
-                            <input required id="form_link" type="url" ref={linkEl} placeholder="https://twitter.com/..."/>
+                            <input required id="form_link" type="url" ref={linkEl} placeholder="https://..."/>
                         </label>
                         <label htmlFor="form_city" className="field">
                             <span className="form_label">City:</span>

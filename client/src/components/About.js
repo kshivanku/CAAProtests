@@ -59,7 +59,7 @@ export function About(props) {
                         <p>
                             <span style={{fontWeight: "bold"}}>Law Makers, Law Breakers </span> 
                             is a citizen led project that aims to objectively document field evidence of democratic protest against the state 
-                            and the state’s response to it.Genuine submissions of unedited videos, photos and objective reporting documenting 
+                            and the state’s response to it. Genuine submissions of unedited videos, photos and objective reporting documenting 
                             the protests in India and the world against the CAA and NRC are solicited from the public and curated as per the&nbsp;  
                             <a className="link" href="https://github.com/kshivanku/CAAProtests/wiki/Content-policy">content policy</a>. 
                         </p>
