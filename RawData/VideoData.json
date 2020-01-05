@@ -78,6 +78,19 @@
         "longitude": "83"
       }
     },
+    "Mangalore": {
+      "videos": [
+        {
+          "link": "https://twitter.com/srivatsayb/status/1208052736370954241?s=20",
+          "caption": "Karnataka Police shot dead two protesters at an anti-CAA rally. In this video, one of the policemen can be heard bewilderly asking why not one of the protesters has fallen yet. ",
+          "date": "19/12/2019"
+        }
+      ],
+      "coordinates": {
+        "latitude": "12.9",
+        "longitude": "74.85"
+      }
+    },
     "Bulandshahr": {
       "videos": [
         {
@@ -268,24 +281,6 @@
       "coordinates": {
         "latitude": "26.9211",
         "longitude": "75.81"
-      }
-    },
-    "Mangalore": {
-      "videos": [
-        {
-          "link": "https://twitter.com/srivatsayb/status/1208052736370954241?s=20",
-          "caption": "Karnataka Police shot dead two protesters at an anti-CAA rally. In this video, one of the policemen can be heard bewilderly asking why not one of the protesters has fallen yet. ",
-          "date": "19/12/2019"
-        },
-        {
-          "link": "https://twitter.com/Shaad_Smith/status/1209675956299821056",
-          "caption": "Several accounts of police brutality that was unleashed by the state on protesters opposing the newly amended Citizenship Act.",
-          "date": "Date unknown"
-        }
-      ],
-      "coordinates": {
-        "latitude": "12.9",
-        "longitude": "74.85"
       }
     },
     "Chandigarh": {
@@ -792,22 +787,27 @@
         },
         {
           "link": "https://twitter.com/imMAK02/status/1213823476496121858",
-          "caption": "Jawaharlal Nehru University (JNU) Students' Union President Aishe Ghosh sobs in front of camera and narrates her ordeal after she was brutally attacked inside the JNU campus. ",
+          "caption": "Jawaharlal Nehru University (JNU) Students' Union President Aishe Ghosh sobs in front of camera and narrates her ordeal after she was brutally attacked by a mob of masked men, allegedly from the RSS-backed Akhil Bharatiya Vidyarthi Parishad, inside the JNU campus. ",
           "date": "05/01/2020"
-        },
-        {
-          "link": "https://twitter.com/Amitjanhit/status/1208229532022398978?s=20 ",
-          "caption": "Police arbitrarily attack protesters and residents in UP during an anti-CAA rally. ",
-          "date": "Date unknown"
-        },
-        {
-          "link": "https://twitter.com/CNNnews18/status/1208046028479352832",
-          "caption": "(Image) Protesters wave the Indian flag in a demonstration against the Citizen Amendment Act passed by the government on December 9, 2019.",
-          "date": "Date unknown"
         },
         {
           "link": "https://twitter.com/DrHarjitBhatti/status/1213852849085411328",
           "caption": "A team of doctors, nurses and medical volunteers, who reached Jawaharlal Nehru University while a masked mob of men attacked university students inside, was attacked by hundreds of goons who surrounded their ambulance. The mob manhandled doctors and nurses and threatened them.",
+          "date": "05/01/2020"
+        },
+        {
+          "link": "https://twitter.com/BDUTT/status/1213851954293567488",
+          "caption": "A large mob of masked men, allegedly from Akhil Bharatiya Vidyarthi Parishad (ABVP) affiliated to the Hindutva outfit the Rashtriya Swayamsevak Sangh (RSS), entered Jawaharlal Nehru University (JNU) campus and hostels, considered one of the best universities in the country and the world, to attack scores of students and professors with iron rods and sticks. Many students were brutally injured, sustaining head injuries.",
+          "date": "05/01/2020"
+        },
+        {
+          "link": "https://twitter.com/ndtv/status/1213883652146380802",
+          "caption": "Atul Sood, a Jawaharlal Nehru University professor, narrates to media how while teachers were blocked from entering the university campus, a mob of 70 to 80 masked men, allegedly activists of the RSS-backed Akhil Bharatiya Vidyarthi Parishad (ABVP), were allegedly allowed inside the campus by the police before the violence began. Many students were mercilessly beaten by the mob, with several sustaining serious injuries. He alleges the attack was orchestrated, while his colleague adds that the attack on students last for 4 hours. He says the students are shocked, especially the girls who never expected the attack, and 6 of them are in the trauma centre while 3 have been admitted to intensive care unit.",
+          "date": "05/01/2020"
+        },
+        {
+          "link": "https://twitter.com/A2D2_/status/1213829465463111681",
+          "caption": "Sucharita Sen, a faculty member of the Center for Study of Regional Development at Jawaharlal Nehru University, being admitted to AIIMS with a head Injury, after she was attacked by a mob of masked men, allegedly affiliated with RSS-backed right wing organisation Akhil Bharatiya Vidyarthi Parishad (ABVP). The mob of around 80 men entered the campus on the evening of January 5, allegedly let in by the Delhi Police at the campus gates, and attacked several students with iron rods and sticks. Many students who were inside the hostels were beaten and several received grave injuries, including head injuries. ",
           "date": "05/01/2020"
         }
       ],

@@ -68,11 +68,11 @@ export function MapLayer(props) {
                                     lineHeight: `calc(1rem + 0.2 * ${String(videoData[city].videos.length)}rem)`
                                 }}
                                 initial = {{scale: 1}}
-                                animate= {{scale: 1.2}}
+                                animate= {{scale: 1.05}}
                                 transition = {{
                                     yoyo: Infinity,
                                     ease: 'easeOut',
-                                    duration: 0.2
+                                    duration: 0.5
                                 }}
                                 ><p>{isZoomFriendly(videoData[city].videos.length) && videoData[city].videos.length}</p>
                             </motion.div>
