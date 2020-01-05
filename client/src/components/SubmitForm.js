@@ -108,7 +108,7 @@ export function SubmitForm(props) {
                         </label>
                         <label htmlFor="form_city" className="field">
                             <span className="form_label">City:</span>
-                            <input required id="form_city" type="text" ref={cityEl} placeholder="Where is the protest happening"/>
+                            <input required id="form_city" type="text" ref={cityEl} placeholder="Where did the protest happen?"/>
                         </label>
                         <motion.button
                             type= "submit"
