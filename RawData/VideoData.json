@@ -280,7 +280,7 @@
         {
           "link": "https://twitter.com/Shaad_Smith/status/1209675956299821056",
           "caption": "Several accounts of police brutality that was unleashed by the state on protesters opposing the newly amended Citizenship Act.",
-          "date": "UNCONFIRMED"
+          "date": "Date unknown"
         }
       ],
       "coordinates": {
@@ -791,14 +791,24 @@
           "date": "31/12/2019"
         },
         {
+          "link": "https://twitter.com/imMAK02/status/1213823476496121858",
+          "caption": "Jawaharlal Nehru University (JNU) Students' Union President Aishe Ghosh sobs in front of camera and narrates her ordeal after she was brutally attacked inside the JNU campus. ",
+          "date": "05/01/2020"
+        },
+        {
           "link": "https://twitter.com/Amitjanhit/status/1208229532022398978?s=20 ",
           "caption": "Police arbitrarily attack protesters and residents in UP during an anti-CAA rally. ",
-          "date": "UNCONFIRMED"
+          "date": "Date unknown"
         },
         {
           "link": "https://twitter.com/CNNnews18/status/1208046028479352832",
           "caption": "(Image) Protesters wave the Indian flag in a demonstration against the Citizen Amendment Act passed by the government on December 9, 2019.",
-          "date": "UNCONFIRMED"
+          "date": "Date unknown"
+        },
+        {
+          "link": "https://twitter.com/DrHarjitBhatti/status/1213852849085411328",
+          "caption": "A team of doctors, nurses and medical volunteers, who reached Jawaharlal Nehru University while a masked mob of men attacked university students inside, was attacked by hundreds of goons who surrounded their ambulance. The mob manhandled doctors and nurses and threatened them.",
+          "date": "05/01/2020"
         }
       ],
       "coordinates": {
@@ -807,5 +817,5 @@
       }
     }
   },
-  "totalVideos": 102
+  "totalVideos": 104
 }
