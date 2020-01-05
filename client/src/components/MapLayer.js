@@ -68,7 +68,7 @@ export function MapLayer(props) {
                                     lineHeight: `calc(1rem + 0.2 * ${String(videoData[city].videos.length)}rem)`
                                 }}
                                 initial = {{scale: 1}}
-                                animate= {city=='Delhi' ? {scale: 1.2}: {scale:1}}
+                                animate= {{scale: 1.2}}
                                 transition = {{
                                     yoyo: Infinity,
                                     ease: 'easeOut',
