@@ -615,6 +615,11 @@
           "link": "https://www.theweek.in/news/india/2020/01/04/the-week-morning-brief-million-march-in-hyderabad-against-caa-us-iran-tension.html",
           "caption": "The ‘Million March’. Over one hundred thousand protesters, many carrying the Indian tricolour flag, took part in a peaceful march, chanting slogans against the new citizenship law",
           "date": "04/01/2020"
+        },
+        {
+          "link": "https://twitter.com/DesiPoliticks/status/1213425334772785152?s=20",
+          "caption": "TEST Lakhs of peaceful protesters swarm Dharna Chowk to protest against the CAA-NRC.",
+          "date": "04/01/2020"
         }
       ],
       "coordinates": {
@@ -827,5 +832,5 @@
       }
     }
   },
-  "totalVideos": 106
+  "totalVideos": 107
 }

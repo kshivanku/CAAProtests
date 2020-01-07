@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1U6HqFmMggr_N9mGh_P08yvJcohf3IdbTmTw59Sio9Ao/edit#gid=0';
+const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1a05RMjtnV49O6l8zVXO3ScX6pcrRXBAOI76F-jUUNfc/edit?usp=sharing';
 
 // Datasource check with datasrc var
 app.get('/getVideoData', async (req, res) => {
@@ -24,9 +24,9 @@ app.get('/getVideoData', async (req, res) => {
     res.send(revisedJSON)
   }
   if (datasrc === "SHEET") {
-    let revisedJSON = await getSheetData()
+    let revisedJSON = await getSheetData();
     fs.writeFileSync('./RawData/VideoData.json', JSON.stringify(revisedJSON, null, 2))
-    console.log("Sending back Sheet Response")
+    console.log("Sending Sheet Response")
     res.send(revisedJSON)
   }
 
