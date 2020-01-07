@@ -114,6 +114,10 @@
   font-size: 1.2rem;
 }
 
+.linkCard p {
+  color: #888;
+}
+
 .rawLink {
   display: "block";
   margin-bottom: 0.5rem; 

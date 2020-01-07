@@ -84,8 +84,10 @@ export function SubmitForm(props) {
                 >
                     <h2>Add more protests to the map</h2>
                     <p>
-                        Have a link to a protest that you didn’t find here? 
-                        Send it to us, we'll&nbsp;
+                        If you'd like to inform us about an act of resistance we might have missed, 
+                        or share any relevant information regarding the ongoing protests, 
+                        please send us your submissions here.
+                        We'll&nbsp;
                         <a href="https://github.com/kshivanku/CAAProtests/wiki/Content-policy" className="link">review</a> 
                         &nbsp;and add it as soon as we can.
                     </p>
