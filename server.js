@@ -52,17 +52,25 @@ function processSheetData(data, tabletop) {
         if(!isNaN(currentline['Latitude (°N)']) && !isNaN(currentline['Longitude (°E)'])) {
             if(newjson.cities[currentline['City']] !== undefined) {
                 newjson.cities[currentline['City']].videos.push({
-                    link: currentline['Link'],
+                    link: currentline['Content URL'],
                     caption: currentline['Caption'],
-                    date: currentline['Date']
+                    date: currentline['Event Date'],
+                    protestName: currentline['Protest Name'],
+                    eventType: currentline['Event Type'],
+                    eventLocation: currentline['Event Location'],
+                    sourceURL: currentline['Source URL']
                 })
             }
             else {
                 newjson.cities[currentline['City']] = {
                     videos: [{
-                        link: currentline['Link'],
-                        caption: currentline['Caption'],
-                        date: currentline['Date']
+                      link: currentline['Content URL'],
+                      caption: currentline['Caption'],
+                      date: currentline['Event Date'],
+                      protestName: currentline['Protest Name'],
+                      eventType: currentline['Event Type'],
+                      eventLocation: currentline['Event Location'],
+                      sourceURL: currentline['Source URL']
                     }],
                     coordinates: {
                     latitude: currentline['Latitude (°N)'],
