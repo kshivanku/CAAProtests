@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1a05RMjtnV49O6l8zVXO3ScX6pcrRXBAOI76F-jUUNfc/edit?usp=sharing';
+const publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/10VdwUE0v7z1_Yz7q1EjAAXBUp9my8mRybOIX4gO6cR8/edit?usp=sharing";
 
 // Datasource check with datasrc var
 app.get('/getVideoData', async (req, res) => {
