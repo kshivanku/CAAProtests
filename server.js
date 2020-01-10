@@ -8,11 +8,12 @@ let arrayWithData = [];
 const app = express();
 const port = process.env.PORT || 5000;
 const datasrc = "SHEET" // "TSV" or "SHEET"
+const srcsheetlabel = "3.Approved"
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1a05RMjtnV49O6l8zVXO3ScX6pcrRXBAOI76F-jUUNfc/edit?usp=sharing';
+const publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/10VdwUE0v7z1_Yz7q1EjAAXBUp9my8mRybOIX4gO6cR8/edit?usp=sharing";
 
 // Datasource check with datasrc var
 app.get('/getVideoData', async (req, res) => {
@@ -27,12 +28,13 @@ app.get('/getVideoData', async (req, res) => {
     let revisedJSON = await getSheetData();
     fs.writeFileSync('./RawData/VideoData.json', JSON.stringify(revisedJSON, null, 2))
     console.log("Sending Sheet Response")
+    console.log(revisedJSON)
     res.send(revisedJSON)
   }
 
 })
 
-// Pulling from Google Sheets with Tabletop 
+// Pulling from Google Sheets with Tabletop
 function getSheetData() {
   return new Promise((resolve) => {
     Tabletop.init({
@@ -40,13 +42,19 @@ function getSheetData() {
       callback: function(data, tabletop) {
         resolve(processSheetData(data, tabletop));
       },
-      simpleSheet: true
+      simpleSheet: false
     })
   })
 }
 
-//Cleaning up the sheet data 
+//Cleaning up the sheet data
 function processSheetData(data, tabletop) {
+    if (!(srcsheetlabel in data)){
+      return(srcsheetlabel+" Not found in sheet")
+    }
+    else{
+      data = data[srcsheetlabel].elements
+    }
     let newjson = {"cities":{},"totalVideos":0}
     data.map(currentline => {
         if(!isNaN(currentline['Latitude (°N)']) && !isNaN(currentline['Longitude (°E)'])) {
@@ -94,7 +102,7 @@ function processSheetData(data, tabletop) {
     return (newjson)
 }
 
-//Cleaning up the TSV data 
+//Cleaning up the TSV data
 function tsvJSON(tsv) {
   return new Promise((resolve, reject) => {
     var lines = tsv.split(/\r?\n/);
