@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import {motion, useMotionValue, useAnimation, AnimatePresence} from 'framer-motion';
 import {TwitterVideoEmbed} from 'react-twitter-embed';
+import InstagramEmbed from 'react-instagram-embed';
 import close from '../icons/close.svg'
 
 export function CityDetailView(props) {
@@ -115,6 +116,19 @@ export function CityDetailView(props) {
                                 </div>
                             )
                         }
+                        else if(videoObj.link.indexOf('instagram.com') !== -1) {
+                            
+                            return (
+                                <div className="linkCard" key={videoObj.link+ index}>
+                                    <p>{videoObj.date}</p>
+                                    <h2>{videoObj.caption}</h2>
+                                    <InstagramEmbed url={videoObj.link} 
+                                        onLoad={e => {if(e){e.style.display = "inline-block"}}} 
+                                    />
+                                </div>
+                            )
+                        }
+
                         else {
                             return (
                                 <div className="linkCard" key={index}>
