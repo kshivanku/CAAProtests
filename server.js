@@ -8,6 +8,7 @@ let arrayWithData = [];
 const app = express();
 const port = process.env.PORT || 5000;
 const datasrc = "SHEET" // "TSV" or "SHEET"
+const approvedSheetName = '3.Approved';
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
@@ -38,7 +39,7 @@ function getSheetData() {
     Tabletop.init({
       key: publicSpreadsheetUrl,
       callback: function(data, tabletop) {
-        resolve(processSheetData(data, tabletop));
+        resolve(processSheetData(tabletop));
       },
       simpleSheet: true
     })
@@ -46,7 +47,9 @@ function getSheetData() {
 }
 
 //Cleaning up the sheet data 
-function processSheetData(data, tabletop) {
+function processSheetData(tabletop) {
+  if(tabletop.models[approvedSheetName]){
+    let data = tabletop.models[approvedSheetName].elements;
     let newjson = {"cities":{},"totalVideos":0}
     data.map(currentline => {
         if(!isNaN(currentline['Latitude (°N)']) && !isNaN(currentline['Longitude (°E)'])) {
@@ -92,6 +95,11 @@ function processSheetData(data, tabletop) {
     newjson.cities = objSorted
     newjson.totalVideos = data.length;
     return (newjson)
+  }
+  else {
+    console.log(`No sheet called ${approvedSheetName}`)
+    return (`No sheet is called ${approvedSheetName}`)
+  }
 }
 
 //Cleaning up the TSV data 
