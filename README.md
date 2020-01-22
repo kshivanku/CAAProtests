@@ -37,7 +37,7 @@ Start the client server in a new terminal tab
     
 # Data
 
-All content submissions go into a firebase database and fact checked for authenticity by volunteers in a [google spreadsheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vQPGGA0BSZFo29GSABgiO1pGYvKA0ON4cVh5YaaMSiYqAZHHE-83rxzUmQwpSKRXdA68KSTYpKadpVU/pubhtml?gid=0&single=true).
+All content submissions go into a firebase database and fact checked for authenticity by volunteers in a [google spreadsheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vSn7eqNU8lFk9EtrLCGaDZ9psVb-zoFJ0p7o3QiMhfzb9Op2roxJMZrwVCB8scA2yqJgFLX1bCZ8Nrm/pubhtml?gid=0&single=true).
 
 The sheet is queried via [tapletop](https://www.npmjs.com/package/tabletop) and made available to the app as a JSON API: http://caaprotests.info/getVideoData
 
